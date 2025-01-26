@@ -1,167 +1,154 @@
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      margin-top: 0;
-    }
-    header {
-      background:linear-gradient(#13181d,#20212e, #341b47);
-      padding: 10px 5% 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    color: white;
-   
-    }
+header {
+  background: linear-gradient(#13181d, #20212e, #341b47);
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
 
-  header .nav  {
-    display: flex;
-    align-items: center;
-  }
-  header .nav p{
-    margin: 0 15px 0 0;
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: rgb(235, 82, 235);
-    
-  }
-  header nav p a{
-    text-decoration: none;
-    color: rgb(235, 82, 235);
-  }
-  header nav p a:hover{
-    color: #c3e1c4;
-  }
-  header .h-p{
-    color: white;
-  }
-    header .h-p h1 {
-      font-size: 1.22rem;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    header .h-p p {
-      font-size: 0.76rem;
-      
-    }
+header .h-p h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-    header .nav button{
-      border: 1px solid black;
-      background:violet;
-      border-radius: 5px;
-      color: white;
-      margin: 0;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    header .nav button a{
-        text-decoration: none;
-    }
-    header .nav button:hover{
-      background: white;
-      color: #13181d;
+header .h-p a {
+  color: white;
+  text-decoration: none;
+}
 
-    }
-    header .services {
-      
-      padding: 20px ;
-      text-align: left;
-      
-     
-      
-    }
-    
-    .services h2 {
-      font-size: 2rem;
-      
-      margin-bottom: 20px;
-    }
-    
-    .services p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #fafafa; 
-      margin-bottom: 20px;
-    }
-    
-    .services ul {
-      padding: 0;
-      margin: 20px 0;
-      list-style-type:square; 
-      border: 1px solid white;
-      border-radius: 20px;
-      background-color: aliceblue;
-      margin: 0 50% 0 0;
-      padding: 1% 1% 1% 3%;
-    }
-    
-    .services ul li {
-      font-size: 1rem;
-      color:  rgb(243, 87, 243);
-      margin-bottom: 10px;
-      list-style:circle;
-      
-    }
-    
-      
+header .menu-toggle {
+  background-color: violet;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
 
-    
-     
-    .contact{
-      
-      padding: 10px;
-      text-align: center;
-      color: white;
-    }
-    .contact input, .contact textarea{
-      display:block;
-      border: none;
-      width: 40%;
-      margin: 10px;
-      padding: 10px;}
-    
-    .contact button {
-      padding:10px 20px;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align:center;
-    }
-    .contact button:hover{
-      background-color: #45a049;
-    }
-    
-    footer{
-      background-color: rgb(41, 40, 42);
-       width: 100%;
-      padding: 20px 5px;
-      text-align: center;
-      color: white;
-    }
- 
-@media (max-widh:480px) {
+header .menu-toggle:hover {
+  background-color: white;
+  color: #13181d;
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav.active {
+  display: flex;
+}
+
+.nav p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.nav p a {
+  color: rgb(235, 82, 235);
+  text-decoration: none;
+}
+
+.nav p a:hover {
+  color: #c3e1c4;
+}
+
+.nav button {
+  border: 1px solid black;
+  background: violet;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  background-image: url();
+  color: #13181d;
+}
+
+.services {
+  padding: 20px;
+  color: rgb(17, 16, 16);
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+.services ul {
+  margin: 20px 0;
+  list-style-type: square;
+  padding-left: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.services ul li {
+  color: rgb(243, 87, 243);
+}
+
+.contact {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.contact input,
+.contact textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: rgb(41, 40, 42);
+  color: white;
+  text-align: center;
+  padding: 20px 5px;
+}
+
+/* Responsive */
+@media screen and (min-width: 680px) {
   header {
-    font-size: 18px;
-    padding: 0;
-    margin: 0;
-  }
-    .services {
-    font-size: 16px;
-    padding: 10px;
+    flex-direction: row;
   }
 
-  h1 h1{
-    font-size: 1.5rem;
+  .menu-toggle {
+    display: none;
   }
-  p{
-    font-size: 0.9rem;
-  }
-  .nav p .nav button{
-    font-size: 0.9rem;
-  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
 }

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <meta name="description"
-    content="Decouvrez nos services de developpement web et de marketing digital pour booster votre présence en ligne.">
+    content="Découvrez nos services de développement web et de marketing digital pour booster votre présence en ligne.">
   <title>Landing Page - Services Web</title>
   <meta name="google-site-verification" content="MulvnIc9bkfbiGccHjwxnEPDDyVl8ryKKhbDQpvhpxw" />
 </head>
@@ -14,54 +14,60 @@
 <body>
   <header>
     <div class="h-p">
-      <h1>Bienvenue sur notre site</h1>
-  
+      <h1><a href="https://abdoul332.github.io/a-works/">Bienvenue sur notre site</a></h1>
     </div>
+    <button class="menu-toggle">Menu</button>
     <nav class="nav">
-      <p><a href="#">Acceuil</a></p>
+      <p><a href="#">Accueil</a></p>
       <p><a href="#">Nos réalisations</a></p>
-      <p><a href="#"> offres</a></p>
+      <p><a href="#">Offres</a></p>
       <button><a href="#">Let's go</a></button>
     </nav>
-    <section class="services">
-      <h2>Des solutions completes pour votre presence en ligne.</h2>
-      
-        
-          Nous vous accompagnons dans la réalisation de vos projets en ligne avec des services de
-          développement web et de marketing digital adaptés à vos besoins.
-          Forts de plusieurs années d'expérience, nous transformons vos idées en réalité.
-
-          Grâce à notre stratégie hybride avancée, nous garantissons des résultats
-          exceptionnels, qu'il s'agisse de :
-        </p>
-        <ul>
-          <li>Création et optimisation de sites WordPress</li>
-          <li>Développement de boutiques Shopify</li>
-          <li>Conception de landing pages et sites vitrines</li>
-          <li>SEO on-page et création de contenu</li>
-          <li>Publicité en ligne (Google Ads, Facebook Ads)</li>
-        </ul>
-        <p>
-          la prochaine fois que vous aurez besions d'un service de qualité, tout ce qu'il vous reste à faire c'est de
-          nous Contactez
-          ,pour transformer vos ambitions en succès !
-        </p>
-      </section>
-    </section>
   </header>
+
+  <section class="services">
+    <h2>Des solutions complètes pour votre présence en ligne</h2> 
+    <p>
+      Nous vous accompagnons dans la réalisation de vos projets en ligne avec des services de développement web et de
+      marketing digital adaptés à vos besoins. Forts de plusieurs années d'expérience, nous transformons vos idées en
+      réalité.
+    </p>
+    <p>
+      Grâce à notre stratégie hybride avancée, nous garantissons des résultats exceptionnels, qu'il s'agisse de :
+    </p>
+    <ul>
+      <li>Création et optimisation de sites WordPress</li>
+      <li>Développement de boutiques Shopify</li>
+      <li>Conception de landing pages et sites vitrines</li>
+      <li>SEO on-page et création de contenu</li>
+      <li>Publicité en ligne (Google Ads, Facebook Ads)</li>
+    </ul>
+    <p>
+      La prochaine fois que vous aurez besoin d'un service de qualité, contactez-nous pour transformer vos ambitions en
+      succès !
+    </p>
+  </section>
+
   <footer>
     <section class="contact" id="contact">
       <h3>Contactez-nous</h3>
-      <p>Envoyez-nous un message pour discuter de vos besions.</p>
+      <p>Envoyez-nous un message pour discuter de vos besoins.</p>
       <form>
         <input type="text" placeholder="Votre nom" required>
         <input type="email" placeholder="Votre email" required>
         <textarea placeholder="Votre message"></textarea>
-        <button type="submit">Envoyez</button>
+        <button type="submit">Envoyer</button>
       </form>
     </section>
-    <p>&copy; 2025 - Tous droits reserves.</p>
+    <p>&copy; 2025 - Tous droits réservés.</p>
   </footer>
-</body>
 
-</html>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active'); // Ajoute ou enlève la classe "active"
+    });
+  </script>
+</bod
