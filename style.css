@@ -161,6 +161,6 @@ footer {
   .nav {
     display: flex;
     flex-direction: row;
-    gap: 15px;
-  }
+    gap:15px;
+}
 }
