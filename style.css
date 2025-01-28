@@ -1,6 +1,9 @@
 /* Styles généraux */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", serif;
   margin: 0;
   padding: 0;
 }
@@ -20,6 +23,11 @@ header .h-p h1 {
   font-weight: bold;
   text-transform: uppercase;
 }
+header .h-p h1:hover{
+  background: 1px solid violet;
+  
+
+}
 
 header .h-p a {
   color: white;
@@ -27,7 +35,7 @@ header .h-p a {
 }
 
 header .menu-toggle {
-  background-color: violet;
+  background-color: rgb(222, 177, 222);
   color: white;
   border: none;
   padding: 10px;
@@ -81,20 +89,24 @@ header .menu-toggle:hover {
 
 .services {
   padding: 20px;
-  color: rgb(17, 16, 16);
+  color: rgb(242, 232, 232);
+  background-image: url(https://images.pexels.com/photos/1190906/pexels-photo-1190906.jpeg?auto=compress&cs=tinysrgb&w=400);
+  background-size: cover;
 }
 
 .services h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 
+}
+.services p{
+  font-size: 18px;
 }
 
 .services ul {
   margin: 20px 0;
   list-style-type: square;
   padding-left: 20px;
-  background-color: aliceblue;
   border-radius: 10px;
 }
 
