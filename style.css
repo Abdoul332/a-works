@@ -19,12 +19,15 @@ header {
 }
 
 header .h-p h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 16px;
+  /*font-weight: bold;*/
+  text-transform: none;
 }
-header .h-p h1:hover{
-  background: 1px solid violet;
+
+
+
+header .h-p  a:hover {
+color:  #c3e1c4;
   
 
 }
@@ -33,12 +36,22 @@ header .h-p a {
   color: white;
   text-decoration: none;
 }
+header .h-p p{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header .h-p p a:hover {
+  color:  #c3e1c4;}
+
+
+
 
 header .menu-toggle {
   background-color: rgb(222, 177, 222);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   font-size: 1.2rem;
 }
@@ -77,14 +90,19 @@ header .menu-toggle:hover {
 .nav button {
   border: 1px solid black;
   background: violet;
-  border-radius: 5px;
-  color: white;
+  border-radius: 20px;
+  
   cursor: pointer;
+}
+.nav button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color:violet;
 }
 
 .nav button:hover {
-  background-image: url();
-  color: #13181d;
+  
+  background-color: white;
 }
 
 .services {
@@ -105,13 +123,14 @@ header .menu-toggle:hover {
 
 .services ul {
   margin: 20px 0;
-  list-style-type: square;
+  list-style-type:lower-greek;
   padding-left: 20px;
   border-radius: 10px;
 }
 
 .services ul li {
-  color: rgb(243, 87, 243);
+  color: rgb(121, 252, 248);
+  font-size: 1.2rem;
 }
 
 .contact {
