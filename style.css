@@ -185,10 +185,6 @@ font-size: 8px;
     flex-direction:initial;
   }
 
-  .menu-toggle {
-    display: none;
-  }
-
   .nav {
     display: flex;
     flex-direction: row;
