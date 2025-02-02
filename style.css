@@ -62,7 +62,7 @@ header .menu-toggle:hover {
 }
 
 .nav {
-  display: none;
+  display:flex;
   flex-direction: column;
   gap: 10px;
 }
@@ -171,14 +171,19 @@ footer {
 @media screen and (min-width: 680px) {
   header {
     flex-direction: row;
+    padding: 5px 5%;
   }
+  header .h-p p{
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;}
 
   .menu-toggle {
     display: none;
   }
 
   .nav {
-    display: flex;
+    display:contents;
     flex-direction: row;
     gap:15px;
 }
