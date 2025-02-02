@@ -20,7 +20,7 @@ header {
 
 header .h-p h1 {
   font-size: 16px;
-  /*font-weight: bold;*/
+  font-weight: bold;
   text-transform: none;
 }
 
@@ -41,6 +41,7 @@ header .h-p p{
   font-weight: bold;
   text-transform: uppercase;
 }
+
 header .h-p p a:hover {
   color:  #c3e1c4;}
 
@@ -62,7 +63,7 @@ header .menu-toggle:hover {
 }
 
 .nav {
-  display:flex;
+  display: none;
   flex-direction: column;
   gap: 10px;
 }
@@ -166,25 +167,31 @@ footer {
   text-align: center;
   padding: 20px 5px;
 }
+.social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.5);
+}
+.custom-text{
+font-size: 8px;
+}
 
 /* Responsive */
 @media screen and (min-width: 680px) {
   header {
-    flex-direction: row;
-    padding: 5px 5%;
+    flex-direction:initial;
   }
-  header .h-p p{
-    font-size: 0.5rem;
-    font-weight: bold;
-    text-transform: uppercase;}
 
   .menu-toggle {
     display: none;
   }
 
   .nav {
-    display:contents;
+    display: flex;
     flex-direction: row;
-    gap:15px;
+    gap : 15px;
 }
 }
