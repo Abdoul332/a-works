@@ -15,6 +15,7 @@ body {
 header {
   background: linear-gradient(#13181d, #20212e, #341b47);
   width: 100%;
+  
 
   
 }
@@ -27,59 +28,19 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
-nav a{
-  color: white;
-  text-decoration: none;
-}
-nav .logo{
-  font-size: 2rem;
-  font-weight:400;
-  align-items: center;
-}
-.nav-links{
-  display: flex;
-}
-.nav-links ul{
-  display: flex;
-  align-items: center;
-}
-.nav-links li{
-  margin: 0 10px;
-}
-
-nav, .link ,ul , link , .active, a {
-  color: red;
-}
-nav .menu-hamburger{
-  display: none;
-  width: 20px;
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  width: 35px;
-}
-
-
-nav button {
-  border: 1px solid black;
-  background: violet;
-  border-radius: 5px;
-  gap: 10px;
-  cursor: pointer;
-}
-nav button a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color:rgb(246, 243, 246);
-}
-
-nav button:hover {
-  
-  background-color: white;
+.logo{
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top:5px;
+  left: 10px;
 }
 
 .services {
-  padding: 60px;
+padding: 0 5%;
   color: rgb(242, 232, 232);
   background-image: url(https://images.pexels.com/photos/1190906/pexels-photo-1190906.jpeg?auto=compress&cs=tinysrgb&w=400);
   background-size: cover;
@@ -139,7 +100,7 @@ font-size: 8px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 0 5% 0;
+  padding: 0 0 0 0;
   margin: 0;
   
   
@@ -154,7 +115,7 @@ nav .logo{
 }
 .services{
   width: 100%;
-  padding: 20px 0 30px 10px;
+  padding: 60px 0 30px 10px;
   margin: 0;
 }
  .logo a{
@@ -166,7 +127,7 @@ nav {
 }
 .nav-links{
   width:100%;
-  height: 7vh;
+  height: 10vh;
   display: flex;
   justify-content:end;
   align-items:center ;

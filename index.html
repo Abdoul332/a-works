@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
-
   <meta name="description" content=" Décuvrez a-works, votre expert en développement web et marketing digital.
   créationde sites moderne et optimisé.">
   <title>Développement web & Marketing digital  </title>
@@ -17,22 +15,27 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo">
-      <a href="https://abdoul332.github.io/a-works/">Bienvenue sur notre site</a>
+     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+          <a class="navbar-brand text-white" href="https//:Abdoul332.github.io/a-works">
+          <img src="img/1.png" alt="logo" width="100 " >
+          </a>
+          <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto align-items-center py-3">
+                  <li class="nav-item"><a class="nav-link text-white" href="#">Nos réalisation</a></li>
+                  <li class="nav-item"><a class="nav-link text-white" href="#">Nos Services</a></li>
+                  <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+                  <li class="nav-item">
+                  <a href="#" class="btn btn-primary ">En savoir plus</a>
+                  </li>
+              </ul>
+              
+          </div>
       </div>
-      <div class="nav-links">
-        <ul>
-      <li class="active"><a href="https://www.upwork.com/freelancers/~019b37056d42cfbd4a?p=1884282142477860864">Nos réalisations</a></li>
-      <li><a href="#"> NOs Offres</a></li>
-      <li><button><a href="#">Let's go</a></button></li>
-        </ul>
-      </div>
-        <div class="menu-hamburger">
-          <img src="img/menu-btn.png" alt="menu">
-        </div>
-    
-    </nav>
+  </nav>
   </header>
   <section class="services">
     <h1>Développement web & Marketing Digital</h1>
@@ -56,7 +59,7 @@
       succès !
     </p>
   </section>
-    <footer class="bg-dark text-light p-0">
+    <footer class="bg-dark text-light py-">
       <div class="container">
           <div class="row">
               <div class="col-md-4">
@@ -94,12 +97,4 @@
       </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
- <script>
-   const menuHamburger = document.querySelector(".menu-hamburger")
-        const navLinks = document.querySelector(".nav-links")
- 
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('menu mobile')
-        })
- </script>
 </bod>
