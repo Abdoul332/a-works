@@ -43,35 +43,37 @@ header {
 padding: 0 5%;
   color: rgb(242, 232, 232);
   background-image: url(https://images.pexels.com/photos/1190906/pexels-photo-1190906.jpeg?auto=compress&cs=tinysrgb&w=400);
-  background-size: cover;
 }
-
 .services h2 {
   font-size: 1.6rem;
-  margin:50px 0 0 0;
+  margin:20px 0 20px 0;
   color: violet;
 
 }
 .services h1 {
+  padding: 20px 0 10px 0;
   font-size: 1.3rem;
-  margin: 0 ;
   text-align: center;
 
+}
+.services h3{ 
+  color: rgb(255, 158, 255);
+  font-size: 300;
+  padding: 0px 0 20px 0;
 }
 .services p{
   font-size: 18px;
 }
-
-.services ul {
-  margin: 20px 0;
-  list-style-type:lower-greek;
-  padding-left: 20px;
-  border-radius: 10px;
+footer button{
+  background-color: violet;
+  border-radius: 4px;
+  color: white;
 }
 
-.services ul li {
-  color: rgb(121, 252, 248);
-  font-size: 1.2rem;
+footer button:hover{
+  background-color:rgb(15, 135, 205);
+  border-radius: 2px;
+  color: white;
 }
 
 footer {
@@ -102,8 +104,6 @@ font-size: 8px;
   flex-wrap: wrap;
   padding: 0 0 0 0;
   margin: 0;
-  
-  
 }
 nav{
   padding: 0 5% 10px 0;
@@ -125,44 +125,14 @@ nav .logo{
 nav {
   padding: 0;
 }
-.nav-links{
-  width:100%;
-  height: 10vh;
-  display: flex;
-  justify-content:end;
-  align-items:center ;
-  
-  
-}
-.nav-links .mobile-menu{
-  margin-left: 0;
-}
-.nav-links ul{
-  display: flex;
-  flex-direction: column;
-}
-nav .menu-hamburger{
-  display:none;
-  width: 15px;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  right: 50px;
-  
-}
-.nav-links ul li{
-  margin: 5px 0;
-}
 
 .services h1 {
   font-size: 1.2rem;
-  margin: 15px 0 ;
   text-align: center;
 
 }
 .services h2 {
   font-size: 1.6rem;
-  margin:20px 0 0 0;
   color: violet;
 
 }
