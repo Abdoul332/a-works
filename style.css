@@ -28,21 +28,16 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
-.logo{
-  height: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  position: relative;
-  top:5px;
-  left: 10px;
+nav .container i {
+  font-size: 80px;
 }
+
 
 .services {
 padding: 0 5%;
   color: rgb(242, 232, 232);
   background-image: url(https://images.pexels.com/photos/1190906/pexels-photo-1190906.jpeg?auto=compress&cs=tinysrgb&w=400);
+  padding: 20px;
 }
 .services h2 {
   font-size: 1.6rem;
@@ -58,21 +53,24 @@ padding: 0 5%;
 }
 .services h3{ 
   color: rgb(255, 158, 255);
-  font-size: 300;
+  font-size: 20px;
   padding: 0px 0 20px 0;
 }
 .services p{
   font-size: 18px;
 }
 footer button{
+  border-radius: 7px;
   background-color: violet;
-  border-radius: 4px;
+  transition:all 0.5s;
+  border: none;
+  
   color: white;
 }
 
 footer button:hover{
-  background-color:rgb(15, 135, 205);
-  border-radius: 2px;
+  background-color:#0cb2ff;
+  border-radius: 10px;
   color: white;
 }
 
@@ -93,6 +91,28 @@ footer {
 .custom-text{
 font-size: 8px;
 }
+section{
+  background: rgb(240, 231, 231);
+  padding: 20px 10% 0 10%;
+}
+
+section .page {
+  padding: 0 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  background: #13181d;
+
+}
+.lef{
+  margin: 20px;
+  padding:10px 5px 10px 5px;
+}
+.right{
+  padding: 0 60px 0 0;
+}
+
 
 /* Responsive */
 @media screen and (max-width: 700px) {
@@ -127,8 +147,8 @@ nav {
 }
 
 .services h1 {
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 1.3rem;
+  text-align: start;
 
 }
 .services h2 {
@@ -136,6 +156,17 @@ nav {
   color: violet;
 
 }
-
+section .page {
+  padding: 10px 20%;
+  display: flex;
+  align-items: center;
+}
+section .page .lef p{
+  font-weight: 10px;
+  text-align: center;
+}
+section .page .lef img {
+ width: 10px;
+}
 }
  
