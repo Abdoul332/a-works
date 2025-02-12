@@ -93,25 +93,20 @@ font-size: 8px;
 }
 section{
   background: rgb(240, 231, 231);
-  padding: 20px 10% 0 10%;
+  padding: 20px 10% 0 20%;
+  margin: 0;
 }
 
-section .page {
-  padding: 0 20%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
-  background: #13181d;
+section, .page {
+  padding: 0 5% 10px 5%;
+  display: inline;
+  align-items: center;
 
 }
-.lef{
-  margin: 20px;
-  padding:10px 5px 10px 5px;
+section, .page, img{
+margin: 0 50px 0 0;
 }
-.right{
-  padding: 0 60px 0 0;
-}
+
 
 
 /* Responsive */
@@ -129,23 +124,13 @@ nav{
   padding: 0 5% 10px 0;
 
 }
-nav .logo{
-  font-size: 1.3rem;
-  font-weight: bold;
-}
+
 .services{
   width: 100%;
-  padding: 60px 0 30px 10px;
+  padding: 60px 0 20px 10px;
   margin: 0;
 }
- .logo a{
-  top: 0px;
-  color: rgb(238, 221, 221);
-}
-nav {
-  padding: 0;
-}
-
+ 
 .services h1 {
   font-size: 1.3rem;
 
@@ -155,17 +140,21 @@ nav {
   color: violet;
 
 }
-section .page {
-  padding: 10px 20%;
+section, .page {
+  padding: 10px 5% 10px 5%;
+  margin: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
-section .page .lef p{
-  font-weight: 10px;
-  text-align: center;
+.page, .left, p{
+  padding: 5px 0 0 0;
+font-size: 10px;
 }
-section .page .lef img {
- width: 10px;
+
+ .page, .lef, img {
+ width: 150PX;
+ ;
 }
 }
  
