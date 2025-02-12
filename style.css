@@ -8,17 +8,19 @@
 
 body {
   font-family: "Poppins", serif;
-  margin: 0;
-  padding: 0;
+  margin: 0 ;
+  padding: 0 ;
 }
 
 header {
   background: linear-gradient(#13181d, #20212e, #341b47);
   width: 100%;
+  color:white;
   
 
   
 }
+
  nav {
   padding: 0;
   display: flex;
@@ -33,12 +35,12 @@ nav .container i {
 }
 
 
-.services {
-padding: 0 5%;
-  color: rgb(242, 232, 232);
-  background-image: url(https://images.pexels.com/photos/1190906/pexels-photo-1190906.jpeg?auto=compress&cs=tinysrgb&w=400);
-  padding: 20px;
-}
+/*.services {
+  background-image: url(https://images.pexels.com/photos/30341723/pexels-photo-30341723/free-photo-of-scenic-view-of-lake-como-riverside-architecture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}*/
 .services h2 {
   font-size: 1.6rem;
   margin:20px 0 20px 0;
