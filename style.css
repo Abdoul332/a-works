@@ -140,6 +140,12 @@ nav{
   color: violet;
 
 }
+section, .page {
+  padding: 10px 5% 10px 5%;
+  margin: 0;
+  display:inline;
+  align-items: center;
+}
 .page, .left, p{
   padding: 5px 0 0 0;
 font-size: 10px;
