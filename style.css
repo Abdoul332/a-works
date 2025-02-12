@@ -152,8 +152,8 @@ font-size: 10px;
 }
 
  .page, .lef, img {
- width: 150PX;
- ;
-}
+ width: 100px;
+ display: inline;
+
 }
  
