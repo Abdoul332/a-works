@@ -35,12 +35,17 @@ nav .container i {
 }
 
 
-/*.services {
-  background-image: url(https://images.pexels.com/photos/30341723/pexels-photo-30341723/free-photo-of-scenic-view-of-lake-como-riverside-architecture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load);
+.services {
+  padding:10px 5%;
+  background: url(img/3\ \(1\).jpg) no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}*/
+  position: relative;
+  color: white;
+
+}
+
 .services h2 {
   font-size: 1.6rem;
   margin:20px 0 20px 0;
@@ -61,11 +66,15 @@ nav .container i {
 .services p{
   font-size: 18px;
 }
+.re{
+  padding: 5%;
+}
 footer button{
-  border-radius: 7px;
+  border-radius: 10px;
   background-color: violet;
   transition:all 0.5s;
   border: none;
+  padding: 3%;
   
   color: white;
 }
@@ -108,7 +117,6 @@ section, .page {
 section, .page, img{
 margin: 0 50px 0 0;
 }
-
 
 
 /* Responsive */
@@ -154,8 +162,8 @@ font-size: 10px;
 }
 
  .page, .lef, img {
- width: 100px;
+ width: 200px;
  display: inline;
 
 }
- 
+}
