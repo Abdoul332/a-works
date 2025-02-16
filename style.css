@@ -35,46 +35,70 @@ nav .container i {
 }
 
 
-.services {
+#main {
   padding:10px 5%;
   background: url(img/3\ \(1\).jpg) no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: relative;
   color: white;
 
 }
-
-.services h2 {
+.center{
+  margin: 0;
+  padding: 0;
+  background: inherit;
+}
+.center h2 {
   font-size: 1.6rem;
   margin:20px 0 20px 0;
   color: violet;
 
 }
-.services h1 {
+.center h1 {
   padding: 20px 0 10px 0;
   font-size: 1.3rem;
   text-align: center;
 
 }
-.services h3{ 
+.center h3{ 
   color: rgb(255, 158, 255);
   font-size: 20px;
   padding: 0px 0 20px 0;
 }
-.services p{
-  font-size: 18px;
+.center p{
+  font-size: 20px;
+  color: rgb(237, 230, 221);
 }
-.re{
-  padding: 5%;
+
+.center button{
+  border-radius: 10px;
+  background-color: violet;
+  transition:all 0.5s;
+  border: none;
+  padding: 2px;
+  
+  color: white;
 }
+.center button:hover{
+  background-color:#0cb2ff;
+  border-radius: 10px;
+  color: white;
+}
+.main2 {
+  margin: 5%;
+  padding: 50%;
+}
+.secII{
+  background-color: inherit;
+}
+background-color
 footer button{
   border-radius: 10px;
   background-color: violet;
   transition:all 0.5s;
   border: none;
-  padding: 3%;
+  padding: 2px;
   
   color: white;
 }
