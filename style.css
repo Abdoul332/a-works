@@ -37,62 +37,70 @@ nav .container i {
 
 #main {
   padding:10px 5%;
-  background: url(img/3\ \(1\).jpg) no-repeat;
+  background: black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
 
 }
-.center{
-  margin: 0;
-  padding: 0;
-  background: inherit;
-}
-.center h2 {
-  font-size: 1.6rem;
-  margin:20px 0 20px 0;
-  color: violet;
-
-}
-.center h1 {
-  padding: 20px 0 10px 0;
-  font-size: 1.3rem;
+/* Style général */
+.realisation-header {
   text-align: center;
-
-}
-.center h3{ 
-  color: rgb(255, 158, 255);
-  font-size: 20px;
-  padding: 0px 0 20px 0;
-}
-.center p{
-  font-size: 20px;
-  color: rgb(237, 230, 221);
+  margin-bottom: 30px;
 }
 
-.center button{
-  border-radius: 10px;
-  background-color: violet;
-  transition:all 0.5s;
-  border: none;
-  padding: 2px;
-  
-  color: white;
-}
-.center button:hover{
-  background-color:#0cb2ff;
-  border-radius: 10px;
-  color: white;
-}
-.main2 {
-  margin: 5%;
-  padding: 50%;
-}
-.secII{
+.portfolio {
+  padding: 20px;
+  margin-bottom: 40px;
   background-color: inherit;
 }
-background-color
+
+.portfolio h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+/* Grille d'affichage */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(99, 99, 99);
+}
+
+/* Style des réalisations */
+.realisation {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(159, 149, 149, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.realisation img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.realisation h3 {
+color: white;
+}
+.realisation h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.realisation:hover {
+  transform: scale(1.05);
+  background-color: #1c1d1d;
+  width: 100%;
+}
+
 footer button{
   border-radius: 10px;
   background-color: violet;
@@ -189,5 +197,10 @@ font-size: 10px;
  width: 200px;
  display: inline;
 
+}
+.realisation img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
 }
 }
