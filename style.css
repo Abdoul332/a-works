@@ -12,14 +12,6 @@ body {
   padding: 0 ;
 }
 
-header {
-  background: linear-gradient(#13181d, #20212e, #341b47);
-  width: 100%;
-  color:white;
-  
-
-  
-}
 
  nav {
   padding: 0;
@@ -67,8 +59,8 @@ nav .container i {
   padding: 0px 0 20px 0;
 }
 .center p{
-  font-size: 20px;
-  color: rgb(237, 230, 221);
+  font-size: 22px;
+  color: rgb(255, 250, 243);
 }
 
 .center button{
@@ -79,6 +71,11 @@ nav .container i {
   padding: 2px;
   
   color: white;
+}
+.btn-secondary{
+  background: violet;
+  padding: 2px;
+  border: none;
 }
 .center button:hover{
   background-color:#0cb2ff;
@@ -172,68 +169,10 @@ footer {
 .custom-text{
 font-size: 8px;
 }
-section{
-  background: rgb(240, 231, 231);
-  padding: 20px 10% 0 20%;
-  margin: 0;
-}
-
-section, .page {
-  padding: 0 5% 10px 5%;
-  display: inline;
-  align-items: center;
-
-}
-section, .page, img{
-margin: 0 50px 0 0;
-}
 
 
 /* Responsive */
 @media screen and (max-width: 700px) {
 
-  header{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 0 0 0;
-  margin: 0;
-}
-nav{
-  padding: 0 5% 10px 0;
 
-}
-
-.services{
-  width: 100%;
-  padding: 60px 0 20px 10px;
-  margin: 0;
-}
- 
-.services h1 {
-  font-size: 1.3rem;
-
-}
-.services h2 {
-  font-size: 1.6rem;
-  color: violet;
-
-}
-section, .page {
-  padding: 10px 5% 10px 5%;
-  margin: 0;
-  display:inline;
-  align-items: center;
-}
-.page, .left, p{
-  padding: 5px 0 0 0;
-font-size: 10px;
-}
-
- .page, .lef, img {
- width: 200px;
- display: inline;
-
-}
 }
