@@ -1,6 +1,7 @@
 User-agent: *  
 Disallow: /a-works/contact/  
-Disallow: /a-works/en-savoirplus/  
+Disallow: /a-works/en-savoirplus/ 
+Disallow: /a-works/Rapport.html/  
 Allow: /  
 
 Sitemap: https://abdoul332.github.io/a-works/sitemap.xml 
