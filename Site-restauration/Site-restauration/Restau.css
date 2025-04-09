@@ -303,7 +303,8 @@ transition: 0.5s;
 .comment div{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-right:50px;
 }
 .comment div img{
     width: 45px;
@@ -314,18 +315,20 @@ transition: 0.5s;
     width: 30%;
     border: 1px solid #ccc;
     border-radius:5px ;
-    padding: 20px;
+    padding: 2px;
+
 }
 
 
 .comments .comment div h4{
-    margin-left: 15px;
-    font-size: 14px;
+    margin-left: 5px;
+    font-size: 10px;
     color: #273e60;
 }
 
 .comments .comment p{
-    font-size: 13px;
+    font-size: 14px;
+
     color:#999;
 }
 /*reservation*/
@@ -352,6 +355,7 @@ transition: 0.5s;
 }
 #reservation form input{
     margin-bottom: 10px;
+    margin-top: 10px;
     padding: 5px;
     border: 1px solid transparent;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -405,7 +409,7 @@ hr{
     padding: 10px 0;
 }
  span {
-    color: #27ae60;
+    color: #12a4d9;
 }
 
 
