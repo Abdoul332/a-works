@@ -26,7 +26,7 @@ body {
 }
 
 .nav-link:hover {
-  color:rgb(55, 255, 88) ;
+  color: #00f4a7 ;
 }
 
 /* Hero */
@@ -36,11 +36,13 @@ header {
   background-position: center;
 }
 
-header h1,
-header p {
+header h1, p .lead{
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  color: #00f4a7 ;
+  color: #86fff5 ;
+  
 }
+
+  
  header .container  .btn {
   background-color: #377e43;
   border: none;
