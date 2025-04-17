@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- ... tout ton head existant reste identique -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/40bc8033e9.js" crossorigin="anonymous" defer></script>
   <link rel="stylesheet" href="style.css">
+  
+
+  </style>
+    
   <script src="js.js" defer></script>
   <script type="application/ld+json" defer>
     {
@@ -39,79 +43,260 @@
 </script>
 </head>
 <body>
+  <!-- NAVBAR ici (inchangée, déjà bonne) -->
   <header>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-      <div class="container">
-          <a class="navbar-brand text-white" href="https://Abdoul332.github.io/a-works/" aria-label= "Page d'accueil">
-            <i class="fa-solid fa-code fs-3"></i> A-Works
-          
-          </a>
-          <button  aria-label="Menu déroulant" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto align-items-center py-3">
-                <li class="nav-item"><a class="nav-link text-white" href="Rapport.html" aria-label="Rapport Technique SEO - A-Works
-                  Audit rapide et configuration du site">Impact SEO offert 📊</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="Untitled2.html" aria-label="voir nos réalisations">Nos réalisations</a></li>
-                  
-                  <li class="nav-item">
-                  <a href="https://www.upwork.com/freelancers/~019b37056d42cfbd4a?p=1884282142477860864" aria-label="Mon profil sur upwork" class="btn btn-primary bg-dark">En savoir plus</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm ">
+     <div class="container">
+         <a class="navbar-brand text-white" href="https://Abdoul332.github.io/a-works/" aria-label= "Page d'accueil">
+           <i class="fa-solid fa-code fs-4"></i> A-Works
+         
+         </a>
+         <button   aria-label="Menu déroulant" class="navbar-toggler  custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ms-auto align-items-center py-3">
+               <li class="nav-item"><a class="nav-link text-white" href="Rapport.html" aria-label="Rapport Technique SEO - A-Works
+                 Audit rapide et configuration du site">Impact SEO offert 📊</a></li>
+                 <li class="nav-item"><a class="nav-link text-white" href="Ma landing page Audit SEO/Landing page audit seo.html" aria-label="Rapport Techn
+                  Audit rapide et configuration du site">🎁 Offre Gratuite</a></li>
+                
+                 
+                 <li class="nav-item"><a class="nav-link text-white" href="Apropos.html ">À propos</a>
+                 </li>
+             </ul>
+         </div>
+     </div>
+   </nav>
 </header>
-<main>
-  <section class="text-center py-5 bg-light">
-    <div class="container">
-      <h1 class="fw-bold text-primary">Développement Web &  Optimisation SEO</h1>
-      <p class="lead  ">Vous avez un projet en ligne ? Nous sommes là pour le concrétiser. Spécialisés en développement web et SEO technique, nous créons des sites sur-mesure qui répondent parfaitement à vos objectifs. Notre expertise ne s’arrête pas à la création. Nous vous aidons également à maximiser la visibilité de votre site grâce à des techniques  d'optimisation SEO. 
 
-       <p><mark> Discutons de votre projet dès aujourd’hui et donnons à votre présence en ligne la visibilité qu’elle mérite!</mark></p>
-        
-        </p>
-      <a href="mailto:Abdoul332@gmail.com" aria-label="mailto" class="btn btn-primary btn-lg mt-3">Commencer un projet</a>
+  <!-- HERO -->
+  <section class="text-center bg-light py-5 ">
+    <div class="container">
+      <h1 class="fw-bold text-red display-4">Créateur de Sites Web Rapides & Visibles</h1>
+      <p class="lead">Développement Web ✦ SEO ✦ Automatisation IA</p>
+      <a href="#phone" class="btn btn-primary btn-midium mt-3">Discutons de votre projet</a>
     </div>
   </section>
 
-  <section id="services" class="py-5">
+  <!-- SERVICES -->
+  <section class="py-5 bg text-center">
     <div class="container">
-      <h2 class="text-center fw-bold">Nos Services</h2>
-      <div class="row text-center mt-4">
-        <div class="col-md-3">
-          <i class="bi bi-code-slash text-primary fs-1"></i>
-          <h3 class="mt-3">Développement Web</h3>
-          <p> site WordPress, landing pages, Sites web responsive et modernes. </p>
+      <h2 class="fw-bold mb-4">Mes Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <i class="bi bi-laptop fs-1 text-primary"></i>
+          <h4>Sites modernes & rapides</h4>
+          <p>Vitrine, blog, e-commerce, tout est optimisé avec Bootstrap & WordPress.</p>
         </div>
         <div class="col-md-4">
-          <i class="bi bi-graph-up-arrow text-primary fs-1"></i>
-          <h3 class="mt-3">SEO technique </h3>
-          <p>Optimisation pour un meilleur classement Google: amélioration de la vitesse et de la structure d'un site .</p>
+          <i class="bi bi-rocket fs-1 text-success"></i>
+          <h4>SEO technique avancé</h4>
+          <p>Indexation, vitesse, Core Web Vitals, structure, contenu, stratégie.</p>
         </div>
         <div class="col-md-4">
-          <i class="bi bi-megaphone text-primary fs-1"></i>
-          <h3 class="mt-3">Marketing Digital</h3>
-          <p>Conception infographique  et réseaux sociaux.</p>
+          <i class="bi bi-cpu fs-1 text-danger"></i>
+          <h4>Automatisation IA</h4>
+          <p>Scripts, assistants IA, génération de contenu ou d’analyse personnalisée.</p>
         </div>
       </div>
     </div>
   </section>
-</main>
-<footer class="bg-dark text-light text-center py-4">
-  <p>&copy; 2025 A-Works - Tous droits réservés</p>
-  <hr class="bg-light">
-  <p>
-    <a href=" mailto:Abdoul332@gmail.com" class="text-light mx-3" aria-label="mailto"><i class="bi bi-envelope text-warning"></i></a>
-    <a href=" https://www.linkedin.com/in/ibrahim-ali-abdoulaye-5b4011327" class="text-light mx-3 " aria-label="Mon profil linkdin" ><i class="bi bi-linkedin text-primary"></i></a>
 
-    <a href="#" class="text-danger mx-3" aria-label="Mon compte instagram"><i class="bi bi-instagram"></i></a>
-  </p>
-</footer>
+  <!-- RÉALISATIONS -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Mes Réalisations</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="img/ABBA CHIKEN3.png" class="card-img-top" alt="Projet site restaurant" />
+            <div class="card-body">
+              <h5 class="card-title">Site Restaurant</h5>
+              <p class="card-text">Un site responsive, avec menu interactif et réservation simple.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="img/Refont-cleason.png" class="card-img-top" alt="Site blog SEO" />
+            <div class="card-body">
+              <h5 class="card-title">Blog SEO</h5>
+              <p class="card-text">Blog rapide, bien structuré, indexé en moins de 24h.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="img/Coacht.img.png" class="card-img-top" alt="Landing page Coach" />
+            <div class="card-body">
+              <h5 class="card-title">Landing Page Coach</h5>
+              <p class="card-text">Design impactant, formulaire efficace, SEO local intégré.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+           <hr>
+         
+    <a href="Untitled2.html"><i class="bi bi-arrow-up-right-square text-light fs-5 btn-primary">Voir plus</i></a>
+    <hr>
+  </section>
+   
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CHIFFRES CLÉS -->
+  <section class="py-5 text-white bg-primary text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Quelques chiffres</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <h3 class="display-5 fw-bold counter" data-target="20">0</h3>
+          <p>Sites livrés</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="display-5 fw-bold counter" data-target="30">0</h3>
+          <p>Pages indexées</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="display-5 fw-bold counter" data-target="100">0</h3>
+          <p>Core Web Vitals</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="display-5 fw-bold counter" data-target="30">0</h3>
+          <p>Clients satisfaits</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Ils m'ont fait confiance</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4">
+            <p>“Travail rapide, clair, très professionnel. Mon site est visible sur Google en 2 jours !”</p>
+            <h5 class="mt-3">— Abdoulaye, Coach Sporive</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4">
+            <p>“Audit technique ultra complet. On a corrigé notre site grâce à lui.”</p>
+            <h5 class="mt-3">— Marc, Consultant</h5>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4">
+            <p>“Site fluide, rapide et super design. Merci A-Works !”</p>
+            <h5 class="mt-3">— ABBA, Restaurateur</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="map" class="py-5 bg-light">
+    <div class="container">
+      <div class="row text-center mb-4">
+        <div class="col">
+          <h2 class="mb-3">Nous trouver</h2>
+          <p class="text-muted">Voici notre emplacement exact.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="map-responsive rounded shadow">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9992342443633!2d2.292292615674242!3d48.85837307928701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fcd25555555%3A0x5d1f7eaaa8fa3a9f!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1613730512345"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER ici (inchangé ou mis à jour si tu veux) -->
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+  
+        <!-- Logo / Nom du site -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold">A-Works</h5>
+          <p>Développement Web, SEO technique, et solutions digitales sur-mesure. Basé sur la performance, l'esthétique et la conversion.</p>
+        </div>
+  
+        
+  
+        <!-- Contact -->
+        <div class="col-md-2 col-lg-4 col-xl-4 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+          <p >
+            <i class="bi bi-envelope-fill me-4 fs-5"></i>
+            <a href="mailto:abdoulibrahim332@gmail.com" class="text-light text-decoration-none">abdoulibrahim332</a>
+          </p>
+          <p id="phone">
+            <i class="bi bi-whatsapp me-4 fs-5"></i> 
+             <a href="https://wa.me/22791123080" class="text-light text-decoration-none "target="blank">+227 91 12 30 80</a>
+           </p>
+           <p>
+            <i class="bi bi-briefcase-fill me-6 fs-5"></i>
+            <a href="https://comeup.com/fr/@ibrahimaliabdoulah" target="_blank" class="text-light  text-decoration-none">freelancers platform</a>
+           </p>
+           
+            <p>
+              <i class="bi bi-geo-alt-fill me-5 fs-4"></i> 
+              <a href="https://goo.gl/maps/3v5x7Z1g2kF2" class="text-light> text-decoration-none" target="blank">Niamey, Niger</a>
+            </p>
+        </div>
+  
+        <!-- Réseaux Sociaux -->
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-center">Suivez-moi</h5>
+          <a href="https://www.linkedin.com/in/abdoul332" class="text-light me-3"><i class="bi bi-linkedin fs-4"></i></a>
+          <a href="https://github.com/Abdoul332" class="text-light me-3"><i class="bi bi-github fs-4"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+        </div>
+      </div>
+  
+      <hr class="mb-4 mt-4 text-light" />
+  
+      <!-- Footer Bas -->
+      <div class="row align-items-center text-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="mb-0">© 2025 A-Works – Créé par Ibrahim Ali Abdoulahi. Tous droits réservés.</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <a href="#top" class="text-light text-decoration-none">
+            <i class="bi bi-arrow-up-circle-fill fs-4"></i> Haut de page
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS compteur animé -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 100;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
-</body>
-</html>

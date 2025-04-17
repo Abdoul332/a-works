@@ -1,13 +1,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif}.navbar{padding:15px 0}.navbar-brand i{font-size:1.8rem}.navbar-nav.nav-link{font-weight:500}.navbar.btn{border-radius:5px}
-main.container h1{font-size:2rem}
-main.container p{font-size:1.1rem}
-main.btn-lg{padding:10px 20px;border-radius:5px}
-#services{background-color:#f8f9fa}
-#services h2{color:#0d6efd}
-#services.col-md-4{padding:20px}
-#services.col-md-4 i{font-size:2.5rem;color:#0d6efd}
-footer{background-color:#0d6efd;color:white}
+
+    /* ========== POLICES & BASE ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+.custom-btn {
+  background-color: #1e1e1e; /* Couleur personnalisée */
+  border: none; /* Retire la bordure par défaut */
+  color: rgb(255, 255, 255); /* Couleur du texte */
+  padding: 10px 10px; /* Espacement du bouton */
+  border-radius:none; /* Bordures arrondies */
+  font-weight: 5px; /* Texte en gras */
+  font-size: small; /* Taille de police */
+  transition: all 0.3s ease; /* Animation lors du survol */
+}
+
+.custom-btn:hover {
+  background-color: #a2f8f3; /* Couleur de survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+  border: none; /* Retire la bordure au survol */
+}
+.custom-btn:focus {
+  outline: none; /* Retirer le contour de focus */
+  box-shadow: none; /* Supprimer la bordure ou ombre du focus */
+}
+
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #32394f;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== BOUTONS ========== */
+.btn-primary {
+  background-color: #0895f4;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-warning {
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+section .Hero{
+    background-color: #0b5757;
+}
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+/* ========== SERVICES ICONES ========== */
+.bi {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* ========== RÉALISATIONS ========== */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  object-fit: cover;
+  height: 220px;
+}
+
+/* ========== TÉMOIGNAGES ========== */
+.card.border-0 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ========== CHIFFRES (compteur) ========== */
+.counter {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* ========== HERO SECTION ========== */
+section.bg-light.text-center {
+  background: linear-gradient(135deg, #83bbff, #e9ecef);
+}
+section.bg-light.text-center {
+    background: linear-gradient(135deg, #83bbff, #e9ecef);
+}
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+}
+footer a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+footer i {
+  transition: transform 0.3s ease;
+}
+footer i:hover {
+  transform: scale(1.2);
+}
 .portfolio {width: 100%;}
 .realisation-header h1{color:#0d6efd ;}
 .portfolio-grid .realisation img{  width: 200px;}
