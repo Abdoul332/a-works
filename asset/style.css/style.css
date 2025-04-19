@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== POLICES & BASE ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #32394f;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== BOUTONS ========== */
+.custom-btn {
+  background-color: #1e1e1e;
+  border: none;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: small;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #a2f8f3;
+  transform: scale(1.1);
+}
+
+.custom-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #0895f4;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-warning {
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+section.bg-light.text-center {
+  background: linear-gradient(135deg, #83bbff, #e9ecef);
+}
+
+/* ========== SERVICES ICONES ========== */
+.bi {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* ========== RÉALISATIONS ========== */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  object-fit: cover;
+  height: 220px;
+}
+
+.card.border-0 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ========== CHIFFRES (compteur) ========== */
+.counter {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* ========== MAP ========== */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: rgb(41, 40, 42);
+  color: white;
+  text-align: center;
+  padding: 20px 5px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+footer a:hover {
+  transform: scale(1.2);
+  color: #ffc107;
+}
+
+footer i {
+  transition: transform 0.3s ease;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  main.container h1 {
+    font-size: 1.5rem;
+  }
+}
