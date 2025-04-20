@@ -1,4 +1,8 @@
 /* ========== page réalisation ========== */
+body{
+  background-color: #79d5ffcd;
+  
+}
 #realisation, .realisation, .container {
   color: #fcf7f7;
 }
@@ -9,9 +13,15 @@
   color: #4080ff;
 }
 
-#realisation {
-  background-color: #79d5ffcd;
-  background-position: absolute;
+#realisation  {
+  
+  margin-top: 10px;
+
+
+
+
+
+  
 }
 
 #realisation, .card:hover {
