@@ -111,7 +111,9 @@ section.bg-light.text-center {
 
 .card img {
   object-fit: cover;
-  height: 220px;
+  width: 100%;
+  height: auto;
+  
 }
 
 .card.border-0 {
