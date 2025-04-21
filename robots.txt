@@ -2,6 +2,8 @@ User-agent: *
 Disallow: /a-works/contact/  
 Disallow: /a-works/en-savoirplus/ 
 Disallow: /a-works/Rapport.html/  
-Allow: /  
-
+Disallow: /abdoul332.github.io/a-works/robots.txt/ 
+Disallow: /abdoul332.github.io/a-works/en/
+Disallow: /abdoul332.github.io/a-works/Untitled2.html/
+Allow   : / 
 Sitemap: https://abdoul332.github.io/a-works/sitemap.xml 
