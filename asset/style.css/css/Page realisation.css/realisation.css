@@ -1,1 +1,13 @@
-corps{background-color:#79d5ffcd}#réalisation,.container,.réalisation{color:#000}#réalisation,.container h2,.réalisation{position:relative;z-index:1;color:#4080ff}#réalisation{margin-top:10px}#réalisation,.card:hover{transform:translateY(-5px);transition:transform .3s,box-shadow .3s;box-shadow:0 8px 20px rgba(0,0,0,.12)}#réalisation,.card{transition:transform .3s,box-shadow .3s;border-radius:10px;overflow:hidden}#réalisation,.card img{border-top-left-radius:10px;border-top-right-radius:10px}.card .btn{width:100%;margin-bottom : 10px}
+corps{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+    background-color:#79d5ffcd}#réalisation,.container,.réalisation{color:#000}#réalisation,.container h2,.réalisation{position:relative;z-index:1;color:#4080ff}#réalisation{margin-top:10px}#réalisation,
+.container-portfolio{
+    max-width:1440px; margin-inline:auto; }
+.card-body{padding:1rem .8rem}.card-title{font-size:1.05rem}.card-text{font-size:.9rem}.card:hover{transform:translateY(-5px);transition:transform .3s,box-shadow .3s;box-shadow:0 8px 20px rgba(0,0,0,.12)}#réalisation,.card{transition:transform .3s,box-shadow .3s;border-radius:10px;overflow:hidden}#réalisation,.card img{border-top-left-radius:10px;border-top-right-radius:10px}.card-img-top{height:200px;   object-fit:cover;   /* 200–220 px suffit */    /* conserve le ratio */}.card .btn{width:100%;margin-bottom : 10px}
+  @media (min-width:768px){ /* tablettes & + */
+    .card-body{padding:1.25rem}
+    .card-title{font-size:1.15rem}
+    .card-text{font-size:1rem}
+    .card-img-top{
+      height:300px;}}@media (min-width:1200px){ /* écrans XL */
+    .card-img-top{
+      height:240px;} }
