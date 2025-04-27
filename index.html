@@ -56,6 +56,8 @@
                  Audit rapide et configuration du site">Impact SEO offert 📊</a></li>
                  <li class="nav-item"><a class="nav-link text-white" href="Ma landing page Audit SEO/Landing page audit seo.html" aria-label="Rapport Techn
                   Audit rapide et configuration du site">🎁 Offre Gratuite</a></li>
+                  <li class="nav-item"><a class="nav-link text-white" href="package prix.html" aria-label="Rapport Techn
+                    Audit rapide et configuration du site">Package & prix</a></li>
                 
                  <li class="nav-item"><a class="nav-link text-white" href="Apropos.html ">À propos</a>
                  </li>
@@ -70,7 +72,15 @@
     <div class="container">
       <h1 class="fw-bold text-red display-4">Créateur de Sites Web Rapides & Visibles</h1>
       <p class="lead">Développement Web ✦ SEO ✦ Automatisation IA</p>
-      <a href="#footer" class="btn btn-primary btn-midium mt-3">Discutons de votre projet</a>
+      <div style="position: relative; display: inline-block;">
+        <a href="#" id="discutons-btn" class="btn btn-primary btn-midium mt-3 fs-6">Discutons de votre projet</a>
+      
+        <div id="options-popup" class="popup-options fs-6">
+          <a href="#footer" class="btn btn-secondary mb-2">Contacts</a><br>
+          <a href="package prix.html" class="btn btn-secondary">Packages & Prix</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -110,13 +120,15 @@
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="card shadow h-100">
-          <img src="img/Blog et site vitrine.webp" class="card-img-top img-fluid rounded" alt="Site blog SEO" loading="lazy" style="object-fit: cover; height: 250px;">
+          <img src="img/Dev web baniere.webp" class="card-img-top img-fluid rounded" alt="Site blog SEO" loading="lazy" style="object-fit: cover; height: 250px;">
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="card shadow h-100">
           <img src="img/Duré d'engagement site web.jpg" class="card-img-top img-fluid rounded" alt="Site blog SEO" loading="lazy" style="object-fit: cover; height: 250px;">
         </div>
+      </div>
+      </div>
       </div>
     </div>
   </div>
@@ -198,10 +210,7 @@
       <div class="row justify-content-center">
         <div class="col-md-10">
           <div class="map-responsive rounded shadow">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=https://www.google.com/maps/@13.8160403,8.9789864,15z?hl=fr&entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D.9992342443633!2d2.292292615674242!3d48.85837307928701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fcd25555555%3A0x5d1f7eaaa8fa3a9f!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1613730512345"
-              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=https://www.google.com/maps/@13.8160403,8.9789864,15z?hl=fr&entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D.9992342443633!2d2.292292615674242!3d48.85837307928701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fcd25555555%3A0x5d1f7eaaa8fa3a9f!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1613730512345" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -264,29 +273,6 @@
     </div>
   </div>
 </footer>
-
-  <!-- JS compteur animé -->
-  <script>
-    const counters = document.querySelectorAll('.counter');
-    const speed = 100;
-
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-
-        const increment = target / speed;
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS compteur animé --><script defer>const counters=document.querySelectorAll('.counter');const speed=100;counters.forEach(counter=>{const updateCount=()=>{const target=+counter.getAttribute('data-target');const count=+counter.innerText;const increment=target/speed;if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCount,30)}else{counter.innerText=target}};updateCount()});</script><script defer>document.getElementById('discutons-btn').addEventListener('click',function(event){event.preventDefault();var popup=document.getElementById('options-popup');if(popup.style.display==='block'){popup.style.display='none'}else{popup.style.display='block'}});document.addEventListener('click',function(event){var popup=document.getElementById('options-popup');var button=document.getElementById('discutons-btn');if(!button.contains(event.target)&&!popup.contains(event.target)){popup.style.display='none'}});</script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
