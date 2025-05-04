@@ -56,9 +56,7 @@
                  Audit rapide et configuration du site">Impact SEO offert 📊</a></li>
                  <li class="nav-item"><a class="nav-link text-white" href="Ma landing page Audit SEO/Landing page audit seo.html" aria-label="Rapport Techn
                   Audit rapide et configuration du site">🎁 Offre Gratuite</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="package prix.html" aria-label="Rapport Techn
-                    Audit rapide et configuration du site">Packages & prix</a></li>
-                    
+                 
                  <li class="nav-item"><a class="nav-link text-white" href="Apropos.html ">À propos</a>
                  </li>
                  <li class="nav-item"><a class="nav-link text-danger fw-bold" href="#footer" aria-label="Mes contacter
@@ -76,6 +74,7 @@
       <h1 class="fw-bold text-red display-4">Créateur de Sites Web Rapides & Visibles</h1>
       <p class="lead">Développement Web ✦ SEO ✦ Automatisation IA</p>
     </div>
+    
   </section>
 
   <!-- SERVICES -->
@@ -100,8 +99,8 @@
         </div>
       </div>
     </div>
+    <div class="cta-wrapper mt-4" style="position:relative;display:inline-block;"><button id="ctaMain" class="btn btn-primary rounded-pill px-4 py-2 shadow">💬 Discutons de votre projet</button><div id="ctaOptions" style="position:absolute;top:110%;left:50%;transform:translateX(-50%);display:none;flex-direction:line;gap:0.5rem;z-index:10;"><a href="mailto:abdoulibrahim332@gmail.com"aria-label="Mon adresse Email"  class="btn btn-outline-primary" style="width:200px;">📞 Contact</a><a href="package prix.html" aria-label="lien vers la page prix"class="btn btn-outline-success" style="width:200px;">💼 Packages & Prix</a></div></div>
   </section>
-
   <!-- RÉALISATIONS -->
 <section class="py-5 bg-light text-center">
   <div class="container">
@@ -271,6 +270,12 @@
     </div>
   </div>
 </footer>
-  <!-- JS compteur animé --><script defer>const counters=document.querySelectorAll('.counter');const speed=100;counters.forEach(counter=>{const updateCount=()=>{const target=+counter.getAttribute('data-target');const count=+counter.innerText;const increment=target/speed;if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCount,30)}else{counter.innerText=target}};updateCount()});</script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- JS CALL TO ACTION BUTTON -->
+  <script defer>
+    const c=document.getElementById("ctaMain"),o=document.getElementById("ctaOptions");c.addEventListener("click",()=>{if("flex"===o.style.display)o.style.display="none";else{o.style.display="flex",o.animate([{opacity:0,transform:"translate(-50%, 20px)"},{opacity:1,transform:"translate(-50%, 0)"}],{duration:300,easing:"ease"})}}),document.addEventListener("click",e=>{c.contains(e.target)||o.contains(e.target)||("flex"===o.style.display&&(o.style.display="none"))});
+  </script>
+  <!-- JS compteur animé --><script defer>const counters=document.querySelectorAll('.counter');const speed=100;counters.forEach(counter=>{const updateCount=()=>{const target=+counter.getAttribute('data-target');const count=+counter.innerText;const increment=target/speed;if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCount,30)}else{counter.innerText=target}};updateCount()});</script>
+   <!-- CDN Bootstrap (à garder si tu veux le style Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
