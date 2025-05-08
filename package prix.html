@@ -1,110 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comparatif des Packs | Création de site web</title>
-  <meta name="description" content="Découvrez nos packs : One Page, Vitrine Pro et Site Complet. Un site web pro, rapide et optimisé SEO.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création de Site Vitrine Pro</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body{
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f8;
-      color: #333;
-    }
-    .icon,.price{color:#0d6efd}body{background-color:#f4f4f8;font-family:'Segoe UI',sans-serif;color:#333}h2{font-size:2.2rem}.pack-card{border-radius:1.5rem;padding:2rem;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}.pack-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.1)}.badge-pack{font-size:.95rem;padding:.4rem 1rem;border-radius:30px}.icon{margin-right:8px}.icon.cross{color:#999}.price{font-size:1.7rem;font-weight:700}.btn-cta,ul li{font-size:1rem}ul li{margin-bottom:.5rem}.cta-section{background:#0d6efd;color:#fff;border-radius:1rem;padding:2rem;text-align:center;margin-top:4rem}.cta-section h3{font-size:1.8rem;margin-bottom:1rem}.btn-cta{padding:.75rem 1.5rem;border-radius:50px}
-   </style>
-  <!-- Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-57J8LJGQ1L"></script>
-   <script defer>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-     gtag('config', 'G-57J8LJGQ1L');
-   </script>
+   .advantage-card,.price-card{transition:transform .3s,box-shadow .3s}body{font-family:Inter,sans-serif;background-color:#f8f9fa;color:#212529}header.hero{background:linear-gradient(to right,#0d6efd,#6610f2);color:#fff;padding:100px 0}.btn-primary{background-color:#0d6efd;border:none}.btn-primary:hover{background-color:#0b5ed7}.advantage-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.15)}.price-card{background:linear-gradient(135deg,#f8f9fa,#fff);border:1px solid #dee2e6}.price-card:hover{transform:scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.1)}.fade-in-up{opacity:0;transform:translateY(20px);transition:.6s}.fade-in-up.show{opacity:1;transform:translateY(0)}footer{background-color:#212529;color:#fff;padding:40px 0}.accordion-button:not(.collapsed){background-color:#0d6efd;color:#fff}
+  </style>
 </head>
+
 <body>
+  <!-- Hero -->
+  <header class="hero text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Votre Site Vitrine Professionnel</h1>
+      <p class="lead mt-3 animate__animated animate__fadeInUp">Un site rapide, moderne, et optimisé pour Google – livré clé en main.</p>
+      <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-light mt-4 px-4 py-2 fw-semibold">Commencer maintenant</a>
+    </div>
+  </header>
 
-<section class="container py-5">
-  <div class="text-center mb-5">
-    <h2 class="fw-bold">Comparatif des Packs de Création de Site Web</h2>
-    <p class="text-muted">Trouvez l’offre idéale pour vos besoins et démarrez votre présence en ligne</p>
+  <!-- Avantages -->
+<section class="container my-5  ">
+  <div class="row text-center g-4">
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="p-4 bg-warning text-white rounded shadow-sm advantage-card lead">
+        <h5 class="fw-bold">🎨 Design moderne</h5>
+        <p>Conçu sur-mesure pour refléter votre image professionnelle.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="p-4 bg-primary text-white rounded shadow-sm advantage-card lead">
+        <h5 class="fw-bold">🌐 Optimisé SEO</h5>
+        <p>Structure, rapidité et indexation Google garanties.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="p-4 bg-success text-white rounded shadow-sm advantage-card lead">
+        <h5 class="fw-bold">📱 Responsive</h5>
+        <p>Parfaitement lisible sur mobile, tablette et ordinateur.</p>
+      </div>
+    </div>
   </div>
-
-  <div class="row g-4">
-
-    <!-- One Page -->
-    <div class="col-md-4">
-      <div class="pack-card h-100">
-        <span class="badge bg-secondary badge-pack mb-3">⭐ Pack One Page</span>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check-circle icon"></i>1 page unique</li>
-          <li><i class="bi bi-check-circle icon"></i>Design sur-mesure</li>
-          <li><i class="bi bi-check-circle icon"></i>Responsive mobile & tablette</li>
-          <li><i class="bi bi-check-circle icon"></i>Formulaire de contact</li>
-          <li><i class="bi bi-check-circle icon"></i>SEO avancé</li>
-          <li><i class="bi bi-check-circle icon"></i>Galerie médias</li>
-          <li><i class="bi bi-check-circle icon"></i>Témoignages clients</li>
-          <li><i class="bi bi-x-circle icon cross"></i>Blog intégré</li>
-          <li><i class="bi bi-x-circle icon cross"></i>E-commerce</li>
+</section>
+<!-- Tarification avec défilement progressif -->
+<section class="bg-light py-5 w-100" id="pricing"style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHNpdGV8ZW58MHx8fHwxNjg3NTY5MjQ1&ixlib=rb-4.0.3&q=80&w=1080'); background-size: cover; background-position: center;">
+  <div class="container text-center ">
+    <h2 class="fw-bold mb-4"> Une seule offre 🏷️</h2>
+    <div class="card mx-auto price-card shadow-lg" style="max-width: 400px;">
+      <div class="card-body bg-info text-dark   rounded-top">
+        <h3 class="card-title fw-bold fade-in-up" id="pricing-name"> Tout inclus 📦</h3>
+        <hr>
+        <h4 class=" bg-dark text-white" > Site Vitrine Pro</h4>
+        <hr>
+        <ul class="list-unstyled my-3 lead text-white" id="pricing-features">
+          <li class="fade-in-up "> Design personnalisé ✔️</li>
+          <li class="fade-in-up "> 4 à 5 pages ✔️</li>
+          <li class="fade-in-up "> Mobile & SEO friendly ✔️</li>
+          <li class="fade-in-up "> Livraison rapide ✔️</li>
+          <li class="fade-in-up "> Installation offerte 🎁</li>
         </ul>
-        <p class="mt-3"><strong>⏱ Délai :</strong> 4 jours</p>
-        <p class="price">40 $US</p>
+        <h4 class="fw-bold text-white fs-large fade-in-up bg-primary" id="pricing-price">200€</h4>
       </div>
     </div>
-
-    <!-- Vitrine Pro -->
-    <div class="col-md-4">
-      <div class="pack-card h-100">
-        <span class="badge bg-primary badge-pack mb-3">🏆 Pack Vitrine Pro</span>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check-circle icon"></i>Jusqu’à 5 pages</li>
-          <li><i class="bi bi-check-circle icon"></i>Design sur-mesure</li>
-          <li><i class="bi bi-check-circle icon"></i>Responsive mobile & tablette</li>
-          <li><i class="bi bi-check-circle icon"></i>Formulaire de contact</li>
-          <li><i class="bi bi-check-circle icon"></i>SEO avancé</li>
-          <li><i class="bi bi-check-circle icon"></i>Galerie médias</li>
-          <li><i class="bi bi-check-circle icon"></i>Témoignages clients</li>
-          <li><i class="bi bi-x-circle icon cross"></i>Blog intégré</li>
-          <li><i class="bi bi-check-circle icon"></i>E-commerce (10 produits)</li>
-        </ul>
-        <p class="mt-3"><strong>⏱ Délai :</strong> 10 jours</p>
-        <p class="price">100 $US</p>
-      </div>
-    </div>
-
-    <!-- Site Complet -->
-    <div class="col-md-4">
-      <div class="pack-card h-100">
-        <span class="badge bg-dark text-white badge-pack mb-3">💎 Pack Site Complet</span>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-check-circle icon"></i>Jusqu’à 10 pages</li>
-          <li><i class="bi bi-check-circle icon"></i>Design sur-mesure</li>
-          <li><i class="bi bi-check-circle icon"></i>Responsive mobile & tablette</li>
-          <li><i class="bi bi-check-circle icon"></i>Formulaire de contact</li>
-          <li><i class="bi bi-check-circle icon"></i>SEO avancé</li>
-          <li><i class="bi bi-check-circle icon"></i>Galerie médias</li>
-          <li><i class="bi bi-check-circle icon"></i>Blog intégré</li>
-          <li><i class="bi bi-check-circle icon"></i>Témoignages clients</li>
-          <li><i class="bi bi-check-circle icon"></i>E-commerce (20 produits)</li>
-        </ul>
-        <p class="mt-3"><strong>⏱ Délai :</strong> 20 jours</p>
-        <p class="price">200 $US</p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Call To Action -->
-  <div class="cta-section mt-5">
-    <h3>Vous avez une question ou un projet en tête ?</h3>
-    <p class="mb-4">Contactez-moi directement, je vous réponds rapidement !</p>
-    <a href="mailto:https//:abdoul332@gmail.com" class="btn btn-light btn-cta">
-      <i class="bi bi-envelope-fill me-2"></i>Me contacter
-    </a>
+    <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-success  mt-3 fade-in-up px-4" id="pricing-btn"> Commander maintenant</a>
   </div>
 </section>
 
+
+
+
+  <!-- FAQ -->
+  <section class="container my-5">
+    <h3 class="text-center mb-4 fw-bold">FAQ – Questions Fréquentes</h3>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Combien de temps faut-il pour créer mon site ?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Un site vitrine simple est livré en 4 à 7 jours selon la complexité. Tout est clair dès le début.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Le site sera-t-il bien référencé sur Google ?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Oui. Je fournis un code optimisé, rapide, mobile-first et conforme aux bonnes pratiques SEO techniques.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Puis-je modifier le site après livraison ?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Bien sûr. Vous aurez accès aux fichiers et je propose aussi un service de modification ou suivi si besoin.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            Comment héberger mon site web ?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Je vous guide pour choisir un bon hébergeur (Hostinger, Infomaniak, etc.) et j’installe tout si besoin. Coût : environ 2€/mois.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA final -->
+  <section id="contact" class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold">Prêt à booster votre présence en ligne ?</h2>
+      <p class="lead">Réservez dès maintenant votre site vitrine professionnel.</p>
+      <a href="https://wa.me/22791123080" target="_blank" class="btn btn-light px-4 py-2 mt-3">Discuter sur WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p class="mb-0">&copy; 2025 Ibrahim Ali Abdoulahi – Développeur Web / Expert SEO</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({duration:1000,once:true});
+  window.addEventListener("DOMContentLoaded",()=>{const e=e=>new Promise(o=>setTimeout(o,e));async function o(){const o=[document.getElementById("pricing-name"),...document.querySelectorAll("#pricing-features li"),document.getElementById("pricing-price"),document.getElementById("pricing-btn")];for(let t=0;t<o.length;t++)o[t].classList.add("show"),await e(400)}document.querySelectorAll(".fade-in-up").forEach(e=>{e.classList.remove("show")}),o()});
+</script>
 </body>
+
 </html>
