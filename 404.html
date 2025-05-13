@@ -1,17 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>Redirection...</title>
   <script>
-  const baseRedirection = "https://abdoul332.github.io/a-works"; // ton vrai site GitHub Pages
+  const baseRedirection = "https://abdoul332.github.io/a-works"; // GitHub Pages
 
   const redirections = {
     "/en/": "/",                      // redirige /en/ vers la page d'accueil
     "/Untitled2.html": "/",          // redirige vers l'accueil
-    "/ancienne-page.html": "/works.html", // exemple : redirige vers la page de réalisations
-    // Ajoute d'autres redirections ici
+    "/ancienne-page.html": "/works.html", //  redirige vers la page de réalisations
+    // Ajoute d'autres redirections
   };
 
   const chemin = window.location.pathname.replace("/a-works", "");
