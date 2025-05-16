@@ -1,185 +1,489 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Site vitrine professionnel à 200€ – rapide, responsive, optimisé SEO et livré clé en main. Commandez votre présence en ligne dès aujourd'hui.">
-<meta property="og:title" content="Création de Site Vitrine Pro">
-<meta property="og:description" content="Un site rapide, moderne et optimisé pour Google – livré clé en main à 200€.">
-<meta property="og:image" content="URL_de_ton_image_partage">
-<meta property="og:type" content="website">
+  <meta property="og:title" content="Création de Site Vitrine Pro">
+  <meta property="og:description" content="Un site rapide, moderne et optimisé pour Google – livré clé en main à 200€.">
+  <meta property="og:image" content="URL_de_ton_image_partage">
+  <meta property="og:type" content="website">
   <title>Création de Site Vitrine Pro</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Fonts & Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Animations & AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
   <style>
-   .advantage-card,.price-card{transition:transform .3s,box-shadow .3s}body{font-family:Inter,sans-serif;background-color:#f8f9fa;color:#212529}header.hero{background:linear-gradient(to right,#0d6efd,#6610f2);color:#fff;padding:100px 0}.btn-primary{background-color:#0d6efd;border:none}.btn-primary:hover{background-color:#0b5ed7}.advantage-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.15)}.price-card{background:linear-gradient(135deg,#f8f9fa,#fff);border:1px solid #dee2e6}.price-card:hover{transform:scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.1)}.fade-in-up{opacity:0;transform:translateY(20px);transition:.6s}.fade-in-up.show{opacity:1;transform:translateY(0)}footer{background-color:#212529;color:#fff;padding:40px 0}.accordion-button:not(.collapsed){background-color:#0d6efd;color:#fff}
-  </style>
+  body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Héros */
+header.hero {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  color: #fff;
+  padding: 100px 0;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Cartes */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.price-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+section.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* FAQ */
+.accordion-button:not(.collapsed) {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* AOS Animation fix */
+[data-aos] {
+  transition-property: opacity, transform;
+}
+.card {
+  transition: transform 0.3s ease;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+</style>
 </head>
+<body>
+
 
 <body>
   <!-- Hero -->
-  <header class="hero text-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Votre Site Vitrine Professionnel</h1>
-      <p class="lead mt-3 animate__animated animate__fadeInUp">Un site rapide, moderne, et optimisé pour Google – livré clé en main.</p>
-      <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-light mt-4 px-4 py-2 fw-semibold">Commencer maintenant</a>
-    </div>
-  </header>
 
-  <!-- Avantages -->
-<section class="container my-5  ">
-  <div class="row text-center g-4">
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-      <div class="p-4 bg-warning text-white rounded shadow-sm advantage-card lead">
-        <h5 class="fw-bold">🎨 Design moderne</h5>
-        <p>Conçu sur-mesure pour refléter votre image professionnelle.</p>
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="p-4 bg-primary text-white rounded shadow-sm advantage-card lead">
-        <h5 class="fw-bold">🌐 Optimisé SEO</h5>
-        <p>Structure, rapidité et indexation Google garanties.</p>
-      </div>
-    </div>
-    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-      <div class="p-4 bg-success text-white rounded shadow-sm advantage-card lead">
-        <h5 class="fw-bold">📱 Responsive</h5>
-        <p>Parfaitement lisible sur mobile, tablette et ordinateur.</p>
+<header class="hero text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Sites web, SEO & support technique</h1>
+    <p class="lead mb-4">WordPress, code sur mesure, optimisation SEO ou dépannage : choisissez l'offre adaptée à vos besoins. Design moderne, performance, visibilité — pour des résultats concrets.</p>
+    <a href="#offres" class="btn btn-primary btn-lg">Voir les offres disponibles</a>
+  </div>
+</header>
+  <!-- Section Offres - Style ComeUp -->
+<section id="offres" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Mes Offres de Création de Site Web</h2>
+    
+   <!-- Offres de services -->
+<div class="row g-4">
+  <!-- Offre 1 -->
+  <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+    <div class="card h-100 shadow-sm border-0">
+      <img src="asset/img/wordpress bug1.png" class="card-img-top" alt="Correction WordPress">
+      <div class="card-body">
+        <h5 class="fw-bold">Correction & installation WordPress</h5>
+        <p class="small text-muted">Je corrige vos bugs et installe les bons plugins
+Fiable, rapide, sans casser votre site
+<hr>
+⚙️ Bugs d’affichage, erreurs techniques, lenteur
+<hr>
+🔌 Plugins essentiels installés et configurés
+<hr>
+📩 Sauvegarde + rapport clair inclus
+<hr>
+
+→ Intervention rapide sous 24–48h</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="fw-bold text-primary">97 000 F CFA</span>
+          <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline-primary btn-sm">Commander</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<!-- Tarification avec défilement progressif -->
-<section class="bg-light py-5 w-100" id="pricing"style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHNpdGV8ZW58MHx8fHwxNjg3NTY5MjQ1&ixlib=rb-4.0.3&q=80&w=1080'); background-size: cover; background-position: center;">
-  <div class="container text-center ">
-    <h2 class="fw-bold mb-4"> Une seule offre 🏷️</h2>
-    <div class="card mx-auto price-card shadow-lg" style="max-width: 400px;">
-      <div class="card-body bg-info text-dark   rounded-top">
-        <h3 class="card-title fw-bold fade-in-up" id="pricing-name"> Tout inclus 📦</h3>
-        <hr>
-        <h4 class=" bg-dark text-white" > Site Vitrine Pro</h4>
-        <hr>
-        <ul class="list-unstyled my-3 lead text-white" id="pricing-features">
-          <li class="fade-in-up "> Design personnalisé ✔️</li>
-          <li class="fade-in-up "> 4 à 5 pages ✔️</li>
-          <li class="fade-in-up "> Mobile & SEO friendly ✔️</li>
-          <li class="fade-in-up "> Livraison rapide ✔️</li>
-          <li class="fade-in-up "> Installation offerte 🎁</li>
-        </ul>
-        <h4 class="fw-bold text-white fs-large fade-in-up bg-primary" id="pricing-price">200€</h4>
+
+  <!-- Offre 2 -->
+  <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+    <div class="card h-100 shadow-sm border-0">
+      <img src="asset/img/Wordpress bug.png" class="card-img-top" alt="Site WordPress Pro">
+      <div class="card-body">
+        <h5 class="fw-bold">Site WordPress optimisé</h5>
+        <p class="small text-muted">Je crée votre site WordPress rapide, moderne et optimisé SEO
+
+ Performance |  Visibilité |  Résultats
+
+<hr>
+
+Site WordPress professionnel avec Elementor ou Divi
+<hr>
+Design responsive, rapide et optimisé SEO
+<hr>
+Aucune surcharge : pas de plugins inutiles
+<hr>
+Structure technique claire + Core Web Vitals optimisés
+<hr>
+</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="fw-bold text-primary"> à 259 000 CFA</span>
+          <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline-primary btn-sm">Commander</a>
+        </div>
       </div>
     </div>
-    <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-success  mt-3 fade-in-up px-4" id="pricing-btn"> Commander maintenant</a>
   </div>
-</section>
+   
+  <!-- Offre 3 -->
+<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+  <div class="card h-100 shadow-sm border-0">
+    <img src="asset/img/Page en construction par un développeur.png" class="card-img-top" alt="Site codé à la main">
+    <div class="card-body">
+      <h5 class="fw-bold">Site codé sans CMS</h5>
+      <p class="small text-muted">Site rapide, léger et codé à la main
+Idéal pour portfolio, présentation pro ou blog simple
+<hr>
+🛠️ 100% personnalisable – sans dépendance à WordPress
+<hr>
+⚡ Vitesse, SEO, responsive inclus
+<hr>
+💼 Exemples : one page, vitrine, blog statique
 
+<hr>
+→ Livraison rapide, code propre, modifiable facilement</p>
+<hr>
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="fw-bold text-primary">199 000 F CFA</span>
+        <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline-primary btn-sm">Commander</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Offre 4 – Optimisation SEO Technique -->
+<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+  <div class="card h-100 shadow-sm border-0">
+    <img src="asset/img/Audit SEO et Intelligence Artificielle.png" class="card-img-top" alt="Optimisation SEO Technique">
+    <div class="card-body d-flex flex-column justify-content-between">
+      <div>
+        <h5 class="fw-bold">Optimisation SEO Technique</h5>
+        <p class="small text-muted mb-2">
+          🚀 Boostez votre visibilité Google grâce à un audit complet, une optimisation de la vitesse, des balises SEO et une indexation propre.
+          <hr>
+          🧠 Audit technique + plan d’action
+           <hr>
+          ⚡ Core Web Vitals & vitesse
+            <hr>
+          🔧 Balises, sitemap, Search Console
+        </p>
+
+        <hr>
+      </div>
+      <div class="d-flex justify-content-between align-items-center mt-auto">
+        <span class="fw-bold text-primary">À 327 000 F CFA</span>
+        <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline-primary btn-sm">Commander</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+<!-- Témoignage -->
 <section class="container my-5">
   <h3 class="text-center fw-bold mb-4">Ils m’ont fait confiance</h3>
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="border rounded p-4 shadow-sm bg-white">
-        <p class="fst-italic">“Je suis très content de notre collaboration avec Ibrahim. Il est très à l'écoute et sait intégrer les remarques, ce qui a conduit à un excellent travail. Je le recommande. !”</p>
-        <div class="d-flex align-items-center mt-3">
-          <img src="img/Cleason.png" class="rounded-circle me-3" alt="Client">
+        <p class="fst-italic mb-3">“Je suis très content de notre collaboration avec Ibrahim. Il est à l'écoute, proactif, et a livré un excellent travail. Je recommande vivement !”</p>
+        <div class="d-flex align-items-center">
+          <img src="img/Cleason.png" class="rounded-circle me-3" width="50" alt="Client">
           <div>
             <h6 class="mb-0 fw-semibold">Cleason</h6>
-            <small class="text-muted"> indépendant</small>
+            <small class="text-muted">Indépendant</small>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="container my-5">
-  <h3 class="text-center fw-bold mb-4">Ce que vous obtenez 🔍</h3>
-  <ul class="list-group list-group-flush mx-auto" style="max-width: 600px;">
-    <li class="list-group-item">✔️ Un design sur-mesure et moderne</li>
-    <li class="list-group-item">✔️ Jusqu’à 5 pages incluses</li>
-    <li class="list-group-item">✔️ Optimisation SEO technique</li>
-    <li class="list-group-item">✔️ Installation et mise en ligne incluses</li>
-    <li class="list-group-item">✔️ Version responsive (mobile + tablette)</li>
-    <li class="list-group-item">✔️ Livraison rapide (4 à 7 jours)</li>
-  </ul>
-</section>
 
-
-
-  <!-- FAQ -->
-  <section class="container my-5">
-    <h3 class="text-center mb-4 fw-bold">FAQ – Questions Fréquentes</h3>
+<section class="faq-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">FAQ – Questions fréquentes</h2>
     <div class="accordion" id="faqAccordion">
+      
+      <!-- Question 1 -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
             Combien de temps faut-il pour créer mon site ?
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Un site vitrine simple est livré en 4 à 7 jours selon la complexité. Tout est clair dès le début.
+            Cela dépend de l’offre choisie :
+            <ul>
+              <li><strong>One Page :</strong> 3 à 5 jours</li>
+              <li><strong>Site Vitrine :</strong> 5 à 7 jours</li>
+              <li><strong>Blog WordPress :</strong> 5 à 8 jours</li>
+              <li><strong>Site Complet :</strong> 7 à 10 jours</li>
+            </ul>
+            Un planning précis vous est communiqué dès la commande.
           </div>
         </div>
       </div>
+
+      <!-- Question 2 -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-            Le site sera-t-il bien référencé sur Google ?
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+            Est-ce que le site sera responsive (mobile) ?
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Oui. Je fournis un code optimisé, rapide, mobile-first et conforme aux bonnes pratiques SEO techniques.
+            Oui, tous les sites sont entièrement adaptés aux smartphones, tablettes et ordinateurs.
           </div>
         </div>
       </div>
+
+      <!-- Question 3 -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-            Puis-je modifier le site après livraison ?
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+            Le référencement (SEO) est-il inclus ?
           </button>
         </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Bien sûr. Vous aurez accès aux fichiers et je propose aussi un service de modification ou suivi si besoin.
+            Oui. Toutes mes offres incluent un SEO technique : structure optimisée, rapidité, balisage clair, et indexation facilitée.
           </div>
         </div>
       </div>
+      <!-- Question 4 -->
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-            Comment héberger mon site web ?
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+              Pourrai-je modifier mon site moi-même ?
+
           </button>
         </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Je vous guide pour choisir un bon hébergeur (Hostinger, Infomaniak, etc.) et j’installe tout si besoin. Coût : environ 2€/mois.
+            Oui. Pour WordPress, l’interface est simple. Pour les sites codés, une documentation est fournie.
+
           </div>
         </div>
+      </div>
+      <!-- Question 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+            Le nom de domaine et l’hébergement sont-ils inclus ?
+
+          </button>
+        </h2>
+        <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Non, mais je vous accompagne gratuitement dans leur configuration ou je m’en charge si besoin.
+
+          </div>
+        </div>
+      </div>
+      <!-- Question 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+           Puis-je demander des modifications après livraison ?
+
+          </button>
+        </h2>
+        <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+           Oui, chaque offre inclut un nombre de retours gratuits. Je reste aussi disponible pour des ajustements à la demande.
+
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Ajoute d’autres questions ici si besoin -->
+        <!-- Question 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+         Ce que vous devez savoir avant de commander
+          </button>
+        </h2>
+        <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+           Je m’engage à vous livrer un site professionnel, rapide, responsive, et optimisé pour le SEO, que ce soit un site codé à la main ou sous WordPress.
+<br>
+🔧 Les délais sont clairs et respectés :
+
+Site codé (HTML/CSS) : livré en 3 à 7 jours selon le projet.
+
+Optimisation SEO complète : 3 à 5 jours avec rapport & actions.
+<br>
+Correction WordPress : 24 à 48h en moyenne.
+Un planning précis est défini avec vous dès le départ.
+<br>
+📱 Chaque site est 100 % responsive, testé sur mobile, tablette et ordinateur. Je ne livre jamais un site mal affiché ou bâclé.
+<br>
+⚙️ Le SEO est intégré dès la base : structure, balises, rapidité, sitemap, indexation, Core Web Vitals... Vous bénéficiez d’un vrai avantage Google, sans jargon inutile. Si besoin, je propose aussi un audit complet avec plan d’action personnalisé.
+<br>
+✍️ Le site vous appartient : tout est modifiable.
+
+Si vous êtes sous WordPress, je vous livre une interface simple + les bons plugins.
+
+Si c’est un site codé, je fournis un code propre et documenté, prêt à être repris.
+<br>
+🛠️ Vous n’êtes jamais seul :
+Je reste disponible après la livraison, je corrige les éventuels détails gratuitement et je propose aussi un accompagnement ou une maintenance si besoin.
+<br>
+🌐 Nom de domaine & hébergement : non inclus, mais je vous guide gratuitement ou je m’en charge si vous préférez.
+<br>
+💼 Je suis un professionnel indépendant, je privilégie la qualité, la fiabilité et la transparence. Mon objectif n’est pas de « vendre un site », mais de vous aider à réussir avec un site performant, propre et utile.
+
+
+          </div>
+        </div>
+      </div>
+      
+ <!-- Question 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+          Proposez-vous un accompagnement après la livraison ?
+
+
+          </button>
+        </h2>
+        <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Oui, je vous accompagne gratuitement après la livraison. Je propose aussi un service de maintenance si nécessaire.
+
+
+          </div>
+        </div>
+      </div>
+      
+ <!-- Question 9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+          Quels sont les moyens de paiement ?
+          </button>
+        </h2>
+        <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+          Paiement possible par mobile money, carte bancaire ou virement bancaire selon votre préférence.
+          </div>
+        </div>
+      </div>
+      
+
+       
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS Bundle (Popper inclus) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Contact / CTA final -->
+<section id="contact" class="py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 class="fw-bold">Prêt à booster votre présence en ligne ?</h2>
+    <p class="lead">Réservez dès maintenant votre site vitrine professionnel sur mesure.</p>
+    <a href="https://wa.me/22791123080" target="_blank" class="btn btn-light px-4 py-2 mt-3">Discuter sur WhatsApp</a>
+  </div>
+</section>
+<!--Footer  -->
+<footer class="footer bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>A-Works</h5>
+        <p>Création de sites web modernes, rapides et bien référencés.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Liens rapides</h5>
+        <ul class="list-unstyled">
+          <li><a href="#packs" class="text-white-50">Offre Vitrine</a></li>
+          <li><a href="#process" class="text-white-50">Processus</a></li>
+          <li><a href="#faq" class="text-white-50">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p><i class="bi bi-whatsapp"></i> <a href="https://wa.me/tonnumero" class="text-white">WhatsApp</a></p>
+        <p><i class="bi bi-envelope"></i> contact@a-works.com</p>
       </div>
     </div>
-  </section>
-
-  <!-- Contact / CTA final -->
-  <section id="contact" class="py-5 bg-primary text-white text-center">
-    <div class="container">
-      <h2 class="fw-bold">Prêt à booster votre présence en ligne ?</h2>
-      <p class="lead">Réservez dès maintenant votre site vitrine professionnel.</p>
-      <a href="https://wa.me/22791123080" target="_blank" class="btn btn-light px-4 py-2 mt-3">Discuter sur WhatsApp</a>
+    <div class="text-center mt-4">
+      <a href="#contact" class="btn btn-primary">Demander mon site</a>
+      <p class="text-white-50 mt-3 mb-0">&copy; 2025 A-Works. Tous droits réservés.</p>
     </div>
-  </section>
-
-  <footer class="text-center">
-    <p class="mb-0">&copy; 2025 Ibrahim Ali Abdoulahi – Développeur Web / Expert SEO</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({duration:1000,once:true});
-  window.addEventListener("DOMContentLoaded",()=>{const e=e=>new Promise(o=>setTimeout(o,e));async function o(){const o=[document.getElementById("pricing-name"),...document.querySelectorAll("#pricing-features li"),document.getElementById("pricing-price"),document.getElementById("pricing-btn")];for(let t=0;t<o.length;t++)o[t].classList.add("show"),await e(400)}document.querySelectorAll(".fade-in-up").forEach(e=>{e.classList.remove("show")}),o()});
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
 </script>
+
 </body>
 
 </html>
