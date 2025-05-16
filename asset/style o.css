@@ -1,0 +1,96 @@
+
+  body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Héros */
+header.hero {
+  background: linear-gradient(to right, #6e004b, #6610f2);
+  color: #fff;
+  padding: 100px 0;
+}
+
+.btn-primary {
+  background-color:#0b5ed7;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Cartes */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.price-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+section.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* FAQ */
+.accordion-button:not(.collapsed) {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* AOS Animation fix */
+[data-aos] {
+  transition-property: opacity, transform;
+}
+.card {
+  transition: transform 0.3s ease;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+.accordion-button {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #212529;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+  color: #0d6efd;
+}
+
+.accordion-body {
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
