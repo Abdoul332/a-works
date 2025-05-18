@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Découvrez mes solutions digitales sur mesure : création de sites web performants (HTML, WordPress), optimisation SEO technique, assistance et maintenance. Des services fiables pour une présence en ligne rapide, visible et sans stress.">
@@ -18,10 +15,14 @@
 
   <!-- Fonts & Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Bootstrap JS Bundle (Popper inclus) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CDN for Animate.css for animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-KgbYF6tvxV5M/a1ybFhfQtw9+Hj9uCVxSb4ZZDx/NjTxTiYlOf+LjTgxlMswJpjP3WsHq1oa0TgZwpHQp+gWZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Animations & AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <!-- Custom CSS -->
@@ -29,22 +30,52 @@
   
 </head>
 <body>
-
-
-<body>
   <!-- Hero -->
-
-<header class="hero text-white text-center py-4 py-md-5 py-lg-6">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Sites web, SEO & support technique</h1>
-    <p class="lead mb-4">WordPress, code sur mesure, optimisation SEO ou dépannage : choisissez l'offre adaptée à vos besoins. Design moderne, performance, visibilité — pour des résultats concrets.</p>
-    <a href="#offres" class="btn btn-primary btn-lg">Voir les offres disponibles</a>
+<header>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <!-- Retour à l'accueil -->
+    <a class="navbar-brand text-white d-flex align-items-center fs-6 mb-2 mb-lg-0" href="https://Abdoul332.github.io/a-works/" aria-label="page d'accueil">
+      <i class="bi bi-arrow-left me-2"></i>Accueil
+    </a>
+    <!-- Mes réalisations -->
+    <a class="navbar-brand text-white d-flex align-items-center fs-6 mb-2 mb-lg-0" href="Mes-réalisations.html" aria-label="mes réalisations">
+      Mes réalisations<i class="bi bi-arrow-right ms-2"></i>
+    </a>
   </div>
+</nav>
 </header>
+<main>
+  
+<section class="hero text-white text-center py-4 relative overflow-hidden" id="Offres">
+  <div class="container">
+    <h1 class="display-2 fw-bold fs-2 fs-md-3 animate__animated animate__fadeInDown mb-3">Sites web, SEO & support technique</h1>
+    <p class="lead mb-4 fs-4 fs-md-5 animate__animated animate__fadeInUp">WordPress, code sur mesure, optimisation SEO ou dépannage : choisissez l'offre adaptée à vos besoins. Design moderne, performance, visibilité — pour des résultats concrets.</p>
+    
+<a href="#temoignage" class="btn btn-outline-warning btn-small px-4 py-2 shadow-lg rounded-pill pulse">
+  Rejoignez mon client satisfait
+</a>
+  </div>
+</section>
+
+<!-- Section Offres - Style ComeUp -->
+<section id="offres" class="py-2 bg-light">
+
+
+
+  <div class="container">
+    
+  </div>
+</section>
+
+
+
   <!-- Section Offres - Style ComeUp -->
 <section id="offres" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Solutions Digitales Sur Mesure – Site Web, Référencement & Maintenance</h2>
+    <h2 class="text-center fw-bold mb-4 fs-4 fs-md-5" data-aos="fade-up">
+      Solutions Digitales Sur Mesure – Site Web, Référencement & Maintenance
+    </h2>
     
    <!-- Offres de services -->
 <div class="row g-4">
@@ -52,7 +83,7 @@
   <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
     <div class="card h-100 shadow-sm border-0">
       <img src="asset/img/wordpress bug1.png" class="card-img-top" alt="Correction WordPress">
-      <div class="card-body bg-warning d-flex flex-column justify-content-between">
+      <div class="card-body bg-outline-warning d-flex flex-column justify-content-between">
         <h5 class="fw-bold">Correction & installation WordPress</h5>
         <p class="small text-muted">Je corrige vos bugs et installe les bons plugins
 Fiable, rapide, sans casser votre site
@@ -67,7 +98,7 @@ Fiable, rapide, sans casser votre site
 → Intervention rapide sous 24–48h</p>
 <hr>
         <div class="d-flex justify-content-between align-items-center">
-          <span class="fw-bold text-white">À 150 €</span>
+          <span class="fw-bold text-success">À 150 €</span>
           <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-primary btn-sm">Commander</a>
         </div>
       </div>
@@ -78,7 +109,7 @@ Fiable, rapide, sans casser votre site
   <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
     <div class="card h-100 shadow-sm border-0">
       <img src="asset/img/Wordpress bug.png" class="card-img-top" alt="Site WordPress Pro">
-      <div class="card-body bg-warning d-flex flex-column justify-content-between">
+      <div class="card-body  d-flex flex-column justify-content-between">
         <h5 class="fw-bold">Site WordPress optimisé</h5>
         <p class="small text-muted">Je crée votre site WordPress rapide, moderne et optimisé 
       
@@ -97,7 +128,7 @@ Structure technique claire + Core Web Vitals optimisés
 <hr>
 </p>
         <div class="d-flex justify-content-between align-items-center">
-          <span class="fw-bold text-white"> À 360 €</span>
+          <span class="fw-bold text-success"> À 360 €</span>
           <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-primary btn-sm">Commander</a>
         </div>
       </div>
@@ -108,7 +139,7 @@ Structure technique claire + Core Web Vitals optimisés
 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
   <div class="card h-100 shadow-sm border-0">
     <img src="asset/img/Page en construction par un développeur.png" class="card-img-top" alt="Site codé à la main">
-    <div class="card-body bg-warning d-flex flex-column justify-content-between">
+    <div class="card-body  d-flex flex-column justify-content-between">
       <h5 class="fw-bold">Site codé sans CMS</h5>
       <p class="small text-muted">Site rapide <br> léger et codé à la main
 Idéal pour portfolio <br> présentation pro ou blog simple
@@ -123,7 +154,7 @@ Idéal pour portfolio <br> présentation pro ou blog simple
 → Livraison rapide <br> code propre <br> modifiable facilement</p>
 <hr>
       <div class="d-flex justify-content-between align-items-center">
-        <span class="fw-bold text-white">À 300 €</span>
+        <span class="fw-bold text-success">À 300 €</span>
         <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-primary btn-sm">Commander</a>
       </div>
     </div>
@@ -133,7 +164,7 @@ Idéal pour portfolio <br> présentation pro ou blog simple
 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
   <div class="card h-100 shadow-sm border-0">
     <img src="asset/img/Audit SEO et Intelligence Artificielle.png" class="card-img-top" alt="Optimisation SEO Technique">
-    <div class="card-body bg-warning d-flex flex-column justify-content-between">
+    <div class="card-body  d-flex flex-column justify-content-between">
       <div>
         <h5 class="fw-bold">Optimisation SEO Technique</h5>
         <p class="small text-muted mb-2">
@@ -149,7 +180,7 @@ Idéal pour portfolio <br> présentation pro ou blog simple
         <hr>
       </div>
       <div class="d-flex justify-content-between align-items-center mt-auto">
-        <span class="fw-bold text-white">À 497 €</span>
+        <span class="fw-bold text-success">À 497 €</span>
         <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-primary btn-sm">Commander</a>
       </div>
     </div>
@@ -159,14 +190,14 @@ Idéal pour portfolio <br> présentation pro ou blog simple
 
   
 <!-- Témoignage -->
-<section class="container my-5">
-  <h3 class="text-center fw-bold mb-4">Ils m’ont fait confiance</h3>
+<section class="container my-5" id="temoignage">
+  <h3 class="text-center fw-bold mb-4">Ils m'ont fait confiance</h3>
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="border rounded p-4 shadow-sm bg-white">
+    <div class="col-md-8">
+      <div class="border rounded-4 p-4 shadow-sm bg-white position-relative">
         <p class="fst-italic mb-3">“Je suis très content de notre collaboration avec Ibrahim. Il est à l'écoute, proactif, et a livré un excellent travail. Je recommande vivement !”</p>
         <div class="d-flex align-items-center">
-          <img src="img/Cleason.png" class="rounded-circle me-3" width="50" alt="Client">
+          <img src="Portfolio/Blog-cleason/Imgs/undraw_young-man-avatar_wgbd.png" class="rounded-circle me-3 shadow-sm" width="50" alt="Cleason - Indépendant">
           <div>
             <h6 class="mb-0 fw-semibold">Cleason</h6>
             <small class="text-muted">Indépendant</small>
@@ -175,9 +206,17 @@ Idéal pour portfolio <br> présentation pro ou blog simple
       </div>
     </div>
   </div>
+  
+  <!-- Call to Action -->
+ 
+  <div class="text-center mt-4 ">
+    <a href="mailto:abdoulibrahim332@gmail.com" class=" btn btn-outline-primary px-4 py-2 shadow-sm rounded-pill">
+  Parlez-moi de votre projet, je m'occupe du reste.
+</a>
+  </div>
+  
 </section>
-
-<section class="faq-section py-5 bg-light ">
+<section class="faq-section py-5 bg-light " id="faq">
   <div class="container col-lg-10 col-xl-8">
     <h2 class="text-center mb-4">FAQ – Questions fréquentes</h2>
     <div class="accordion bg-dark" id="faqAccordion">
@@ -351,53 +390,45 @@ Je reste disponible après la livraison, je corrige les éventuels détails grat
           </div>
         </div>
       </div>
-      
-
-       
     </div>
   </div>
 </section>
-
-<!-- Bootstrap JS Bundle (Popper inclus) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<!-- Contact / CTA final -->
-<section id="contact" class="py-5 bg-primary text-white text-center">
-  <div class="container">
-    <h2 class="fw-bold">Prêt à booster votre présence en ligne ?</h2>
-    <p class="lead">Réservez dès maintenant votre site vitrine professionnel sur mesure.</p>
-    <a href="https://wa.me/22791123080" target="_blank" class="btn btn-light px-4 py-2 mt-3">Discuter sur WhatsApp</a>
-  </div>
-</section>
-<!--Footer  -->
+</main>
+<!-- Footer -->
 <footer class="footer bg-dark text-white py-5">
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row text-center text-md-start px-3">
+      <!-- À propos -->
       <div class="col-md-4 mb-4">
-        <h5>A-Works</h5>
-        <p>Création de sites web modernes, rapides et bien référencés.</p>
+        <h5 class="fw-bold text-center">A-Works</h5>
+        <p class="text-white-50 text-center">Développement Web, SEO technique, et solutions digitales sur-mesure. Basé sur la performance, l'esthétique et la conversion.</p>
       </div>
+
+      <!-- Liens rapides -->
       <div class="col-md-4 mb-4">
-        <h5>Liens rapides</h5>
+        <h5 class="fw-bold">Liens rapides</h5>
         <ul class="list-unstyled">
-          <li><a href="#packs" class="text-white-50">Offre Vitrine</a></li>
-          <li><a href="#process" class="text-white-50">Processus</a></li>
-          <li><a href="#faq" class="text-white-50">FAQ</a></li>
+          <li><a href="#offres" class="text-white-50 text-decoration-none">Offres</a></li>
+          <li><a href="#process" class="text-white-50 text-decoration-none">Processus</a></li>
+          <li><a href="#faq" class="text-white-50 text-decoration-none">FAQ</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
-        <h5>Contact</h5>
-        <p><i class="bi bi-whatsapp"></i> <a href="https://wa.me/tonnumero" class="text-white">WhatsApp</a></p>
-        <p><i class="bi bi-envelope"></i> contact@a-works.com</p>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Contact</h5>
+        <p><i class="bi bi-whatsapp"></i> <a href="https://wa.me/+22791123080" class="text-white text-decoration-none">WhatsApp</a></p>
+        <p><i class="bi bi-envelope"></i> <a href="mailto:abdoulibrahim332@gmail.com" class="text-white text-decoration-none">Abdoulibrahim332</a></p>
       </div>
     </div>
-    <div class="text-center mt-4">
-      <a href="#contact" class="btn btn-primary">Demander mon site</a>
-      <p class="text-white-50 mt-3 mb-0">&copy; 2025 A-Works. Tous droits réservés.</p>
+
+    <!-- Call to Action et Copyright -->
+    <hr>
+      <p class="text-white-50 mt-3 mb-0 text-center">&copy; 2025 A-Works. Tous droits réservés.</p>
     </div>
   </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -406,7 +437,5 @@ Je reste disponible après la livraison, je corrige les éventuels détails grat
     once: true
   });
 </script>
-
 </body>
-
 </html>
