@@ -1,34 +1,44 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+   <url>
+      <loc>https://abdoul332.github.io/a-works/</loc>
+      <lastmod>2025-05-16</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
 
->>>>>>> ed987f9a415ccea5039ba3c47aa40a02a326a64c
+   <url>
+      <loc>https://abdoul332.github.io/a-works/Apropos</loc>
+      <lastmod>2025-05-16</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
 
-<url>
-  <loc>https://abdoul332.github.io/a-works/</loc>
-  <lastmod>2025-02-06T10:36:56+00:00</lastmod>
-  <changefreq>always</changefreq>
-<<<<<<< HEAD
-</url>
+   <url>
+      <loc>https://abdoul332.github.io/a-works/package-offres</loc>
+      <lastmod>2025-05-16</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
 
+   <url>
+      <loc>https://abdoul332.github.io/a-works/Mes-realiations</loc>
+      <lastmod>2025-05-16</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
 
-=======
-</url>
+   <url>
+      <loc>https://abdoul332.github.io/a-works/Landing-page-audit-SEO</loc>
+      <lastmod>2025-05-16</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
 
+   <url>
+      <loc>https://abdoul332.github.io/a-works/Rapport</loc>
+      <lastmod>2025-05-16</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
 
->>>>>>> ed987f9a415ccea5039ba3c47aa40a02a326a64c
 </urlset>
