@@ -9,6 +9,22 @@
       {
         "duplicate-id": "off"
       }
-    ]
-  }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[referrerpolicy=no-referrer-when-downgrade]"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off",
+    "axe/name-role-value": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 15.8"
+  ]
 }
