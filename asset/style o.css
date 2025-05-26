@@ -11,8 +11,12 @@ section.hero {
   color: #fff;
   padding: 100px 0;
 }
-.navbar-nav.nav-item{margin-bottom:10px}
-.hover-link:hover{border-bottom:1px solid #437fd8;border-top:1px solid #5ec1ff;color:#03304a}
+#offres {
+  background: linear-gradient(135deg,#392988,#0f092b);
+  color: #fff;
+  padding: 100px 0;
+}
+.hover-link:hover{border-bottom:1px solid #f1f121;border-top:1px solid #f1f121;}
 
 .pulse {
   animation: pulse 1.8s infinite;
@@ -20,10 +24,10 @@ section.hero {
 
 @keyframes pulse {
   0% {
-    opacity: 3;
+    opacity: 2;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
   100% {
     opacity: 2;
