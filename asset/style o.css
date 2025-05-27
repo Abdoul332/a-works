@@ -1,98 +1,80 @@
-
-  body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ========== BASE ========= */
+body {
+  font-family: Montserrat, sans-serif;
   background-color: #f8f9fa;
   color: #212529;
 }
 
-/* Héros */
-section.hero {
-  background: linear-gradient(135deg,#392988,#0f092b);
-  color: #fff;
-  padding: 100px 0;
+/* ========== SECTIONS ========= */
+section {
+  padding: 60px 0;
 }
-#offres {
-  background: linear-gradient(135deg,#392988,#0f092b);
-  color: #fff;
-  padding: 100px 0;
-}
-.hover-link:hover{border-bottom:1px solid #f1f121;border-top:1px solid #f1f121;}
 
+section.hero,
+#offres {
+  background: linear-gradient(135deg, #392988, #0f092b);
+  color: #fff;
+  padding: 100px 0;
+}
+
+section.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* ========== BOUTONS ========= */
+.btn-primary {
+  background-color: #0b5ed7;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* ========== LIENS ========= */
+.hover-link:hover {
+  border-bottom: 1px solid #f1f121;
+  border-top: 1px solid #f1f121;
+}
+
+/* ========== ANIMATIONS ========= */
 .pulse {
   animation: pulse 1.8s infinite;
 }
 
 @keyframes pulse {
   0% {
-    opacity: 2;
+    opacity: 1;
   }
   50% {
     opacity: 0.4;
   }
   100% {
-    opacity: 2;
+    opacity: 1;
   }
 }
 
-
-.btn-primary {
-  background-color:#0b5ed7;
-  border: none;
-}
-.btn-primary:hover {
-  background-color: #0b5ed7;
-}
-
-/* Cartes */
+/* ========== CARTES ========= */
 .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-.price-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Sections */
-section {
-  padding: 60px 0;
-}
-section.bg-light {
-  background-color: #f8f9fa;
-}
-
-/* Footer */
-footer {
-  background-color: #212529;
-  color: #fff;
-  padding: 40px 0;
-}
-
-/* FAQ */
-.accordion-button:not(.collapsed) {
-  background-color: #0d6efd;
-  color: #fff;
-}
-
-/* AOS Animation fix */
-[data-aos] {
-  transition-property: opacity, transform;
-}
-.card {
-  transition: transform 0.3s ease;
   border-radius: 1rem;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
   padding: 1.5rem;
 }
+
+/* ========== FAQ - ACCORDÉON ========= */
 .accordion-button {
   background-color: #f8f9fa;
   font-weight: 600;
@@ -101,8 +83,8 @@ footer {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #e9ecef;
-  color: #0d6efd;
+  background-color: #0d6efd;
+  color: #fff;
 }
 
 .accordion-body {
@@ -110,10 +92,21 @@ footer {
   border-top: 1px solid #dee2e6;
 }
 
+/* ========== FOOTER ========= */
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 40px 0;
+}
 
+/* ========== AOS FIX ========= */
+[data-aos] {
+  transition-property: opacity, transform;
+}
+
+/* ========== RESPONSIVE ========= */
 @media (max-width: 768px) {
   .card {
     margin-bottom: 1.5rem;
   }
 }
-
