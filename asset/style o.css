@@ -1,8 +1,8 @@
 /* ========== BASE ========= */
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
+  background: linear-gradient(135deg, #392988, #0f092b);
+  color: #fff;
 }
 
 /* ========== SECTIONS ========= */
@@ -12,7 +12,7 @@ section {
 
 section.hero,
 #offres {
-  background: linear-gradient(135deg, #392988, #0f092b);
+  
   color: #fff;
   padding: 100px 0;
 }
