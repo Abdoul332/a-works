@@ -20,6 +20,63 @@ section.hero,
 section.bg-light {
   background-color: #f8f9fa;
 }
+/* TITRE RESPONSIVE */
+.main-title {
+  font-weight: 600;
+  font-size: 16px; /* Mobile: ~24px */
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 2rem; /* Tablet */
+  }
+}
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 3rem; /* Desktop */
+  }
+}
+
+/* PARAGRAPHE RESPONSIVE */
+.main-paragraph {
+  font-size: 15px;  /* Mobile: 16px */
+  line-height: 1.7;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-paragraph {
+    font-size: 1.25rem; /* Tablet */
+  }
+}
+@media (min-width: 992px) {
+  .main-paragraph {
+    font-size: 22px; /* Desktop */
+    line-height: 1.9;
+  }
+}
+/* SOUS-TITRE (h2) RESPONSIVE */
+.section-title {
+  font-weight: 600;
+  font-size: 1rem;  /* Mobile: ~20px */
+  line-height: 1.4;
+  color: #fff; /* ou #222 si sur fond clair */
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.75rem; /* ~28px */
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 2rem; /* ~32px sur desktop */
+  }
+}
+
 
 /* ========== BOUTONS ========= */
 .btn-primary {
