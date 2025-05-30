@@ -40,7 +40,7 @@ section.bg-light {
 
 /* PARAGRAPHE RESPONSIVE */
 .main-paragraph {
-  font-size: 15px;  /* Mobile: 16px */
+  font-size: 12px;  /* Mobile: 16px */
   line-height: 1.7;
   font-weight: 600;
   margin-bottom: 1rem;
