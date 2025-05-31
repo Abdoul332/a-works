@@ -3,5 +3,5 @@ Disallow: /a-works/contact/
 Disallow: /a-works/en-savoirplus/   
 Disallow: /a-works/en/  
 Disallow: /a-works/Untitled2.html  
-Allow: /  a-works/Rapport.html 
+Disallow: /  a-works/Rapport.html 
 Sitemap: https://abdoul332.github.io/a-works/sitemap.xml
