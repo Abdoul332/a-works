@@ -99,7 +99,7 @@ body {
 /* Responsive ajustements */
 @media (max-width: 576px) {
   .cta-options a {
-    width: 90%; /* s’adapte à la largeur écran */
+    width: 100%; /* s’adapte à la largeur écran */
   }
 }
 
