@@ -355,7 +355,7 @@
   </div>
 </footer>
   <!-- JS CALL TO ACTION BUTTON -->
-  <script>
+  <script defer>
   const ctaBtn = document.getElementById("ctaMain");
   const ctaOptions = document.getElementById("ctaOptions");
 
@@ -375,10 +375,10 @@
    <!-- CDN Bootstrap (à garder si tu veux le style Bootstrap) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Init Swiper -->
-<script>
+<script defer>
   const swiper = new Swiper(".mySwiper", {
     loop: true,
     autoplay: {
@@ -401,14 +401,12 @@
     }
   });
 </script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
+<script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script defer>
   AOS.init({
     duration: 800,
     once: true,
   });
 </script>
-
-
 </body>
 </html>
