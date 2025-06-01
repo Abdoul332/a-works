@@ -61,19 +61,51 @@ body {
 }
 
 .btn-warning:hover {
-  background-color: #cbb572;
   transform: scale(1.05);
 }
-
-.custom-btn:hover {
-  background-color: #0e0b0b;
-  transform: scale(1.1);
+#ctaMain{
+  background: linear-gradient(135deg, #392988, #0f092b);
+  color: white;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 15px 30px;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 400px;
+}
+#ctaMain:hover {
+  background-color:darkred;
+  transform: translateY(-5px);
+}
+.cta-options {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+  padding-top: 10px;
+  align-items: center;
 }
 
-.custom-btn:focus {
-  outline: 0;
-  box-shadow: none;
+.cta-options a {
+  width: 200px;
+  font-weight: 400;
+  text-align: center;
 }
+
+/* Responsive ajustements */
+@media (max-width: 576px) {
+  .cta-options a {
+    width: 90%; /* s’adapte à la largeur écran */
+  }
+}
+
+
+
+
 
 /* =====================
    CARTES & HOVER
@@ -124,6 +156,14 @@ section.bg-dark.text-center {
   font-size: 3rem;
   margin-bottom: 15px;
 }
+#international h5 {
+  font-weight: 600;
+  color: #0d6efd;
+}
+#international p {
+  font-size: 0.95rem;
+}
+
 
 /* =====================
    MAP
