@@ -115,48 +115,63 @@
 
   <!-- SERVICES -->
  <!-- SERVICES -->
-<section class="py-5 text-center bg-light" id="services">
-  <div class="container">
-    <h2 class="fw-bold mb-5">Ce que je vous propose</h2>
+<section class="py-5 bg-primary" id="services">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 display-6 text-light">Des services web pensés pour vos résultats</h2>
+    <p class=" mb-5 fw-semibold text-light">Sites professionnels, référencement naturel et automatisation : tout est conçu pour faire croître votre activité.</p>
 
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide p-4 bg-white shadow rounded text-dark">
-          <i class="bi bi-laptop fs-1 text-primary"></i>
-          <h3 class="mt-3">Sites modernes & performants</h3>
-          <p>Sites vitrines, blogs ou e-commerce, conçus avec Bootstrap, WordPress et JavaScript, professionnels et responsives.</p>
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="p-4 bg-light shadow rounded h-100 hover-zoom">
+          <div class="mb-3">
+            <i class="bi bi-laptop fs-1 text-primary"></i>
+          </div>
+          <h3 class="h5 mb-3">Sites web modernes & performants</h3>
+          <p>Création de sites vitrines, blogs ou boutiques en ligne <strong>rapides, sécurisés</strong> et <strong>adaptés mobile</strong>, via WordPress & Bootstrap.</p>
         </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide p-4 bg-white shadow rounded text-dark">
-          <i class="bi bi-rocket fs-1 text-success"></i>
-          <h3 class="mt-3">Optimisation SEO technique</h3>
-          <p>Indexation, vitesse, structure HTML, Core Web Vitals et stratégie de contenu pour un référencement durable.</p>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide p-4 bg-white shadow rounded text-dark">
-          <i class="bi bi-cpu fs-1 text-danger"></i>
-          <h3 class="mt-3">Automatisation avec l’IA</h3>
-          <p>Création de scripts intelligents, assistants automatisés, génération de contenu ou rapports d’analyse.</p>
-        </div>
-
       </div>
 
-      <!-- Pagination -->
-      <div class="swiper-pagination mt-4"></div>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
+          <div class="mb-3">
+            <i class="bi bi-rocket fs-1 text-success"></i>
+          </div>
+          <h3 class="h5 mb-3">SEO technique & visibilité Google</h3>
+          <p>Optimisation de l’indexation, amélioration de la vitesse, <strong>Core Web Vitals</strong> et contenu structuré pour <strong>mieux vous positionner</strong>.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
+          <div class="mb-3">
+            <i class="bi bi-cpu fs-1 text-danger"></i>
+          </div>
+          <h3 class="h5 mb-3">Automatisation avec l’IA</h3>
+          <p>Création de solutions intelligentes : assistants IA, génération de contenus, automatisation des tâches récurrentes pour <strong>gagner du temps</strong>.</p>
+        </div>
+      </div>
     </div>
+
+    <div class="cta-wrapper mt-4 text-center" data-aos="fade-up" data-aos-delay="300" style="position: relative;">
+  <button id="ctaMain" class="  px-2 py-2 shadow lead">Discutons de votre projet</button>
+  <div id="ctaOptions" style="position:absolute;top:110%;left:50%;transform:translateX(-50%);display:none;flex-direction:align-block;gap:0.5rem;z-index:10;padding-top: 5px;">
+    <a href="mailto:abdoulibrahim332@gmail.com" aria-label="Mon adresse Email" class="btn bg-info" style="width:  200px; font-weight: 400;"> Contact</a>
+    <a href="package-offres.html" aria-label="lien vers la page prix" class="btn bg-light" style="width: 200px;"> Réservez votre site</a>
+  </div>
+</div>
+
   </div>
 </section>
 
+
   <!-- RÉALISATIONS -->
  <!-- Réalisations -->
- <section class="py-5 bg-light">
+ <section class="py-5 bg-primary">
   <div class="container">
-    <h2 class="fw-bold mb-4 py-4 text-center">Mes projets</h2>
+    <h2 class="fw-bold mb-4 py-4 text-center text-light">Mes projets</h2>
     <div class="row g-4">
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="card p-3">
@@ -283,14 +298,7 @@
         <p>Solutions web modernes et bien référencées en Afrique francophone.</p>
       </div>
     </div>
-     <div class="cta-wrapper mt-4 text-center" data-aos="fade-up" data-aos-delay="300" style="position: relative;">
-  <button id="ctaMain" class="  px-2 py-2 shadow lead">Discutons de votre projet</button>
-  <div id="ctaOptions" style="position:absolute;top:110%;left:50%;transform:translateX(-50%);display:none;flex-direction:align-block;gap:0.5rem;z-index:10;padding-top: 5px;">
-    <a href="mailto:abdoulibrahim332@gmail.com" aria-label="Mon adresse Email" class="btn btn-outline-primary" style="width:  200px; font-weight: 400;"> Contact</a>
-    <a href="package-offres.html" aria-label="lien vers la page prix" class="btn btn-outline-success" style="width: 200px;"> Réservez votre site</a>
-  </div>
-</div>
-
+    
   </div>
 </section>
 
@@ -378,33 +386,7 @@
   <!-- JS compteur animé --><script >const counters=document.querySelectorAll('.counter');const speed=100;counters.forEach(counter=>{const updateCount=()=>{const target=+counter.getAttribute('data-target');const count=+counter.innerText;const increment=target/speed;if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCount,30)}else{counter.innerText=target}};updateCount()});</script>
    <!-- CDN Bootstrap (à garder si tu veux le style Bootstrap) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Swiper JS -->
-<script  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Init Swiper -->
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
-
+ 
 <script  src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script >
   AOS.init({
