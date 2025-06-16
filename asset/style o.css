@@ -163,7 +163,7 @@ footer {
 
 /* ========== RESPONSIVE ========= */
 @media (max-width: 768px) {
-  .card {
-    margin-bottom: 1.5rem;
-  }
+.card {
+  margin-bottom: 1.5rem;
+}
 }
