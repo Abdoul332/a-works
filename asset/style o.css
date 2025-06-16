@@ -1,0 +1,169 @@
+/* ========== BASE ========= */
+body {
+  font-family: Montserrat, sans-serif;
+  background: linear-gradient(135deg, #392988, #0f092b);
+  color: #fff;
+}
+
+/* ========== SECTIONS ========= */
+section {
+  padding: 60px 0;
+}
+
+section.hero,
+#offres {
+  
+  color: #fff;
+  padding: 100px 0;
+}
+
+section.bg-light {
+  background-color: #f8f9fa;
+}
+/* TITRE RESPONSIVE */
+.main-title {
+  font-weight: 600;
+  font-size: 18px; /* Mobile: ~24px */
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 2rem; /* Tablet */
+  }
+}
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 3rem; /* Desktop */
+  }
+}
+
+/* PARAGRAPHE RESPONSIVE */
+.main-paragraph {
+  font-size: 16px;  /* Mobile: 16px */
+  line-height: 1.7;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-paragraph {
+    font-size: 1.25rem; /* Tablet */
+  }
+}
+@media (min-width: 992px) {
+  .main-paragraph {
+    font-size: 22px; /* Desktop */
+    line-height: 1.9;
+  }
+}
+/* SOUS-TITRE (h2) RESPONSIVE */
+.section-title {
+  font-weight: 600;
+  font-size: 1rem;  /* Mobile: ~20px */
+  line-height: 1.4;
+  color: #fff; /* ou #222 si sur fond clair */
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.75rem; /* ~28px */
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 2rem; /* ~32px sur desktop */
+  }
+}
+
+
+/* ========== BOUTONS ========= */
+.btn-primary {
+  background-color: #0b5ed7;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* ========== LIENS ========= */
+.hover-link:hover {
+  border-bottom: 1px solid #f1f121;
+  border-top: 1px solid #f1f121;
+}
+
+/* ========== ANIMATIONS ========= */
+.pulse {
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ========== CARTES ========= */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.price-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* ========== FAQ - ACCORDÉON ========= */
+.accordion-button {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #212529;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.accordion-body {
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+}
+
+/* ========== FOOTER ========= */
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* ========== AOS FIX ========= */
+[data-aos] {
+  transition-property: opacity, transform;
+}
+
+/* ========== RESPONSIVE ========= */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
