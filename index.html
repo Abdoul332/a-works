@@ -1,432 +1,384 @@
-<!-- ... tout ton head existant reste identique -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Développeur web freelance basé au  
-   Niger, j'accompagne les entrepreneurs et indépendants francophones (France, Maroc, Canada, Belgique, Niger, Sénégal…) dans la création de sites internet professionnels, optimisés pour le SEO et adaptés à leur image."/>
-  <meta name="google-site-verification" content="MulvnIc9bkfbiGccHjwxnEPDDyVl8ryKKhbDQpvhpxw"/>
-  <meta name="robots" content="index, follow">
-<!-- Open Graph pour partage sur réseaux sociaux -->
-<meta property="og:title" content="Création de site WordPress, moderne et SEO-friendly">
-<meta property="og:description" content="Freelance WordPress spécialisé SEO. Je crée des sites vitrine professionnels avec Elementor, 100% optimisés pour Google.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://abdoul332.github.io/a-works/">
-<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/a8f686e2-5037-49b6-9b27-35972b2e1631.png?token=mr-f4S63GQi43ZgUpM0JoR-nY1rLCOLZUEwquWRuKpo&height=1010&width=1200&expires=33288523740">
-  <title>Créez un site WordPress professionnel, moderne et bien référencé</title>
-  <meta name="author" content="Ibrahim Ali Abdoulahi">
-  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- optionnel mais conseillé -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="canonical" href="https://abdoul332.github.io/a-works/" />
-  <link rel="alternate" hreflang="fr" href="https://abdoul332.github.io/a-works/fr/" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="preload" href="asset/style.css?v=2" as="style">
-<link rel="stylesheet" href="asset/style.css?v=2">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-<link rel="preload" href="asset/img/Avis cleason  (1).webp" as="image">
-<link rel="preload" href="asset/img/Wordpress bug.webp" as="image">
-<link rel="preload" href="https://images.pexels.com/photos/11286066/pexels-photo-11286066.jpeg?auto=compress&cs=tinysrgb&w=400" as="image">
-
-<script src="https://kit.fontawesome.com/40bc8033e9.js" crossorigin="anonymous" defer></script>
-  <script type="application/ld+json" defer>
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "A-Works",
-      "url": "https://abdoul332.github.io/a-works/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://abdoul332.github.io/a-works/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-  <!-- Google tag (gtag.js) -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-57J8LJGQ1L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-57J8LJGQ1L');
-</script>
-</head>
-<body>
-  <!-- NAVBAR ici (inchangée, déjà bonne) -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-6 shadow-sm ">
-     <div class="container">
-         <a class="navbar-brand text-black" href="https://Abdoul332.github.io/a-works/" aria-label= "Page d'accueil">
-           <i class="fa-solid fa-code fs-1"></i> A-Works
-         
-         </a>
-         <button   aria-label="Menu déroulant" class="navbar-toggler  custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav ms-auto align-items-center py-6 fs-6 ">
-                 
-              <li class="nav-item"><a class="nav-link text-light fw-semibold   hover-link" href="package-offres.html" aria-label="Rapport Techn
-                    Audit rapide et configuration du site "> Lancez Votre Projet  
-                  </a></li>
-
-                  <li class="nav-item"><a class="nav-link text-light fw-semibold  hover-link" href="Portfolio/Landing-page-audit-SEO/index.html" aria-label="Rapport Techn
-                  Audit rapide et configuration du site">Articles</a></li>
-
-               <li class="nav-item"><a class="nav-link text-light fw-semibold  hover-link" href="Rapport.html" aria-label="Rapport Technique SEO - A-Works
-                 Audit rapide et configuration du site">Boost SEO Offert</a></li>
-                 
-                 
-                 <li class="nav-item"><a class="nav-link text-light fw-bold   hover-link" href="Apropos.html ">À propos</a>
-                 </li>
-
-                 <li class="nav-item"><a class=" nav-link fw-semibold hover-link text-warning  fw-bold" href="#footer" aria-label="Mes contacter
-                  Audit rapide et configuration du site">Prenons Contact</a></li>
-             </ul>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Développeur web freelance basé au Niger, j'accompagne les entrepreneurs et indépendants francophones dans la création de sites internet professionnels, optimisés pour le SEO et adaptés à leur image.">
+      <meta name="robots" content="index, follow">
+      <meta name="google-site-verification" content="MulvnIc9bkfbiGccHjwxnEPDDyVl8ryKKhbDQpvhpxw">
+      <!-- Open Graph -->
+      <meta property="og:title" content="Création de site WordPress, moderne et SEO-friendly">
+      <meta property="og:description" content="Freelance WordPress spécialisé SEO. Je crée des sites vitrine professionnels avec Elementor, 100% optimisés pour Google.">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://abdoul332.github.io/a-works/">
+      <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/a8f686e2-5037-49b6-9b27-35972b2e1631.png?token=mr-f4S63GQi43ZgUpM0JoR-nY1rLCOLZUEwquWRuKpo&height=1010&width=1200&expires=33288523740">
+      <title>Créez un site WordPress professionnel, moderne et bien référencé</title>
+      <meta name="author" content="Ibrahim Ali Abdoulahi">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+      <link rel="canonical" href="https://abdoul332.github.io/a-works/">
+      <link rel="alternate" hreflang="fr" href="https://abdoul332.github.io/a-works/fr/">
+      <!-- Styles -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="asset/style.css?v=2">
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/40bc8033e9.js" crossorigin="anonymous" defer></script>
+      <!-- JSON-LD Schema -->
+      <script type="application/ld+json">
+         {
+           "@context": "https://schema.org",
+           "@type": "WebSite",
+           "name": "A-Works",
+           "url": "https://abdoul332.github.io/a-works/",
+           "potentialAction": {
+             "@type": "SearchAction",
+             "target": "https://abdoul332.github.io/a-works/?q={search_term_string}",
+             "query-input": "required name=search_term_string"
+           }
+         }
+      </script>
+      <!-- Google Analytics -->
+      <script defer src="https://www.googletagmanager.com/gtag/js?id=G-57J8LJGQ1L"></script>
+      <script defer>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'G-57J8LJGQ1L');
+      </script>
+   </head>
+   <body>
+      <!-- CONTENU PRINCIPAL ENTIÈREMENT PRÉSERVÉ ICI (navbar, sections, footer) -->
+      <!-- NAVBAR ici (inchangée, déjà bonne) -->
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-6 shadow-sm ">
+            <div class="container">
+               <a class="navbar-brand text-black" href="https://Abdoul332.github.io/a-works/" aria-label= "Page d'accueil">
+               <i class="fa-solid fa-code fs-1"></i> A-Works
+               </a>
+               <button   aria-label="Menu déroulant" class="navbar-toggler  custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto align-items-center py-6 fs-6 ">
+                     <li class="nav-item"><a class="nav-link text-light fw-semibold   hover-link" href="package-offres.html" aria-label="Rapport Techn
+                        Audit rapide et configuration du site "> Lancez Votre Projet  
+                        </a>
+                     </li>
+                     <li class="nav-item"><a class="nav-link text-light fw-semibold  hover-link" href="Portfolio/Landing-page-audit-SEO/index.html" aria-label="Rapport Techn
+                        Audit rapide et configuration du site">Articles</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-semibold  hover-link" href="Rapport.html" aria-label="Rapport Technique SEO - A-Works
+                        Audit rapide et configuration du site">Boost SEO Offert</a></li>
+                     <li class="nav-item"><a class="nav-link text-light fw-bold   hover-link" href="Apropos.html ">À propos</a>
+                     </li>
+                     <li class="nav-item"><a class=" nav-link fw-semibold hover-link text-warning  fw-bold" href="#footer" aria-label="Mes contacter
+                        Audit rapide et configuration du site">Prenons Contact</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <!-- HERO -->
+         <section class="text-center bg-dark py-5">
+            <div class="container px-3 px-md-2">
+               <!-- Titre principal -->
+               <h1 class="title-responsive text-info animate__animated animate__fadeInDown fs-2 py-2"> Créez un site WordPress moderne et visible sur Google</h1>
+               <!-- Premier paragraphe -->
+               <p class="paragraph animate__animated animate__fadeInUp animate__delay-1s ">
+                  <strong>Développeur web freelance</strong> spécialisé en <strong>WordPress</strong> et <strong>SEO technique</strong>, j’aide les entrepreneurs et indépendants à créer des sites vitrines <strong>professionnels, rapides et performants</strong>.
+               </p>
+               <!-- Deuxième paragraphe -->
+               <p class="paragraph animate__animated animate__fadeInUp animate__delay-2s">
+                  Mon objectif : vous livrer un <strong>site WordPress visible sur Google</strong>, optimisé pour le référencement naturel, adapté aux mobiles, et conçu pour améliorer votre crédibilité et attirer plus de clients.
+               </p>
+            </div>
+         </section>
+         <section class="py-6 bg-light" id="services">
+            <div class="container text-center">
+               <!-- Titre de section -->
+               <h2 class="fs-2 mb-3 display-6 text-primary">
+                  Développeur WordPress freelance – Expertise SEO & Performance
+               </h2>
+               <p class="mb-5 fw-semibold text-secondary">
+                  Je conçois des sites WordPress sur-mesure, rapides, sécurisés et optimisés pour le SEO. Une approche centrée sur la performance, la visibilité et l’automatisation pour faire grandir votre activité.
+               </p>
+               <!-- Services -->
+               <div class="row g-4">
+                  <!-- Service 1 -->
+                  <div class="col-md-4">
+                     <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
+                        <div class="mb-3">
+                           <i class="bi bi-laptop fs-1 text-primary"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Un site qui vous ressemble</h3>
+                        <p>
+                           Création de sites WordPress <strong>modernes</strong>, <strong>rapides</strong> et <strong>adaptés mobile</strong>, pensés pour valoriser votre activité dès la première visite.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- Service 2 -->
+                  <div class="col-md-4">
+                     <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
+                        <div class="mb-3">
+                           <i class="bi bi-rocket fs-1 text-success"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Soyez trouvé sur Google</h3>
+                        <p>
+                           Votre site est <strong>optimisé dès le départ</strong> pour le référencement naturel : vitesse, structure, mots-clés et compatibilité SEO.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- Service 3 -->
+                  <div class="col-md-4">
+                     <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
+                        <div class="mb-3">
+                           <i class="bi bi-cpu fs-1 text-danger"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Gagnez du temps avec l’IA</h3>
+                        <p>
+                           J’automatise les tâches répétitives grâce à l’<strong>intelligence artificielle</strong> : création de contenu, assistants, analyse de performance, etc.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- CTA animé -->
+               <div class="cta-wrapper mt-5 text-center" data-aos="fade-up" data-aos-delay="300" style="position: relative;">
+                  <button id="ctaMain" class="btn btn-primary w-100 px-3 py-2 shadow lead" aria-label="Lien vers les offres">
+                  L’offre web pensée pour propulser votre activité
+                  </button>
+               </div>
+            </div>
+         </section>
+         <!-- Réalisations -->
+         <section class="py-6 bg-primary">
+            <div class="container">
+               <h2 class="fs-2 mb-4 py-6 text-center text-light">Mes projets réalisés</h2>
+               <div class="row g-4">
+                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                     <div class="card p-3">
+                        <img src="asset/img/OASIS DESKOP.png" class="card-img-top rounded" alt="Je crée votre site WordPress rapide, moderne et optimisé
+                           Performance | Visibilité | Résultats" loading="lazy">
+                        <div class="card-body">
+                           <h4 class="card-title"> WordPress optimisé </h4>
+                           <p class="card-text"> Site web vitrine  professionnel avec Elementor.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                     <div class="card p-3">
+                        <video src="asset/img/Video/tinywow_Abba_80178339.mp4" autoplay muted loop class="w-100 rounded shadow-sm"></video>
+                        <div class="card-body">
+                           <h4 class="card-title">Site  vitrine moderne pour Abba Chicken</h4>
+                           <p class="card-text"> Site vitrine de restauration rapide.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                     <div class="card p-3">
+                        <img src="https://images.pexels.com/photos/11286066/pexels-photo-11286066.jpeg?auto=compress&cs=tinysrgb&w=400" class="card-img-top rounded" alt="Rèdirection vers la page projets">
+                        <p></p>
+                        <hr>
+                        <div class="card-body">
+                           <a href="Projets.html" class="text-decoration-none text-center d-block mb-4"><i class="bi bi-arrow-up-right-square text-light fs-5 btn-primary">Voir tous les projets</i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- CHIFFRES CLÉS HONNÊTES -->
+         <section class="py-5 text-white bg-dark text-center">
+            <div class="container">
+               <h2 class="fs-2 mb-4 text-white">Des bases solides, des résultats concrets</h2>
+               <div class="row g-4 justify-content-center text-info">
+                  <div class="col-md-4">
+                     <h3 class="display-5 fs-2">
+                        <span class="counter" data-target="100">0</span>%
+                     </h3>
+                     <p class="text-white">Sites optimisés SEO dès le départ</p>
+                  </div>
+                  <div class="col-md-4">
+                     <h3 class="display-5 fs-2">
+                        +<span class="counter" data-target="90">0</span>
+                     </h3>
+                     <p class="text-white">Score PageSpeed sur les projets</p>
+                  </div>
+                  <div class="col-md-4">
+                     <h3 class="display-5 fs-2">En expansion</h3>
+                     <p class="text-white">Des projets et des clients satisfaits</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- TÉMOIGNAGES -->
+         <section class="py-5 bg-dark text-center">
+            <div class="container">
+               <h2 class="fs-2 mb-4 text-light">Ils m'ont fait confiance</h2>
+               <div class="row g-4">
+                  <!-- Témoignage avec image -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                     <div class="card shadow h-100">
+                        <img src="asset/img/Avis cleason  (1).webp" class="card-img-top img-fluid" alt="Avis client - Blog" loading="lazy" />
+                        <div class="card-body">
+                           <h5 class="card-title">Blog</h5>
+                           <p class="card-text">Blog rapide, bien structuré.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Témoignage texte 1 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                     <div class="card border-0 shadow-sm h-100 p-4">
+                        <p class="fst-italic">“Audit technique ultra complet. On a corrigé notre site grâce à lui.”</p>
+                        <h5 class="mt-3 fw-semibold">— Marc, Consultant</h5>
+                     </div>
+                  </div>
+                  <!-- Témoignage texte 2 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                     <div class="card border-0 shadow-sm h-100 p-4">
+                        <p class="fst-italic">“Site fluide, rapide et super design. Merci A-Works !”</p>
+                        <h5 class="mt-3 fw-semibold">— ABBA, Restaurateur</h5>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="py-5 bg-light" id="international">
+            <div class="container">
+               <h2 class="text-center mb-4" data-aos="fade-down">J'accompagne des clients partout dans le monde</h2>
+               <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                  freelancer basé au <strong>Niger</strong>, je travaille à distance avec des 
+                  <strong>entrepreneurs</strong> et <strong>indépendants francophones</strong> : 
+                  <strong>France, Maroc, Canada, Belgique, Sénégal</strong>… Où que vous soyez, je vous aide à créer un site 
+                  <strong>professionnel</strong>, <strong>SEO-friendly</strong> et <strong>adapté à votre image</strong>.
+               </p>
+               <div class="row text-center">
+                  <div class="col-md-4 mb-4" data-aos="zoom-in">
+                     <h5>🇫🇷 France</h5>
+                     <p>Sites vitrines, landing pages, refontes SEO pour freelances & TPE.</p>
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                     <h5>🇲🇦 Maroc</h5>
+                     <p>Projets web pour commerçants, coachs et entrepreneurs marocains.</p>
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                     <h5>🇨🇦 Canada</h5>
+                     <p>Sites performants pour les professionnels francophones du Québec.</p>
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                     <h5>🇧🇪 Belgique</h5>
+                     <p>Création de sites sur mesure pour indépendants et artisans.</p>
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                     <h5>🇳🇪 Niger</h5>
+                     <p>Services web professionnels pour entreprises locales et diaspora.</p>
+                  </div>
+                  <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                     <h5>🌍 Sénégal & Afrique</h5>
+                     <p>Solutions web modernes et bien référencées en Afrique francophone.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <!-- FOOTER -->
+      <footer class="bg-dark text-light pt-5 pb-4"id="footer">
+         <div class="container">
+            <div class="row text-md-left text-center">
+               <!-- Logo / Description -->
+               <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <h5 class="text-uppercase mb-3 fw-bold">A-Works</h5>
+                  <p>Développement Web, SEO technique, et solutions digitales sur-mesure. Basé sur la performance, l'esthétique et la conversion.</p>
+               </div>
+               <!-- Contact -->
+               <div class="col-12 col-md-6 col-lg-4 mb-4 py-1">
+                  <h5 class="text-uppercase mb-3 fw-bold">Contact</h5>
+                  <p>
+                     <i class="bi bi-envelope-fill me-2 fs-6"></i>
+                     <a href="mailto:abdoulibrahim332@gmail.com" class="text-light fs-5 text-decoration-none">abdoulibrahim332@gmail.com</a>
+                  </p>
+                  <p>
+                     <i class="bi bi-whatsapp me-2 fs-5"></i>
+                     <a href="https://wa.me/22791123080" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener">+227 91 12 30 80</a>
+                  </p>
+                  <p>
+                     <i class="bi bi-briefcase-fill me-2 fs-5"></i>
+                     <a href="https://comeup.com/fr/@ibrahimaliabdoulah" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener">Comeup Platform</a>
+                  </p>
+                  <p>
+                     <i class="bi bi-briefcase-fill me-2 fs-5"></i>
+                     <a href="https://www.upwork.com/freelancers/~019b37056d42cfbd4a" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener">Upwork Platform</a>
+                  </p>
+                  <p>
+                     <i class="bi bi-geo-alt-fill me-2 fs-5"></i>
+                     <a href="https://goo.gl/maps/3v5x7Z1g2kF2" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener"> Niger</a>
+                  </p>
+               </div>
+               <!-- Réseaux Sociaux -->
+               <div class="col-12 col-lg-4 mb-4 text-center">
+                  <h5 class="text-uppercase mb-3 fw-bold">Suivez-moi</h5>
+                  <a href="https://www.linkedin.com/in/abdoul332" class="text-light me-3" target="_blank" rel="noopener" title="LinkedIn Profile"><i class="bi bi-linkedin fs-4"></i></a>
+                  <a href="https://github.com/Abdoul332" class="text-light me-3" target="_blank" rel="noopener" title="GitHub Profile"><i class="bi bi-github fs-4"></i></a>
+                  <a href="#" class="text-light" target="_blank" title="Instagram Profile"><i class="bi bi-instagram fs-4"></i></a>
+               </div>
+            </div>
+            <hr class="text-light my-4">
+            <!-- Bas du footer -->
+            <div class="row align-items-center text-center">
+               <div class="col-md-7 col-lg-8 mb-2 mb-md-0">
+                  <p class="mb-0">© 2025 A-Works – Créé par Ibrahim Ali Abdoulahi. Tous droits réservés.</p>
+               </div>
+               <div class="col-md-5 col-lg-4">
+                  <a href="#top" class="text-light text-decoration-none">
+                  <i class="bi bi-arrow-up-circle-fill fs-4"></i> Haut de page
+                  </a>
+               </div>
+            </div>
          </div>
-     </div>
-   </nav>
-</header>
-<main>
-  <!-- HERO -->
-  <section class="text-center bg-dark py-5">
-  <div class="container px-3 px-md-2">
-
-    <!-- Titre principal -->
-   <h1 class="title-responsive text-info animate__animated animate__fadeInDown fs-2 py-2"> Créez un site WordPress moderne et visible sur Google</h1>
-
-<!-- Premier paragraphe -->
-<p class="paragraph animate__animated animate__fadeInUp animate__delay-1s ">
-  <strong>Développeur web freelance</strong> spécialisé en <strong>WordPress</strong> et <strong>SEO technique</strong>, j’aide les entrepreneurs et indépendants à créer des sites vitrines <strong>professionnels, rapides et performants</strong>.
-</p>
-
-<!-- Deuxième paragraphe -->
-<p class="paragraph animate__animated animate__fadeInUp animate__delay-2s">
-  Mon objectif : vous livrer un <strong>site WordPress visible sur Google</strong>, optimisé pour le référencement naturel, adapté aux mobiles, et conçu pour améliorer votre crédibilité et attirer plus de clients.
-</p>
-  </div>
-</section>
-<section class="py-6 bg-light" id="services">
-  <div class="container text-center">
-
-    <!-- Titre de section -->
-    <h2 class="fs-2 mb-3 display-6 text-primary">
-      Développeur WordPress freelance – Expertise SEO & Performance
-    </h2>
-    <p class="mb-5 fw-semibold text-secondary">
-      Je conçois des sites WordPress sur-mesure, rapides, sécurisés et optimisés pour le SEO. Une approche centrée sur la performance, la visibilité et l’automatisation pour faire grandir votre activité.
-    </p>
-
-    <!-- Services -->
-    <div class="row g-4">
-
-      <!-- Service 1 -->
-      <div class="col-md-4">
-        <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
-          <div class="mb-3">
-            <i class="bi bi-laptop fs-1 text-primary"></i>
-          </div>
-          <h3 class="h5 mb-3">Un site qui vous ressemble</h3>
-          <p>
-            Création de sites WordPress <strong>modernes</strong>, <strong>rapides</strong> et <strong>adaptés mobile</strong>, pensés pour valoriser votre activité dès la première visite.
-          </p>
-        </div>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="col-md-4">
-        <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
-          <div class="mb-3">
-            <i class="bi bi-rocket fs-1 text-success"></i>
-          </div>
-          <h3 class="h5 mb-3">Soyez trouvé sur Google</h3>
-          <p>
-            Votre site est <strong>optimisé dès le départ</strong> pour le référencement naturel : vitesse, structure, mots-clés et compatibilité SEO.
-          </p>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="col-md-4">
-        <div class="p-4 bg-white shadow rounded h-100 hover-zoom">
-          <div class="mb-3">
-            <i class="bi bi-cpu fs-1 text-danger"></i>
-          </div>
-          <h3 class="h5 mb-3">Gagnez du temps avec l’IA</h3>
-          <p>
-            J’automatise les tâches répétitives grâce à l’<strong>intelligence artificielle</strong> : création de contenu, assistants, analyse de performance, etc.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CTA animé -->
-    <div class="cta-wrapper mt-5 text-center" data-aos="fade-up" data-aos-delay="300" style="position: relative;">
-      <button id="ctaMain" class="btn btn-primary w-100 px-3 py-2 shadow lead">
-        Discutons de votre projet
-      </button>
-
-      <div id="ctaOptions" style="
-        position: absolute;
-        top: 110%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        z-index: 10;
-        padding-top: 5px;
-        width: 100%;
-        max-width: 240px;">
-        
-        <a href="package-offres.html" class="btn btn-success fw-normal w-100" aria-label="Lien vers les offres">
-          Réservez votre site
-        </a>
-        <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline-success text-white fw-normal w-100" aria-label="Adresse Email">
-          Contact
-        </a>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
- <!-- Réalisations -->
- <section class="py-6 bg-primary">
-  <div class="container">
-    <h2 class="fs-2 mb-4 py-6 text-center text-light">Mes projets réalisés</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card p-3">
-          <img src="asset/img/OASIS DESKOP.png" class="card-img-top rounded" alt="Je crée votre site WordPress rapide, moderne et optimisé
-          Performance | Visibilité | Résultats" loading="lazy">
-          <div class="card-body">
-            <h4 class="card-title"> WordPress optimisé </h4>
-            <p class="card-text"> Site web vitrine  professionnel avec Elementor.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card p-3">
-          <video src="asset/img/Video/tinywow_Abba_80178339.mp4" autoplay muted loop class="w-100 rounded shadow-sm"></video>
-          <div class="card-body">
-            <h4 class="card-title">Site  vitrine moderne pour Abba Chicken</h4>
-            <p class="card-text"> Site vitrine de restauration rapide.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="card p-3">
-          <img src="https://images.pexels.com/photos/11286066/pexels-photo-11286066.jpeg?auto=compress&cs=tinysrgb&w=400" class="card-img-top rounded" alt="Rèdirection vers la page projets">
-          <p></p>
-          <hr>
-          <div class="card-body">
-            <a href="Projets.html" class="text-decoration-none text-center d-block mb-4"><i class="bi bi-arrow-up-right-square text-light fs-5 btn-primary">Voir tous les projets</i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- CHIFFRES CLÉS HONNÊTES -->
-<section class="py-5 text-white bg-dark text-center">
-  <div class="container">
-    <h2 class="fs-2 mb-4 text-white">Des bases solides, des résultats concrets</h2>
-    <div class="row g-4 justify-content-center text-info">
-      <div class="col-md-4">
-        <h3 class="display-5 fs-2">100%</h3>
-        <p class="text-white">Sites optimisés SEO dès le départ</p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="display-5 fs-2">+90</h3>
-        <p class="text-white" >Score PageSpeed sur les projets</p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="display-5 fs-2">En expansion</h3>
-        <p class="text-white">Des projets  et des clients satisfaits</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- TÉMOIGNAGES -->
-<section class="py-5 bg-dark text-center">
-  <div class="container">
-    <h2 class="fs-2 mb-4 text-light">Ils m'ont fait confiance</h2>
-    <div class="row g-4">
-      
-      <!-- Témoignage avec image -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card shadow h-100">
-          <img src="asset/img/Avis cleason  (1).webp" class="card-img-top img-fluid" alt="Avis client - Blog" loading="lazy" />
-          <div class="card-body">
-            <h5 class="card-title">Blog</h5>
-            <p class="card-text">Blog rapide, bien structuré.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Témoignage texte 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0 shadow-sm h-100 p-4">
-          <p class="fst-italic">“Audit technique ultra complet. On a corrigé notre site grâce à lui.”</p>
-          <h5 class="mt-3 fw-semibold">— Marc, Consultant</h5>
-        </div>
-      </div>
-
-      <!-- Témoignage texte 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card border-0 shadow-sm h-100 p-4">
-          <p class="fst-italic">“Site fluide, rapide et super design. Merci A-Works !”</p>
-          <h5 class="mt-3 fw-semibold">— ABBA, Restaurateur</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="py-5 bg-light" id="international">
-  <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-down">J'accompagne des clients partout dans le monde</h2>
-    <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-       freelancer basé au <strong>Niger</strong>, je travaille à distance avec des 
-      <strong>entrepreneurs</strong> et <strong>indépendants francophones</strong> : 
-      <strong>France, Maroc, Canada, Belgique, Sénégal</strong>… Où que vous soyez, je vous aide à créer un site 
-      <strong>professionnel</strong>, <strong>SEO-friendly</strong> et <strong>adapté à votre image</strong>.
-    </p>
-
-    <div class="row text-center">
-      <div class="col-md-4 mb-4" data-aos="zoom-in">
-        <h5>🇫🇷 France</h5>
-        <p>Sites vitrines, landing pages, refontes SEO pour freelances & TPE.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-        <h5>🇲🇦 Maroc</h5>
-        <p>Projets web pour commerçants, coachs et entrepreneurs marocains.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-        <h5>🇨🇦 Canada</h5>
-        <p>Sites performants pour les professionnels francophones du Québec.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-        <h5>🇧🇪 Belgique</h5>
-        <p>Création de sites sur mesure pour indépendants et artisans.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
-        <h5>🇳🇪 Niger</h5>
-        <p>Services web professionnels pour entreprises locales et diaspora.</p>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
-        <h5>🌍 Sénégal & Afrique</h5>
-        <p>Solutions web modernes et bien référencées en Afrique francophone.</p>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-  
-
-
-</main>
- <!-- FOOTER -->
-<footer class="bg-dark text-light pt-5 pb-4"id="footer">
-  <div class="container">
-    <div class="row text-md-left text-center">
-
-      <!-- Logo / Description -->
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <h5 class="text-uppercase mb-3 fw-bold">A-Works</h5>
-        <p>Développement Web, SEO technique, et solutions digitales sur-mesure. Basé sur la performance, l'esthétique et la conversion.</p>
-      </div>
-
-      <!-- Contact -->
-      <div class="col-12 col-md-6 col-lg-4 mb-4 py-1">
-        <h5 class="text-uppercase mb-3 fw-bold">Contact</h5>
-        <p>
-          <i class="bi bi-envelope-fill me-2 fs-6"></i>
-          <a href="mailto:abdoulibrahim332@gmail.com" class="text-light fs-5 text-decoration-none">abdoulibrahim332@gmail.com</a>
-        </p>
-        <p>
-          <i class="bi bi-whatsapp me-2 fs-5"></i>
-          <a href="https://wa.me/22791123080" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener">+227 91 12 30 80</a>
-        </p>
-        <p>
-          <i class="bi bi-briefcase-fill me-2 fs-5"></i>
-          <a href="https://comeup.com/fr/@ibrahimaliabdoulah" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener">Comeup Platform</a>
-        </p>
-        <p>
-          <i class="bi bi-briefcase-fill me-2 fs-5"></i>
-          <a href="https://www.upwork.com/freelancers/~019b37056d42cfbd4a" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener">Upwork Platform</a>
-        </p>
-        <p>
-          <i class="bi bi-geo-alt-fill me-2 fs-5"></i>
-          <a href="https://goo.gl/maps/3v5x7Z1g2kF2" class="text-light fs-5 text-decoration-none" target="_blank" rel="noopener"> Niger</a>
-        </p>
-      </div>
-
-      <!-- Réseaux Sociaux -->
-      <div class="col-12 col-lg-4 mb-4 text-center">
-        <h5 class="text-uppercase mb-3 fw-bold">Suivez-moi</h5>
-        <a href="https://www.linkedin.com/in/abdoul332" class="text-light me-3" target="_blank" rel="noopener" title="LinkedIn Profile"><i class="bi bi-linkedin fs-4"></i></a>
-        <a href="https://github.com/Abdoul332" class="text-light me-3" target="_blank" rel="noopener" title="GitHub Profile"><i class="bi bi-github fs-4"></i></a>
-        <a href="#" class="text-light" target="_blank" title="Instagram Profile"><i class="bi bi-instagram fs-4"></i></a>
-      </div>
-    </div>
-
-    <hr class="text-light my-4">
-
-    <!-- Bas du footer -->
-    <div class="row align-items-center text-center">
-      <div class="col-md-7 col-lg-8 mb-2 mb-md-0">
-        <p class="mb-0">© 2025 A-Works – Créé par Ibrahim Ali Abdoulahi. Tous droits réservés.</p>
-      </div>
-      <div class="col-md-5 col-lg-4">
-        <a href="#top" class="text-light text-decoration-none">
-          <i class="bi bi-arrow-up-circle-fill fs-4"></i> Haut de page
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-  <!-- JS CALL TO ACTION BUTTON -->
-  <script >
-  const ctaBtn = document.getElementById("ctaMain");
-  const ctaOptions = document.getElementById("ctaOptions");
-
-  ctaBtn.addEventListener("click", () => {
-    ctaOptions.style.display = (ctaOptions.style.display === "flex") ? "none" : "flex";
-  });
-
-  // Fermer si on clique en dehors
-  document.addEventListener("click", (e) => {
-    if (!ctaBtn.contains(e.target) && !ctaOptions.contains(e.target)) {
-      ctaOptions.style.display = "none";
-    }
-  });
-</script>
-
-  <!-- JS compteur animé --><script >const counters=document.querySelectorAll('.counter');const speed=100;counters.forEach(counter=>{const updateCount=()=>{const target=+counter.getAttribute('data-target');const count=+counter.innerText;const increment=target/speed;if(count<target){counter.innerText=Math.ceil(count+increment);setTimeout(updateCount,30)}else{counter.innerText=target}};updateCount()});</script>
-   <!-- CDN Bootstrap (à garder si tu veux le style Bootstrap) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
- 
-<script  src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script >
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
-</script>
-</body>
+      </footer>
+      <!-- CTA BUTTON FUNCTION -->
+      <script>
+         document.getElementById('ctaMain').addEventListener('click', function () {
+           window.location.href = 'package-offres.html';
+         });
+      </script>
+      <!-- AOS & COMPTEUR JS -->
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+         AOS.init({ duration: 800, once: true });
+      </script>
+      <script>
+         const counters = document.querySelectorAll('.counter');
+         
+         const animateCounter = (counter) => {
+           const target = +counter.getAttribute('data-target');
+           const speed = 100;
+           const increment = target / speed;
+           const update = () => {
+             const current = +counter.innerText;
+             if (current < target) {
+               counter.innerText = Math.ceil(current + increment);
+               setTimeout(update, 30);
+             } else {
+               counter.innerText = target;
+             }
+           };
+           update();
+         };
+         
+         const observer = new IntersectionObserver((entries, obs) => {
+           entries.forEach(entry => {
+             if (entry.isIntersecting) {
+               animateCounter(entry.target);
+               obs.unobserve(entry.target);
+             }
+           });
+         }, { threshold: 0.6 });
+         
+         counters.forEach(counter => observer.observe(counter));
+      </script>
+   </body>
 </html>
