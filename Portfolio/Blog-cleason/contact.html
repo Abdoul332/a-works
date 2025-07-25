@@ -11,22 +11,31 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    .navbar {
-      background-color: #111;
-    }
-
-    .navbar-brand {
+   /* Logo stylisé */
+    .brand span {
+      color: #28a745;
       font-weight: bold;
-      color: white;
     }
 
-    .navbar-brand span {
-      color: #20c997;
+    .custom-navbar {
+      background-color: #1f1f1f;
     }
 
-    .nav-link {
-      color: white !important;
-      font-weight: 500;
+    .custom-navbar .navbar-brand {
+      color: #ffffff;
+    }
+
+    .custom-navbar .navbar-brand span {
+      color: #28a745;
+    }
+
+    .custom-navbar .nav-link {
+      color: #dddddd;
+      transition: color 0.3s ease;
+    }
+
+    .custom-navbar .nav-link:hover {
+      color: #28a745;
     }
 
     .contact-section {
@@ -72,21 +81,22 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">MON <span>BLOG</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">CONTACT</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand" href="#">MON <span>BLOG</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+        <li class="nav-item"><a class="nav-link" href="article.html">ARTICLES</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Section Contact -->
   <section class="contact-section">
@@ -98,11 +108,11 @@
           <form>
             <div class="mb-3">
               <label for="name" class="form-label">Votre nom</label>
-              <input type="text" class="form-control" id="name" placeholder="---" required />
+              <input type="text" class="form-control" id="name" placeholder="..." required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Votre email</label>
-              <input type="email" class="form-control" id="email" placeholder="---" required />
+              <input type="email" class="form-control" id="email" placeholder="..." required />
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Votre message</label>

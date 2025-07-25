@@ -3,77 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>À propos - BlogCleason</title>
+  <title>À propos - MonBlog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #fdfdfd;
+      scroll-behavior: smooth;
     }
+
+    /* Navbar */
+    /* Logo stylisé */
+    .brand span {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .custom-navbar {
+      background-color: #1f1f1f;
+    }
+
+    .custom-navbar .navbar-brand {
+      color: #ffffff;
+    }
+
+    .custom-navbar .navbar-brand span {
+      color: #28a745;
+    }
+
+    .custom-navbar .nav-link {
+      color: #dddddd;
+      transition: color 0.3s ease;
+    }
+
+    .custom-navbar .nav-link:hover {
+      color: #28a745;
+    }
+   
+    /* Section À propos */
     .about-section {
-      padding: 60px 0;
+      padding: 100px 0 80px;
+      background-color: #e0f7fa;
     }
+
     .profile-img {
       width: 100%;
-      border-radius: 8px;
+      max-width: 400px;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
+
+    .profile-img:hover {
+      transform: scale(1.03);
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      color: #1f1f1f;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Footer */
     footer {
-      background-color: #f5f5f5;
-      padding: 20px 0;
+      background: #111;
+      color: #f1f1f1;
+      padding: 2rem 0;
       text-align: center;
+    }
+
+    footer span {
+      color: #20c997;
+    }
+
+    footer small {
+      color: #ccc;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #20c997;
+    }
+
+    @media (max-width: 576px) {
+      h2 {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        max-width: 180px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: block;
+        margin: auto;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">BlogCleason</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand" href="#">MON <span>BLOG</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+        <li class="nav-item"><a class="nav-link" href="article.html">ARTICLES</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <!-- Photo -->
-        <div class="col-md-5">
-          <img src="Imgs/undraw_young-man-avatar_wgbd.png" alt="Photo de Cleason" class="profile-img">
-        </div>
-        <!-- Texte -->
-        <div class="col-md-7">
-          <h2 class="fw-bold mb-3">Salut, moi c'est Cleason ! 👋</h2>
-          <p>
-            Passionné par le web et l’écriture, j’ai décidé de créer ce blog pour partager mes idées, mes découvertes et mes conseils dans un cadre simple et inspirant.
-          </p>
-          <p>
-            Ce blog est un espace d’échange, d’inspiration et d’apprentissage où chaque article est écrit avec soin et passion.
-          </p>
-          <p>
-            Merci d’être ici 🙏 – j’espère que vous trouverez du contenu utile, motivant ou simplement agréable à lire !
-          </p>
-        </div>
+  <!-- Section À propos -->
+  <section id="a-propos" class="about-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Texte : ordre 1 sur mobile, ordre 2 sur desktop -->
+      <div class="col-md-7 order-1 order-md-2 about-text">
+        <h2 class="fw-bold">Salut, moi c'est {....} 👋</h2>
+        <p>Je suis passionné par le web, la création de contenu et le partage de connaissances. J’ai lancé ce blog pour t’apporter de l'inspiration, des conseils et une touche personnelle à chaque article.</p>
+        <p>Que tu sois curieux, créatif ou en quête d'idées, ce blog est un espace pour explorer, apprendre et échanger ensemble.</p>
+        <p>Merci d’être ici 🙏 – et surtout, amuse-toi en explorant !</p>
+        
+      </div>
+
+      <!-- Image : ordre 2 sur mobile, ordre 1 sur desktop -->
+      <div class="col-md-5 order-2 order-md-1 text-center">
+        <img src="Imgs/undraw_young-man-avatar_wgbd.png" alt="Portrait de l’auteur du blog" class="profile-img">
       </div>
     </div>
-  </section>
+    <a href="index.html#blog" class="btn btn-primary mt-3 px-4 rounded-pill">Voir les articles</a>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p class="mb-0">&copy; 2025 BlogCleason. Tous droits réservés.</p>
+      <p class="mb-1">&copy; 2025 Mon <span>Blog</span> by A-WORKS. Tous droits réservés.</p>
+      <div class="social-icons mb-2">
+        <a href="#" class="text-primary mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" class="text-info mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" class="mx-2" style="color: #E1306C;"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" class="mx-2" style="color: #0A66C2;"><i class="fab fa-linkedin fa-lg"></i></a>
+      </div>
+      <small>Développé avec ❤️ pour partager la connaissance.</small>
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
