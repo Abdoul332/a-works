@@ -53,7 +53,7 @@ section.bg-light {
 }
 @media (min-width: 992px) {
   .main-paragraph {
-    font-size: 22px; /* Desktop */
+    font-size: 25px; /* Desktop */
     line-height: 1.9;
   }
 }
