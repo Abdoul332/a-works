@@ -29,12 +29,12 @@ section.bg-light {
 
 @media (min-width: 768px) {
   .main-title {
-    font-size: 2rem; /* Tablet */
+    font-size: 28PX; /* Tablet */
   }
 }
 @media (min-width: 992px) {
   .main-title {
-    font-size: 3rem; /* Desktop */
+    font-size: 44PX; /* Desktop */
   }
 }
 
@@ -53,7 +53,7 @@ section.bg-light {
 }
 @media (min-width: 992px) {
   .main-paragraph {
-    font-size: 25px; /* Desktop */
+    font-size: 20px; /* Desktop */
     line-height: 1.9;
   }
 }
