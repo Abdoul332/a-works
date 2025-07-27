@@ -1,9 +1,13 @@
 /* ========== BASE ========= */
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #ffffff;
   background: linear-gradient(135deg, #392988, #0f092b);
-  color: #fff;
+  scroll-behavior: smooth;
 }
+
 
 /* ========== SECTIONS ========= */
 section {
