@@ -64,14 +64,15 @@ color: #ffffff;
   border-radius: 2px;
 }
 
+
 /* ----------- RESPONSIVE ADAPTATION ----------- */
  @media (max-width: 768px) {
   .global-page-title {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .global-subtitle {
-    font-size: 10px;
+    font-size: 14px;
   }
  
   h1 {
@@ -85,4 +86,11 @@ color: #ffffff;
   p {
     font-size: 16px;
   }
+  @media (max-width: 576px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+}
+
 }
