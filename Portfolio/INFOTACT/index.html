@@ -113,6 +113,44 @@
       color: #777;
       margin-bottom: 8px;
     }
+.section-title h2 {
+  font-size: 1.9rem;
+  position: relative;
+  color: #000;
+}
+
+
+  .underline {
+  width: 50px;
+  height: 3px;
+  background-color: #e91e63;
+  border-radius: 2px;
+
+}
+
+.d-flex .flex-wrap {
+  
+  padding-bottom: 20px;
+}
+.social-icon.twitter:hover {
+  color: #1da1f2; /* Couleur Twitter */
+}
+
+.social-icon.linkedin:hover {
+  color: #0077b5; /* Couleur LinkedIn */
+}
+
+.social-icon.facebook:hover {
+  color: #e91e63 /* Couleur Facebook */
+}
+.social-icon.share {
+  color: #e91e63; /* Couleur personnalisée pour le partage */
+}
+
+.social-icon.share:hover {
+  color: #761ee9; /* Couleur personnalisée pour le partage */
+}
+
 
     /* FOOTER */
     footer {
@@ -138,8 +176,8 @@
 <!-- Navbar -->
 <nav class="navbar">
   <div class="container d-flex justify-content-between align-items-center">
-    <a class="navbar-brand" href="#">
-      <span style="color:#e91e28; font-weight:700;">Infotact</span>
+    <a class="navbar-brand" href="index.html">
+      <span style="color:#e91e28; font-weight:700;">Info-Tech</span>
       <span style="color:#000968; font-weight:400; font-size:0.9rem; margin-left:6px;">Magazine Tech & Société</span>
     </a>
 
@@ -150,53 +188,105 @@
       <li class="nav-item"><a class="nav-link" href="web.html">Web</a></li>
       <li class="nav-item"><a class="nav-link" href="Contact-infotact.html">Contact</a></li>
     </ul>
-
-    <!-- Burger button mobile -->
-    <button id="mobileMenuBtn" class="btn d-lg-none border-0 bg-transparent">
-      <i class="bi bi-list" style="font-size: 2rem; color: #111;"></i>
-    </button>
-  </div>
-</nav>
+    <!-- Bouton d’ouverture visible sur mobile -->
+<button class="btn d-lg-none" id="mobileMenuBtn">
+  <i class="bi bi-list" style="font-size: 1.8rem;"></i>
+</button>
 
 <!-- Menu Mobile personnalisé -->
 <div id="mobileMenu" class="mobile-nav d-lg-none">
   <button class="btn-close ms-auto" id="closeMenuBtn"></button>
   <ul class="nav flex-column text-center mt-5">
-    <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Société</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Web</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    <li class="nav-item"><a class="nav-link" href="tech.html">Tech</a></li>
+    <li class="nav-item"><a class="nav-link" href="societe.html">Société</a></li>
+    <li class="nav-item"><a class="nav-link" href="web.html">Web</a></li>
+    <li class="nav-item"><a class="nav-link" href="Contact-infotact.html">Contact</a></li>
   </ul>
+</div>
+   </div>
+</nav>
+<section class="section-articles">
+  <div class="container">
+    <div class="section-title">
+       <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+  <!-- Titre avec soulignement -->
+  <div class="mb-3 mb-md-0">
+    <h2 class="fw-bold mb-1"> À la une</h2>
+    <div class="underline"></div>
+  </div>
+
+ <!-- Réseaux sociaux -->
+<div class="social-links text-end">
+  <p class="mb-2 small text-muted">Suivez-nous ou partagez :</p>
+  <a href="#" class="me-3 social-icon twitter" title="Suivre sur Twitter"><i class="bi bi-twitter-x"></i></a>
+  <a href="#" class="me-3 social-icon linkedin" title="Suivre sur LinkedIn"><i class="bi bi-linkedin"></i></a>
+  <a href="#" class="me-3 social-icon facebook" title="Suivre sur Facebook"><i class="bi bi-facebook"></i></a>
+  <a href="#" class="social-icon share" title="Partager l’article"><i class="bi bi-share-fill"></i></a>
+</div>
 </div>
 
 
-<section class="section-articles">
-  <div class="container">
-    <h2 class="mb-5 fw-bold">À la une</h2>
-
     <div class="row g-4 align-items-stretch">
       <!-- Article Principal -->
-      <div class="col-lg-6">
+      <div class="col-lg-8">
         <div class="card card-article h-100">
           <img src="imgs/ia.jpg" class="card-img-top" alt="Article 1">
           <div class="card-body">
             <div class="card-meta">Tech • 28 juillet 2025</div>
             <h3 class="card-title">L'IA générative : usages concrets en 2025</h3>
-            <a href="#" class="card-text" style="color: #e91e28;text-decoration: none;">Explorez les avancées de l'intelligence artificielle au cœur du quotidien professionnel et personnel.</a>
+      <p class="card-text" style="color: #e91e28; font-weight: 600;">
+        Explorez comment l'intelligence artificielle transforme notre quotidien.
+      </p>
+      <p>
+        En 2025, l’IA générative ne se limite plus à des démonstrations spectaculaires. Elle est intégrée aux outils de travail, aux services clients, aux contenus web, et même à la création artistique. Ce basculement marque une révolution silencieuse, mais profonde.
+      </p>
+      <p>
+        Dans le monde professionnel, les entreprises utilisent ChatGPT-like pour automatiser les réponses clients, générer des rapports, créer du contenu marketing, voire assister les développeurs dans l’écriture de code. Cela permet des gains de temps considérables.
+      </p>
+      <p>
+        Du côté des particuliers, l’IA aide à planifier des voyages, à créer des CV, ou encore à apprendre plus rapidement grâce à des assistants personnalisés. Elle devient un coach personnel, toujours disponible.
+      </p>
+      <p>
+        Toutefois, cette technologie soulève de grandes questions : quelle place pour la créativité humaine ? Quel impact sur l’emploi ? Et surtout, comment encadrer légalement les contenus générés ?
+      </p>
+      <blockquote class="blockquote my-4 ps-3 border-start border-3 border-danger">
+        <p class="mb-0">"L’IA générative n’est pas un outil du futur, c’est déjà un partenaire actif dans notre quotidien numérique."</p></blockquote>
+        
+        Les écoles, les médias, les administrations commencent à adapter leurs pratiques. On voit apparaître des certifications de contenu authentique, des filtres IA dans les navigateurs, et des formations pour comprendre les outils.
+      </p>
+      <p>
+        En somme, l’IA générative bouleverse les repères classiques, mais ouvre aussi un champ immense d’opportunités – à condition de l’aborder avec éthique et discernement.
+      </p>
+      <br>
+      
+        <footer class="blockquote bg-light py-2 text-muted lead fw-semibold">Rédaction Info-Tech</footer>
+      
+      <p>
           </div>
+         
         </div>
       </div>
 
       <!-- 2 Articles Secondaires -->
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <div class="row g-4">
           <div class="col-md-12">
-            <div class="card card-article h-100">
+            <div class="card card-article h-200">
               <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" class="card-img-top" alt="Article 2">
               <div class="card-body">
                 <div class="card-meta">Société • 26 juillet 2025</div>
                 <h5 class="card-title">Les jeunes et le numérique : génération connectée</h5>
                 <a href="#" class="card-text" style="color: #e91e28;text-decoration: none;">Comprendre les usages digitaux des nouvelles générations.</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card card-article h-100">
+              <img src="https://images.pexels.com/photos/3861957/pexels-photo-3861957.jpeg" class="card-img-top" alt="Article 3">
+              <div class="card-body">
+                <div class="card-meta">Web • 25 juillet 2025</div>
+                <h5 class="card-title">Data centers du futur</h5>
+                <a href="#" class="card-text" style="color: #e91e28; text-decoration: none;">Écologie, souveraineté & performance.</a>
               </div>
             </div>
           </div>
@@ -228,13 +318,24 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+  // Ouvrir le menu
+  document.getElementById("mobileMenuBtn")?.addEventListener("click", function() {
     document.getElementById("mobileMenu").style.display = "flex";
   });
-  document.getElementById("closeMenuBtn").addEventListener("click", function () {
+
+  // Fermer avec la croix
+  document.getElementById("closeMenuBtn")?.addEventListener("click", function() {
     document.getElementById("mobileMenu").style.display = "none";
   });
+
+  // Fermer le menu quand on clique sur un lien
+  document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("mobileMenu").style.display = "none";
+    });
+  });
 </script>
+
 
 </body>
 </html>
