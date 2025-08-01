@@ -177,7 +177,7 @@ footer {
 
 /* ------------------ Responsive ------------------ */
 @media (max-width: 768px) {
-  h1, .display-5 { font-size: 2rem; }
+  h1, .display-5, .fw-bold { font-size: 25px; }
   .section-title { font-size: 1.4rem; }
   .logo-glow { font-size: 1.6rem; }
   .quote-block blockquote { font-size: 1.1rem; }
