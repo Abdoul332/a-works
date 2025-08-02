@@ -32,7 +32,8 @@
  <link rel="stylesheet" href="asset/style.css">
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Données structurées : profil personnel -->
   <script type="application/ld+json">
   {
@@ -202,6 +203,17 @@
 
     window.addEventListener('scroll', checkVisible);
     checkVisible(); // Déclenche au chargement
+  });
+</script>
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700, // Animation duration
+    once: true     // Animation only once
   });
 </script>
 </body>
