@@ -95,15 +95,52 @@ p, .card p {
   text-align: center;
 }
 
-.offre .card {
-  background: #fff;
-  color: #000;
-  border: none;
-  transition: all 0.3s ease-in-out;
+/* Animation vivante au survol */
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
-.offre .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Zoom image au survol */
+.card img {
+  transition: transform 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* Effet lumière dégradée */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+}
+.card:hover::before {
+  left: 125%;
+}
+
+/* Transition pour le texte */
+.card-body {
+  transition: background 0.3s ease;
+}
+.card:hover .card-body {
+  background-color: #111;
 }
 
 .cta-section {
