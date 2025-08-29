@@ -1,7 +1,34 @@
-User-agent: *  
-Disallow: /a-works/contact/  
-Disallow: /a-works/en-savoirplus/   
-Disallow: /a-works/en/  
-Disallow: /a-works/Untitled2.html  
-Disallow: /  a-works/Rapport.html 
-Sitemap: https://abdoul332.github.io/a-works/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://abdoul332.github.io/a-works/#about</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://abdoul332.github.io/a-works/#services</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://abdoul332.github.io/a-works/#process</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://abdoul332.github.io/a-works/#testimonials</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://abdoul332.github.io/a-works/#contact</loc>
+      <lastmod>2025-08-28</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+
+</urlset>
