@@ -159,41 +159,46 @@
         }
 
         // Add subtle animations to stats
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumber = entry.target.querySelector('.stat-number');
-                    if (statNumber) {
-                        const finalValue = statNumber.textContent;
-                        let currentValue = 0;
-                        const increment = finalValue.includes('%') ? 1 : 1;
-                        const timer = setInterval(() => {
-                            currentValue += increment;
-                            if (finalValue.includes('%')) {
-                                statNumber.textContent = currentValue + '%';
-                                if (currentValue >= parseInt(finalValue)) {
-                                    clearInterval(timer);
-                                    statNumber.textContent = finalValue;
-                                }
-                            } else if (finalValue.includes('+')) {
-                                statNumber.textContent = currentValue + '+';
-                                if (currentValue >= parseInt(finalValue)) {
-                                    clearInterval(timer);
-                                    statNumber.textContent = finalValue;
-                                }
-                            } else {
-                                statNumber.textContent = currentValue;
-                                if (currentValue >= parseInt(finalValue)) {
-                                    clearInterval(timer);
-                                    statNumber.textContent = finalValue;
-                                }
-                            }
-                        }, 50);
-                    }
-                }
-            });
-        }, { threshold: 0.5 });
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumber = entry.target.querySelector('.stat-number');
+            if (statNumber) {
+                const finalValue = statNumber.textContent;
+                let currentValue = 0;
+                const increment = 1; // tu peux ajuster la vitesse ici
 
-        document.querySelectorAll('.stat-card').forEach(card => {
-            statsObserver.observe(card);
-        });
+                const timer = setInterval(() => {
+                    currentValue += increment;
+
+                    if (finalValue.includes('%')) {
+                        statNumber.textContent = currentValue + '%';
+                        if (currentValue >= parseInt(finalValue)) {
+                            clearInterval(timer);
+                            statNumber.textContent = finalValue;
+                        }
+                    } else if (finalValue.includes('+')) {
+                        statNumber.textContent = currentValue + '+';
+                        if (currentValue >= parseInt(finalValue)) {
+                            clearInterval(timer);
+                            statNumber.textContent = finalValue;
+                        }
+                    } else {
+                        statNumber.textContent = currentValue;
+                        if (currentValue >= parseInt(finalValue)) {
+                            clearInterval(timer);
+                            statNumber.textContent = finalValue;
+                        }
+                    }
+                }, 50);
+
+                // 🔥 très important : on arrête d'observer cet élément
+                observer.unobserve(entry.target);
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-card').forEach(card => {
+    statsObserver.observe(card);
+});
