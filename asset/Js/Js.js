@@ -83,7 +83,7 @@
         }
 
         function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            currentTestimonial = (currentTestimonial +1) % testimonials.length;
             showTestimonial(currentTestimonial);
         }
 

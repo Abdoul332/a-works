@@ -81,18 +81,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 4rem;
+            height: 3rem;
+            
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color:  #0edbff;
-            text-decoration: none;
-            letter-spacing: -0.025em;
-            transition: color 0.3s ease;
+        .logo img {
+             height: 25px;           
+             width: auto;
+             border-radius: 10%;      
+             transition: transform 0.3s ease, filter 0.3s ease;
+             margin-top: 10px;
+             margin-left: 10px;
+             font-size: 50px;
         }
-
+        .logo img:hover {
+             transform: scale(1.5); 
+             filter: brightness(1.1); 
+       }
         .logo:hover {
             color: var(--secondary);
         }
@@ -115,7 +120,7 @@
         }
 
         .nav-link:hover {
-            color: var(--secondary);
+            color: var(--surface-elevatedy);
         }
 
         .nav-link::after {
@@ -329,13 +334,20 @@
         .section-badge {
             display: inline-block;
             background: rgba(59, 130, 246, 0.1);
-            color: var(--secondary);
+            color: var(--primary-light);
             padding: 0.8rem 1rem;
             border-radius: var(--radius-xl);
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 1.8rem;
+            font-weight: 500;
             margin-bottom: 6rem;
             border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        #section-header {
+            text-align: center;
+            padding-bottom: 4rem;
+            
+            
+        
         }
 
         .section-title {
@@ -355,6 +367,9 @@
         }
 
         /* About Section */
+        #about .container {
+            margin-bottom: 4rem;
+        }
         .about {
             background: var(--surface);
         }
@@ -370,6 +385,7 @@
             opacity: 0;
             transform: translateX(-2rem);
         }
+        
 
         .about-text p {
             margin-bottom: 1.5rem;
