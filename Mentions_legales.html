@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Ibrahim Ali Abdoulahi</title>
+    <meta name="description" content="Mentions légales du site web d'Ibrahim Ali Abdoulahi, développeur web et expert SEO technique basé au Niger.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #171818;
+            --primary-light: #1e293b;
+            --secondary: #2f00ff;
+            --secondary-light: #1d2023;
+            --accent: #000a0c;
+            --text-primary: #0f172a;
+            --text-secondary: #2c3036;
+            --text-muted: #38414d;
+            --background:#f8fafc;
+            --surface: #f8fafc;
+            --surface-elevated: #ffffff;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            --success: #10b981;
+            --green: #00330a;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --gradient-primary: linear-gradient(135deg, #392988, #0f092b);
+            --gradient-secondary: linear-gradient(135deg, #005ef5 0%, #0edbff 100%);
+            --gradient-surface: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            color: #ffffff;
+        }
+
+        /* Navigation */
+         .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(1, 45, 107, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+        }
+
+        .navbar.scrolled {
+            background: rgba(25, 3, 73, 0.98);
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: var(--border);
+        }
+
+        .navbar-brand {
+      text-decoration: none;
+            color:#fff;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+    }
+
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-surface);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 6rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            opacity: 0;
+            transform: translateY(2rem);
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgb(255, 255, 255);
+            color: var(--primary-light);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.025em;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .hero-visual {
+            position: relative;
+            opacity: 0;
+            transform: translateX(2rem);
+            animation: fadeInRight 1s ease 0.6s forwards;
+        }
+
+        .hero-card {
+            background: var(--surface-elevated);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-secondary);
+        }
+
+        .code-preview {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .code-line {
+            margin-bottom: 0.5rem;
+        }
+
+        .code-keyword {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .code-string {
+            color: var(--accent);
+        }
+
+        .code-comment {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-light);
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius-xl);
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 6rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        #section-header {
+            text-align: center;
+            padding-bottom: 4rem;
+            
+            
+        
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        #about .container {
+            margin-bottom: 4rem;
+        }
+        .about {
+            background: var(--surface);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            opacity: 0;
+            transform: translateX(-2rem);
+        }
+        
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .quote-card {
+            background: var(--surface-elevated);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            margin-top: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .quote-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    .quote-img {
+           width: 80px;
+           height: 80px;
+           border-radius: 50%;
+           object-fit: cover;
+           flex-shrink: 0;
+    }
+
+        .quote-author {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .about-visual {
+            opacity: 0;
+            transform: translateX(2rem);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--surface-elevated);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--surface-elevated);
+            padding: 2rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(2rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-secondary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+/* CSS spécifique pour la page de mentions légales */
+
+/* Bannière cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface-elevated);
+    border-top: 1px solid var(--border);
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cookie-banner.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.cookie-content p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.btn-accept, .btn-decline {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-accept {
+    background: var(--gradient-secondary);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-accept:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-decline {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+.btn-decline:hover {
+    background: var(--surface);
+    color: var(--text-primary);
+}
+
+/* Header pour la page de mentions légales */
+.header {
+    padding-top: 4rem;
+    background: var(--gradient-surface);
+}
+
+/* Contenu principal des mentions légales */
+.main {
+    padding: 2rem 0 4rem;
+    background: var(--background);
+}
+
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--surface-elevated);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+/* Titre principal de la page */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: -0.025em;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Sections des mentions légales */
+.legal-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.legal-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.subsection-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 2rem 0 1rem;
+}
+
+.section-content {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.section-content p:last-child {
+    margin-bottom: 0;
+}
+
+.section-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Liens dans le contenu */
+.section-content a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.section-content a:hover {
+    color: var(--primary-light);
+}
+
+.section-content a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+.section-content a:hover::after {
+    width: 100%;
+}
+
+/* Listes dans le contenu */
+.section-content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.section-content li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.section-content li::marker {
+    color: var(--secondary);
+}
+
+/* Dernière mise à jour */
+.last-updated {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.last-updated p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .cookie-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .btn-accept, .btn-decline {
+        flex: 1;
+        max-width: 150px;
+    }
+    
+    .legal-content {
+        margin: 0 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-content {
+        margin: 0 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.125rem;
+        padding-left: 0.75rem;
+    }
+    
+    .section-content {
+        font-size: 0.9rem;
+    }
+    
+    .cookie-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-accept, .btn-decline {
+        max-width: none;
+    }
+}
+
+/* Animation d'apparition pour les sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.legal-section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.legal-section:nth-child(1) { animation-delay: 0.1s; }
+.legal-section:nth-child(2) { animation-delay: 0.2s; }
+.legal-section:nth-child(3) { animation-delay: 0.3s; }
+.legal-section:nth-child(4) { animation-delay: 0.4s; }
+.legal-section:nth-child(5) { animation-delay: 0.5s; }
+.legal-section:nth-child(6) { animation-delay: 0.6s; }
+
+/* Amélioration de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    .legal-section {
+        animation: none;
+    }
+    
+    .cookie-banner {
+        transition: none;
+    }
+    
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Mode sombre (optionnel) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f172a;
+        --surface: #1e293b;
+        --surface-elevated: #334155;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --border: #475569;
+        --border-light: #374151;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Bannière cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Ce site utilise des cookies pour améliorer votre expérience de navigation. En continuant à utiliser ce site, vous acceptez notre utilisation des cookies.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-accept">Accepter</button>
+                <button id="decline-cookies" class="btn-decline">Refuser</button>
+            </div>
+        </div>
+    </div>
+    <header>
+    <!-- Navigation -->
+    <nav class="navbar bg-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-arrow-left"></i> Accueil
+    </a>
+  </div>
+    </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="legal-content">
+                <h1 class="page-title">Mentions Légales</h1>
+                <p class="page-subtitle">Informations légales et conditions d'utilisation du site</p>
+
+                <!-- Section Identification de l'éditeur -->
+                <section class="legal-section">
+                    <h2 class="section-title">Identification de l'éditeur</h2>
+                    <div class="section-content">
+                        <p><strong>Nom :</strong> Ibrahim Ali Abdoulahi</p>
+                        <p><strong>Statut :</strong> Développeur Web / Expert SEO Technique (Freelancer)</p>
+                        <p><strong>Adresse :</strong> Niger</p>
+                        <p><strong>E-mail :</strong> <a href="mailto:abdoulibrahim332@gmail.com">Abdoulibrahim332@gmail.com</a></p>
+                        <p><strong>Téléphone :</strong> +227 91123080</p>
+                        <p><strong>Directeur de la publication :</strong> Ibrahim Ali Abdoulahi</p>
+                    </div>
+                </section>
+
+                <!-- Section Hébergeur du site -->
+                <section class="legal-section">
+                    <h2 class="section-title">Hébergeur du site</h2>
+                    <div class="section-content">
+                        <p>Le présent site est hébergé par GitHub Pages.</p>
+                        <p><strong>Nom de l'hébergeur :</strong> GitHub, Inc.</p>
+                        <p><strong>Adresse :</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis</p>
+                        <p><strong>Site web :</strong> <a href="https://abdoul332.github.io/a-works/" target="_blank" rel="noopener noreferrer">A-works</a></p>
+                    </div>
+                </section>
+
+                <!-- Section Propriété intellectuelle -->
+                <section class="legal-section">
+                    <h2 class="section-title">Propriété intellectuelle</h2>
+                    <div class="section-content">
+                        <p>L'ensemble du contenu de ce site (textes, images, graphismes, logos, icônes, sons, logiciels, etc.) est la propriété exclusive d'Ibrahim Ali Abdoulahi, sauf mention contraire. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable d'Ibrahim Ali Abdoulahi.</p>
+                        <p>Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+                    </div>
+                </section>
+
+                <!-- Section Responsabilité -->
+                <section class="legal-section">
+                    <h2 class="section-title">Responsabilité</h2>
+                    <div class="section-content">
+                        <p>Ibrahim Ali Abdoulahi s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site, dont il se réserve le droit de corriger, à tout moment et sans préavis, le contenu. Toutefois, Ibrahim Ali Abdoulahi ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à la disposition sur ce site.</p>
+                        <p>En conséquence, Ibrahim Ali Abdoulahi décline toute responsabilité :</p>
+                        <ul>
+                            <li>Pour toute interruption du site.</li>
+                            <li>Pour survenance de bugs.</li>
+                            <li>Pour toute inexactitude ou omission portant sur des informations disponibles sur le site.</li>
+                            <li>Pour tout dommage résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à la disposition sur le site.</li>
+                            <li>Et plus généralement de tout dommage direct et indirect, quelles qu'en soient les causes, origines, natures ou conséquences, provoqués à raison de l'accès de quiconque au site ou de l'impossibilité d'y accéder, de l'utilisation du site et/ou du crédit accordé à une quelconque information provenant directement ou indirectement de ce dernier.</li>
+                        </ul>
+                        <p>Le site peut inclure des liens vers d'autres sites web ou d'autres sources Internet. Dans la mesure où Ibrahim Ali Abdoulahi ne peut contrôler ces sites et ces sources externes, Ibrahim Ali Abdoulahi ne peut être tenu pour responsable de la mise à disposition de ces sites et sources externes, et ne peut supporter aucune responsabilité quant au contenu, publicités, produits, services ou tout autre matériel disponible sur ou à partir de ces sites ou sources externes.</p>
+                    </div>
+                </section>
+
+                <!-- Section Données personnelles et cookies -->
+                <section class="legal-section">
+                    <h2 class="section-title">Données personnelles et cookies</h2>
+                    <div class="section-content">
+                        <p>Ibrahim Ali Abdoulahi s'engage à ce que la collecte et le traitement de vos données, effectués à partir du présent site, soient conformes au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+                        
+                        <h3 class="subsection-title">Collecte de données personnelles</h3>
+                        <p>Les informations recueillies sur ce site sont enregistrées dans un fichier informatisé par Ibrahim Ali Abdoulahi pour la gestion de la communication et des relations commerciales. Elles sont conservées pendant une durée qui ne saurait excéder la durée nécessaire aux finalités pour lesquelles elles sont collectées et traitées. Elles sont destinées à Ibrahim Ali Abdoulahi et à ses éventuels partenaires.</p>
+                        <p>Conformément à la loi « informatique et libertés », vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier en contactant : Ibrahim Ali Abdoulahi par e-mail à <a href="mailto:abdoulibrahim332@gmail.com">Abdoulibrahim332@gmail.com</a> ou par téléphone au +227 91123080.</p>
+                        
+                        <h3 class="subsection-title">Cookies</h3>
+                        <p>Un « cookie » est un petit fichier d'information envoyé sur le navigateur de l'Utilisateur et enregistré au sein du terminal de l'Utilisateur (ex : ordinateur, smartphone), (ci-après « Cookies »). Ce fichier comprend des informations telles que le nom de domaine de l'Utilisateur, le fournisseur d'accès Internet de l'Utilisateur, le système d'exploitation de l'Utilisateur, ainsi que la date et l'heure d'accès. Les Cookies ne risquent en aucun cas d'endommager le terminal de l'Utilisateur.</p>
+                        <p>Ibrahim Ali Abdoulahi est susceptible de traiter les informations de l'Utilisateur concernant sa visite du Site, telles que les pages consultées, les recherches effectuées. Ces informations permettent à Ibrahim Ali Abdoulahi d'améliorer le contenu du Site, de la navigation de l'Utilisateur.</p>
+                        <p>Les Cookies facilitant la navigation et/ou la fourniture des services proposés par le Site, l'Utilisateur peut configurer son navigateur pour qu'il lui permette de décider s'il souhaite ou non les accepter de manière à ce que des Cookies soient enregistrés dans le terminal ou, au contraire, qu'ils soient rejetés, soit systématiquement, soit selon leur émetteur.</p>
+                        <p>Si l'Utilisateur refuse l'enregistrement de Cookies dans son terminal ou son navigateur, ou si l'Utilisateur supprime ceux qui y sont enregistrés, l'Utilisateur est informé que sa navigation et son expérience sur le Site peuvent être limitées.</p>
+                        <p>À tout moment, l'Utilisateur peut faire le choix d'exprimer et de modifier ses souhaits en matière de Cookies. Ibrahim Ali Abdoulahi pourra en outre faire appel aux services de prestataires externes pour l'aider à recueillir et traiter les informations décrites dans cette section.</p>
+                    </div>
+                </section>
+
+                <!-- Section Contact -->
+                <section class="legal-section">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-content">
+                        <p>Pour toute question concernant ces mentions légales ou l'utilisation de ce site, vous pouvez nous contacter :</p>
+                        <p><strong>E-mail :</strong> <a href="abdoulibrahim332@gmali.com">Abdoulibrahim332@gmail.com</a></p>
+                        <p><strong>Téléphone :</strong> +227 91123080</p>
+                    </div>
+                </section>
+
+                <div class="last-updated">
+                    <p><em>Dernière mise à jour : Aout 2025</em></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Ibrahim Ali Abdoulahi</h3>
+                <p class="footer-subtitle">Développeur web freelance et Consultant en SEO technique.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/abdoul332" class="footer-link">LinkedIn</a>
+                    <a href="https://github.com/Abdoul332" class="footer-link">Github</a>
+                    <a href="Mentions_legales.html" class="footer-link">Mentions légales</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ibrahim. Tous droits réservés. Conçu avec expertise et passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion de la bannière cookies
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptButton = document.getElementById('accept-cookies');
+            const declineButton = document.getElementById('decline-cookies');
+            
+            // Clés pour le localStorage
+            const COOKIE_CONSENT_KEY = 'cookie-consent';
+            const COOKIE_CONSENT_DATE_KEY = 'cookie-consent-date';
+            
+            // Vérifier si l'utilisateur a déjà donné son consentement
+            function checkCookieConsent() {
+                const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+                const consentDate = localStorage.getItem(COOKIE_CONSENT_DATE_KEY);
+                
+                // Si pas de consentement ou consentement expiré (plus de 13 mois)
+                if (!consent || !consentDate) {
+                    showCookieBanner();
+                    return;
+                }
+                
+                const consentTimestamp = parseInt(consentDate);
+                const currentTimestamp = Date.now();
+                const thirteenMonthsInMs = 13 * 30 * 24 * 60 * 60 * 1000; // 13 mois approximatifs
+                
+                if (currentTimestamp - consentTimestamp > thirteenMonthsInMs) {
+                    // Consentement expiré, supprimer les données et redemander
+                    localStorage.removeItem(COOKIE_CONSENT_KEY);
+                    localStorage.removeItem(COOKIE_CONSENT_DATE_KEY);
+                    showCookieBanner();
+                }
+            }
+            
+            // Afficher la bannière cookies
+            function showCookieBanner() {
+                if (cookieBanner) {
+                    // Petit délai pour une meilleure UX
+                    setTimeout(() => {
+                        cookieBanner.classList.add('show');
+                    }, 1000);
+                }
+            }
+            
+            // Masquer la bannière cookies
+            function hideCookieBanner() {
+                if (cookieBanner) {
+                    cookieBanner.classList.remove('show');
+                    // Supprimer complètement l'élément après l'animation
+                    setTimeout(() => {
+                        cookieBanner.style.display = 'none';
+                    }, 300);
+                }
+            }
+            
+            // Sauvegarder le consentement
+            function saveConsent(accepted) {
+                const timestamp = Date.now().toString();
+                localStorage.setItem(COOKIE_CONSENT_KEY, accepted ? 'accepted' : 'declined');
+                localStorage.setItem(COOKIE_CONSENT_DATE_KEY, timestamp);
+                
+                // Déclencher un événement personnalisé pour informer d'autres scripts
+                const consentEvent = new CustomEvent('cookieConsentChanged', {
+                    detail: {
+                        consent: accepted ? 'accepted' : 'declined',
+                        timestamp: timestamp
+                    }
+                });
+                document.dispatchEvent(consentEvent);
+            }
+            
+            // Gestionnaire pour accepter les cookies
+            if (acceptButton) {
+                acceptButton.addEventListener('click', function() {
+                    saveConsent(true);
+                    hideCookieBanner();
+                    enableCookies();
+                });
+            }
+            
+            // Gestionnaire pour refuser les cookies
+            if (declineButton) {
+                declineButton.addEventListener('click', function() {
+                    saveConsent(false);
+                    hideCookieBanner();
+                    disableCookies();
+                });
+            }
+            
+            // Fonction pour activer les cookies
+            function enableCookies() {
+                console.log('Cookies acceptés - Activation des services analytics');
+                // Ici vous pouvez ajouter votre code Google Analytics ou autres services
+            }
+            
+            // Fonction pour désactiver les cookies
+            function disableCookies() {
+                console.log('Cookies refusés - Désactivation des services analytics');
+                clearNonEssentialCookies();
+            }
+            
+            // Fonction pour supprimer les cookies non essentiels
+            function clearNonEssentialCookies() {
+                const essentialCookies = ['cookie-consent', 'cookie-consent-date'];
+                const cookies = document.cookie.split(';');
+                
+                cookies.forEach(cookie => {
+                    const name = cookie.split('=')[0].trim();
+                    if (!essentialCookies.includes(name)) {
+                        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    }
+                });
+            }
+            
+            // Initialisation : vérifier le consentement au chargement de la page
+            checkCookieConsent();
+        });
+
+        // Script pour la navigation (si nécessaire, à adapter ou supprimer si déjà présent)
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
