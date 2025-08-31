@@ -216,7 +216,7 @@
         }
 
         .nav-cta {
-            background: var(--gradient-secondary);
+            background: var(--gradient-primary);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: var(--radius-lg);
@@ -228,8 +228,9 @@
         }
 
         .nav-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-lg);
+            background: var(--gradient-secondary);
+            transform: translateY(0px);
+            box-shadow: var(--secondary-light);
         }
 
         .mobile-menu-btn {
