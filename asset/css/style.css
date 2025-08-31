@@ -149,7 +149,7 @@
         }
 
         .navbar.scrolled {
-            background: rgba(25, 3, 73, 0.98);
+            background: rgba(1, 45, 107, 0.95);
             box-shadow: var(--shadow-lg);
             border-bottom-color: var(--border);
         }
@@ -226,13 +226,28 @@
             transition: all 0.3s ease;
             box-shadow: var(--shadow-md);
         }
-
+        .nav-cta-R
+        {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
         .nav-cta:hover {
             background: var(--gradient-secondary);
             transform: translateY(0px);
             box-shadow: var(--secondary-light);
         }
-
+       .nav-cta-R:hover {
+            background: var(--gradient-primary);
+            transform: translateY(0px);
+            box-shadow: var(--secondary-light);
+        }
         .mobile-menu-btn {
             display: none;
             flex-direction: column;
