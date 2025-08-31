@@ -240,12 +240,12 @@
         }
         .nav-cta:hover {
             background: var(--gradient-secondary);
-            transform: translateY(0px);
+            transform: translateY(-1px);
             box-shadow: var(--secondary-light);
         }
        .nav-cta-R:hover {
             background: var(--gradient-primary);
-            transform: translateY(0px);
+            transform: translateY(-1px);
             box-shadow: var(--secondary-light);
         }
         .mobile-menu-btn {
