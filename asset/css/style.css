@@ -1004,6 +1004,13 @@
             color: var(--text-primary);
             font-weight: 500;
         }
+        .contact-text a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .contact-text a:hover {
+            color: var(--success);
+            }
 
         /* Footer */
         .footer {
