@@ -1119,15 +1119,32 @@
         }
 
         @media (max-width: 768px) {
-            .nav-menu {
-            display: none;
+            .logo img {
+                height: 30px;
+                width: 100px; ;
+                margin-top: center;
+                margin-right: 50px;
+                font-size: 5px;
             }
-
+            .nav-container{
+                display: flex;
+                flex-direction: row;
+                text-wrap: wrap;
+            }
+            .nav-menu{
+                display: none;
+            }
             .mobile-menu-btn {
                 display: flex;
-            }
+                margin-right: 50%;
+                }
+            
+
+            
              .container {
-                padding: 0 1rem;
+                display: flex;
+                flex-direction: column;
+                padding: 200px 0rem;
             }
             
             .hero-title {
