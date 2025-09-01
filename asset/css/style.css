@@ -163,17 +163,17 @@
         }
 
         .logo img {
-             height: 25px;           
-             width: auto;
-             border-radius: 10%;      
+             height: 35px;           
+             width: 100%;
+             border-radius: 5px;      
              transition: transform 0.3s ease, filter 0.3s ease;
              margin-top: 10px;
-             margin-left: 10px;
+             margin-left: 5px;
              font-size: 50px;
         }
         .logo img:hover {
-             transform: scale(1.5); 
-             filter: brightness(1.1); 
+             transform: scale(1.2); 
+             filter:blur(1.1);
        }
         .logo:hover {
             color: var(--secondary);
@@ -197,7 +197,7 @@
         }
 
         .nav-link:hover {
-            color: var(--surface-elevatedy);
+            color:var(--border)
         }
 
         .nav-link::after {
@@ -207,7 +207,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--secondary);
+            background: var(--background);
             transition: width 0.3s ease;
         }
 
@@ -216,9 +216,10 @@
         }
 
         .nav-cta {
-            background: var(--gradient-primary);
+            background: var(--secondary);
             color: white;
             padding: 0.75rem 1.5rem;
+            margin: 5px;
             border-radius: var(--radius-lg);
             font-weight: 600;
             font-size: 0.875rem;
@@ -231,6 +232,7 @@
             background: var(--gradient-secondary);
             color: white;
             padding: 0.75rem 1.5rem;
+            margin: 5px;
             border-radius: var(--radius-lg);
             font-weight: 600;
             font-size: 0.875rem;
@@ -955,8 +957,8 @@
 
         .nav-dot {
             width: 0.75rem;
-            height: 0.75rem;
-            border-radius: 50%;
+            height: 0.2rem;
+            border-radius: 10%;
             background: var(--border);
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1118,7 +1120,7 @@
 
         @media (max-width: 768px) {
             .nav-menu {
-                display: none;
+            display: none;
             }
 
             .mobile-menu-btn {
@@ -1127,16 +1129,19 @@
              .container {
                 padding: 0 1rem;
             }
+            
             .hero-title {
                 font-size: 2.5rem;
             }
-
+        .hero-visual{
+            display: none;
+        }
             .section-title {
                 font-size: 1.5rem;
             }
 
             .section {
-                padding: 100px 0;
+                padding: 10px 0;
             }
 
             .services-grid,
