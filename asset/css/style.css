@@ -1109,6 +1109,9 @@
                 margin-right: 50px;
                 font-size: 5px;
             }
+            .navbar{
+                display: none;
+            }
             .nav-container{
                 display: flex;
                 flex-direction: row;
