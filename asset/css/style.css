@@ -163,14 +163,14 @@
         }
 
         .logo img {
-             height: 35px;           
-             width: 150px;
-             border-radius: 5px;      
-             transition: transform 0.3s ease, filter 0.3s ease;
-             margin-top: 10px;
-             margin-left: 5px;
-             font-size: 50px;
-        }
+              height: auto;
+              max-width: 125px;
+              border-radius: 5px;
+              transition: transform 0.3s ease, filter 0.3s ease;
+              margin-top: 10px;
+              margin-left: 5px;
+           }
+
         .logo img:hover {
              transform: scale(1.2); 
              filter:blur(1.1);
@@ -217,8 +217,9 @@
 
         .nav-cta {
             background: var(--gradient-secondary);
+            width: 120px;
             color: white;
-            padding: 0.75rem 1rem;
+            padding: 0.75rem 0.7rem;
             border-radius: var(--radius-lg);
             font-weight: 600;
             font-size: 0.8rem;
