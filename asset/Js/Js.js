@@ -131,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptButton = document.getElementById('accept-cookies');
     const declineButton = document.getElementById('decline-cookies');
-    const changeButton = document.getElementById('change-cookies');
     const COOKIE_KEY = 'cookie-consent';
     const COOKIE_DATE_KEY = 'cookie-consent-date';
     const CONSENT_MS = 6*30*24*60*60*1000; // 6 mois
@@ -178,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const essential=[COOKIE_KEY,COOKIE_DATE_KEY];
         document.cookie.split(';').forEach(c=>{
             const n=c.split('=')[0].trim();
-            if(!essential.includes(n)) document.cookie=`${n}=; expires=Thu,01 Jan 1970 00:00:00 UTC; path=/;`;
+            if(!essential.includes(n)) document.cookie = "nom=; Max-Age=0; path=/;";
         });
     }
 
