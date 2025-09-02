@@ -164,7 +164,7 @@
 
         .logo img {
               height: auto;
-              max-width: 125px;
+              max-width: 120px;
               border-radius: 5px;
               transition: transform 0.3s ease, filter 0.3s ease;
               margin-top: 10px;
