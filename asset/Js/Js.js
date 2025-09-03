@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptButton = document.getElementById('accept-cookies');
     const declineButton = document.getElementById('decline-cookies');
-    const GA4_ID = 'G-57J8LJGQ1L'; // Mettre l'ID ici est plus propre
+    const GA4_ID = 'G-57J8LJGQ1L'; //  l'ID 
 
     if (cookieBanner && acceptButton && declineButton) {
         const COOKIE_KEY = 'cookie-consent';
