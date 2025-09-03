@@ -151,11 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem(COOKIE_KEY, accepted?'accepted':'declined');
         localStorage.setItem(COOKIE_DATE_KEY, ts);
         document.dispatchEvent(new CustomEvent('cookieConsentChanged',{detail:{consent:accepted?'accepted':'declined', timestamp:ts}}));
-        if(changeButton) changeButton.style.display='inline-block';
     }
 
     if(acceptButton) acceptButton.addEventListener('click',()=>{ saveConsent(true); hideCookie(); enableGA4(); });
     if(declineButton) declineButton.addEventListener('click',()=>{ saveConsent(false); hideCookie(); disableGA4(); });
+    
     function enableGA4() {
         const GA4_ID = 'G-57J8LJGQ1L'; 
         if(!document.getElementById('ga4-script')){
