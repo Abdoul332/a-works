@@ -156,8 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(acceptButton) acceptButton.addEventListener('click',()=>{ saveConsent(true); hideCookie(); enableGA4(); });
     if(declineButton) declineButton.addEventListener('click',()=>{ saveConsent(false); hideCookie(); disableGA4(); });
-    if(changeButton) changeButton.addEventListener('click',()=>{ showCookie(); });
-
     function enableGA4() {
         const GA4_ID = 'G-57J8LJGQ1L'; 
         if(!document.getElementById('ga4-script')){
