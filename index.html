@@ -494,17 +494,33 @@
             </div>
         </div>
     </footer>
-    <!-- Bannière RGPD Conforme -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <h3 class="cookie-title">🍪 Gestion des cookies</h3>
-                <p>Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic. Vous pouvez choisir d'accepter, refuser ou personnaliser vos préférences.</p>
+    <!-- Bannière RGPD Moderne -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-description">
+        <div class="cookie-container">
+            <div class="cookie-content">
+                <div class="cookie-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="cookie-text">
+                    <h3 id="cookie-title" class="cookie-title">Respect de votre vie privée</h3>
+                    <p id="cookie-description" class="cookie-description">
+                        Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser notre trafic. 
+                        Vous gardez le contrôle total sur vos données.
+                    </p>
+                </div>
             </div>
-            <div class="cookie-buttons">
-                <button id="accept-all-cookies" class="btn-accept">Tout accepter</button>
-                <button id="decline-cookies" class="btn-decline">Tout refuser</button>
-                <button id="customize-cookies" class="btn-customize">Personnaliser</button>
+            <div class="cookie-actions">
+                <button id="accept-all-cookies" class="btn-cookie btn-primary" type="button">
+                    <span>Tout accepter</span>
+                </button>
+                <button id="decline-cookies" class="btn-cookie btn-secondary" type="button">
+                    <span>Refuser</span>
+                </button>
+                <button id="customize-cookies" class="btn-cookie btn-outline" type="button">
+                    <span>Personnaliser</span>
+                </button>
             </div>
         </div>
     </div>
