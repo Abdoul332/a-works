@@ -1,0 +1,21 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#392988;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f092b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Conteneur principal -->
+  <rect x="0" y="0" width="16" height="16" rx="3" fill="url(#faviconGradient)"/>
+  
+  <!-- Code simplifié pour favicon -->
+  <g transform="translate(3, 3)">
+    <!-- Brackets simplifiés -->
+    <path d="M2 2 L0 4 L0 6 L2 8" stroke="#ffffff" stroke-width="1" fill="none"/>
+    <path d="M8 2 L10 4 L10 6 L8 8" stroke="#ffffff" stroke-width="1" fill="none"/>
+    
+    <!-- Slash central -->
+    <path d="M7 2 L3 8" stroke="#2f00ff" stroke-width="1.5"/>
+  </g>
+</svg>
