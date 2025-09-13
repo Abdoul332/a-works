@@ -1622,6 +1622,108 @@
             }
         }
 
+        @media (max-width: 767px) {
+            /* Typography Adjustments */
+            h1, .hero-title {
+                font-size: 1.5rem !important; /* Réduction à 1.5rem pour mobile */
+                line-height: 1.2;
+                margin-bottom: 0.5rem;
+            }
+            
+            h2, .section-title {
+                font-size: 1.5rem !important; /* ~20% reduction */
+                line-height: 1.25;
+                margin-bottom: 0.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important; /* ~15% reduction */
+                line-height: 1.3;
+                margin-bottom: 0.5rem;
+            }
+            
+            p, .hero-subtitle, .section-description, .service-description, .testimonial-text {
+                font-size: 0.85em !important; /* 85% of desktop */
+                line-height: 1.5;
+                margin-bottom: 1rem;
+            }
+            
+            /* Button Adjustments */
+            .btn, .hero-cta, .nav-cta, .contact-submit {
+                width: 90% !important;
+                max-width: 100%;
+                padding: 0.6rem 1.2rem !important;
+                margin: 0.5rem auto;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.2s ease;
+            }
+            
+            .btn:hover, .hero-cta:hover, .nav-cta:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Hero Section */
+            .hero {
+                padding-top: 5rem; /* Augmenté de 3rem à 5rem */
+            }
+            
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem 0 !important;
+            }
+            
+            .hero-text {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 0 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-cta {
+                width: 90%;
+                max-width: 100%;
+                padding: 0.6rem 1.2rem !important;
+                margin: 0 auto;
+            }
+            
+            .hero-badge {
+                justify-content: center;
+                margin-bottom: 0.5rem;
+            }
+            
+            .hero-subtitle {
+                max-width: 90%;
+                margin: 0.5rem auto 1rem;
+            }
+            
+            .hero-visual {
+                width: 90%;
+                max-width: 400px;
+                margin: 1rem auto 0;
+                order: 2;
+            }
+            
+            /* Section Spacing */
+            .section {
+                padding: 2rem 0 !important;
+            }
+            
+            .section-header {
+                margin-bottom: 1.25rem !important;
+            }
+            
+            .section + .section {
+                padding-top: 1.5rem !important;
+            }
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding: 0 0.8rem;
