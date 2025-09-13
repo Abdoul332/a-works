@@ -552,15 +552,12 @@
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            padding: 6rem 0;
-            position: relative;
-            z-index: 1;
-            /* Empêche le débordement */
+            grid-template-columns: 1fr;
+            gap: 3rem;
             width: 100%;
-            max-width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
             box-sizing: border-box;
         }
 
@@ -636,11 +633,24 @@
         .hero-card {
             background: var(--surface-elevated);
             border-radius: var(--radius-xl);
-            padding: 2rem;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--border);
+            padding: 2.5rem;
             position: relative;
+            box-shadow: var(--shadow-lg);
             overflow: hidden;
+            width: 100%;
+            max-width: 540px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-card {
+                padding: 3rem;
+                max-width: 600px;
+                width: 100%;
+                margin: 0;
+                margin-left: auto;
+            }
         }
 
         .hero-card::before {
@@ -932,8 +942,8 @@
         }
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
   margin-top: 40px;
   /* Empêche le débordement sur mobile */
   width: 100%;
@@ -1623,11 +1633,6 @@
         }
 
         @media (max-width: 767px) {
-            /* About Section */
-            .about-text p {
-                font-size: 75% !important; /* Réduction à 75% de la taille d'origine */
-            }
-            
             /* Typography Adjustments */
             h1, .hero-title {
                 font-size: 1.5rem !important; /* Réduction à 1.5rem pour mobile */
@@ -2121,54 +2126,76 @@
         }
 
         /* Styles pour tablettes (768px - 1366px) */
-        @media (min-width: 768px) and (max-width: 1366px) {
+        @media (min-width: 1024px) {
             /* Hero Section */
             .hero {
-                padding: 4rem 0 3rem;
+                padding: 6rem 0 4rem;
+                width: 100%;
+                overflow: hidden; /* added to prevent overflow */
             }
             
             .hero-content {
                 display: flex;
-                flex-direction: row-reverse; /* Inversion de l'ordre des éléments */
-                align-items: flex-start;
-                gap: 1.5rem;
-                padding: 0 1.5rem !important;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 4rem;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 3rem 4rem !important;
+                box-sizing: border-box;
+                width: 100%;
             }
             
             .hero-text {
-                width: 60%;
+                width: 50%;
                 text-align: left;
-                padding: 0 1rem;
+                padding: 2rem 0;
                 margin: 0;
+                max-width: 600px;
             }
             
             .hero-title {
-                font-size: 2.2rem;
+                font-size: 3rem;
                 line-height: 1.2;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
+                font-weight: 800;
+                letter-spacing: -0.5px;
             }
             
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.25rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
                 line-height: 1.5;
                 margin-bottom: 1.5rem;
                 max-width: 100%;
             }
             
             .hero-cta {
-                width: 85%;
-                max-width: 85%;
-                padding: 0.7rem 1.4rem !important;
+                width: auto;
+                max-width: 300px;
+                padding: 1rem 2rem !important;
                 margin: 0;
+                font-size: 1.1rem;
+                font-weight: 600;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+            }
+            
+            .hero-cta:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             }
             
             .hero-visual {
-                width: 40%;
+                width: 50%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-end;
                 margin: 0;
-                padding: 0 1rem;
+                padding: 0;
+                max-width: 650px;
             }
             
             .hero-visual img {
