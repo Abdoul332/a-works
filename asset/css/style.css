@@ -1623,6 +1623,11 @@
         }
 
         @media (max-width: 767px) {
+            /* About Section */
+            .about-text p {
+                font-size: 75% !important; /* Réduction à 75% de la taille d'origine */
+            }
+            
             /* Typography Adjustments */
             h1, .hero-title {
                 font-size: 1.5rem !important; /* Réduction à 1.5rem pour mobile */
@@ -2112,6 +2117,65 @@
             .legal-content {
                 margin: 0 1rem;
                 padding: 2.5rem;
+            }
+        }
+
+        /* Styles pour tablettes (768px - 1366px) */
+        @media (min-width: 768px) and (max-width: 1366px) {
+            /* Hero Section */
+            .hero {
+                padding: 4rem 0 3rem;
+            }
+            
+            .hero-content {
+                display: flex;
+                flex-direction: row-reverse; /* Inversion de l'ordre des éléments */
+                align-items: flex-start;
+                gap: 1.5rem;
+                padding: 0 1.5rem !important;
+            }
+            
+            .hero-text {
+                width: 60%;
+                text-align: left;
+                padding: 0 1rem;
+                margin: 0;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                line-height: 1.5;
+                margin-bottom: 1.5rem;
+                max-width: 100%;
+            }
+            
+            .hero-cta {
+                width: 85%;
+                max-width: 85%;
+                padding: 0.7rem 1.4rem !important;
+                margin: 0;
+            }
+            
+            .hero-visual {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0 1rem;
+            }
+            
+            .hero-visual img {
+                max-width: 100%;
+                height: auto;
+                max-height: 400px;
+                object-fit: contain;
             }
         }
 
