@@ -73,7 +73,9 @@ header {
 
 @media (max-width: 768px) {
     .logo-img {
-        max-width: 150px; /* Réduit la largeur du logo sur mobile */
+        max-width: 100px; /* Largeur encore plus réduite pour mobile */
+        height: auto;
+        padding: 5px 0; /* Un peu d'espace vertical */
     }
 }
 
