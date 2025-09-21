@@ -222,21 +222,22 @@
             .hero-cta a[href="#contact"] {
                 display: none;
             }
-            
+
             /* Réorganisation du contenu */
             .hero-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 2rem 0;
+                margin-top: 80px; /* Account for fixed header on mobile */
             }
-            
+
             /* Positionnement du tagline et du titre */
             .hero-tagline, .hero h1 {
                 order: 1;
                 margin-bottom: 1.5rem;
             }
-            
+
             /* Positionnement de l'image */
             .profile-image {
                 order: 2;
@@ -247,14 +248,14 @@
                 margin: 1rem 0;
                 border: 4px solid var(--secondary-color);
             }
-            
+
             /* Positionnement du paragraphe */
             .hero p {
                 order: 3;
                 margin: 1.5rem 0;
                 padding: 0 1rem;
             }
-            
+
             /* Styles des CTA */
             .hero-cta {
                 order: 4;
@@ -264,30 +265,45 @@
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+
             .hero-cta .cta-button {
                 margin: 0.25rem 0;
                 width: 100%;
                 text-align: center;
             }
-        }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDMiPjwvcmVjdD48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiPjwvcmVjdD48L3N2Zz4=');
-            opacity: 0.15;
-            z-index: 1;
-        }
+            /* Centrer les boutons CTA des autres sections sur mobile */
+            .about-cta,
+            .section-cta,
+            .solution-cta,
+            .offer-cta {
+                text-align: center;
+            }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1100px;
+            .about-cta .cta-button,
+            .section-cta .cta-button,
+            .solution-cta .cta-button,
+            .offer-cta .btn-offer {
+                display: inline-block;
+                margin: 0 auto;
+                min-width: 250px;
+                text-align: center;
+            }
+
+            /* Centrer les boutons de la section CTA sur mobile */
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-buttons .cta-button {
+                width: 100%;
+                max-width: 280px;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+        }
             margin: 0 auto;
             padding: 2rem;
             width: 100%;
@@ -1071,8 +1087,11 @@
     font-size: 1.2rem;
     opacity: 0.9;
     line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
 }
-        .offers {
+
+.offers {
             background-color: var(--light-bg);
             position: relative;
             overflow: hidden;
@@ -1130,8 +1149,8 @@
 
         .offers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
+            gap: 1.1rem;
             margin: 3rem auto 0;
             max-width: 1100px;
             padding: 0 1rem;
@@ -1700,24 +1719,14 @@
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.25rem;
-            color: #4a5568;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-            line-height: 1.6;
-        }
 
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            justify-content: center;
-        }
-        
-        @media (min-width: 1200px) {
-            .offers-grid {
-                grid-template-columns: repeat(4, minmax(280px, 1fr));
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    justify-content: center;
+}
             }
         }
 
@@ -2729,8 +2738,9 @@
             }
 
             .offer-card {
-                margin: 0 auto;
+                margin: 0 auto 2rem;
                 max-width: 350px;
+                padding: 1.5rem;
             }
         }
 
