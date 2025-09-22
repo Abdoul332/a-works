@@ -1091,11 +1091,11 @@ section {
 
         .offer-badge {
             position: absolute;
-            top: 15px;
-            right: -40px;
+            top: 25px;
+            right: -70px;
             background: var(--accent-color);
             color: var(--primary-color);
-            padding: 0.4rem 2.5rem;
+            padding: 0rem 0.5rem;
             transform: rotate(45deg);
             font-size: 0.8rem;
             font-weight: 700;
@@ -1109,6 +1109,7 @@ section {
 
         .offer-card:hover .offer-badge {
             animation: none;
+             padding: 0rem 2rem;
             transform: rotate(45deg) scale(1.05);
         }
 
@@ -2661,4 +2662,5 @@ section {
                 min-width: 120px; /* Bouton très petit */
                 /* Bouton encore plus compact sur petits écrans */
             }
+        }   }
         }
