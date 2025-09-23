@@ -98,7 +98,7 @@
         // WhatsApp Button
         document.getElementById('whatsapp-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            const phoneNumber = '33612345678'; // Replace with your WhatsApp number
+            const phoneNumber = '+22940051011'; // 
             const message = 'Bonjour Lucrèce, je suis intéressé(e) par un accompagnement. Pourrions-nous échanger ?';
             window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
         });
