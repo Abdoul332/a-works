@@ -965,7 +965,7 @@
 
 .portfolio-image {
   position: relative;
-  height: 180px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -1633,6 +1633,11 @@
         }
 
         @media (max-width: 767px) {
+            /* Portfolio Images */
+            .portfolio-image {
+                height: 180px;
+            }
+            
             /* Typography Adjustments */
             h1, .hero-title {
                 font-size: 1.5rem !important; /* Réduction à 1.5rem pour mobile */
