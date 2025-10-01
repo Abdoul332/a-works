@@ -3,11 +3,35 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- Pages principales -->
     <url>
         <loc>https://votredomaine.com/</loc>
         <lastmod>2025-10-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    <!-- Ajoutez d'autres URLs ici si nécessaire -->
+    
+    <!-- Pages légales -->
+    <url>
+        <loc>https://votredomaine.com/pages/legal/mentions-legales.html</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Pages d'erreur -->
+    <url>
+        <loc>https://votredomaine.com/404.html</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    
+    <!-- Page hors ligne -->
+    <url>
+        <loc>https://votredomaine.com/offline.html</loc>
+        <lastmod>2025-10-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
 </urlset>

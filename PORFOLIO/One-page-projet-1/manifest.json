@@ -2,35 +2,66 @@
   "name": "OnePagePro - Votre Vitrine en Ligne",
   "short_name": "OnePagePro",
   "description": "Solution de site one-page pour entrepreneurs et petites entreprises",
-  "start_url": "/index.html",
+  "start_url": "/index.html?source=pwa",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#392988",
+  "theme_color": "#4361ee",
+  "prefer_related_applications": false,
   "icons": [
     {
-      "src": "assets/favicon/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/favicon/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/favicon/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/favicon/favicon-32x32.png",
+      "src": "assets/images/favicon/favicon-32x32.png",
       "sizes": "32x32",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "assets/favicon/favicon-16x16.png",
+      "src": "assets/images/favicon/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/optimized/webp/one-page-1.webp",
+      "sizes": "1200x800",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Capture d'écran de la page d'accueil"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "Découvrez nos services",
+      "url": "/#services"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Contactez-nous",
+      "url": "/#contact"
     }
   ]
 }

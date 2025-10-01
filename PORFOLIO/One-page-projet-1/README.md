@@ -16,15 +16,40 @@ Une landing page moderne, professionnelle et éducative qui explique ce qu'est u
 ## Structure du projet
 
 ```
-landing-page/
+one-page-projet-1/
 ├── assets/
-│   └── images/           # Images et illustrations
-├── css/
-│   └── style.css         # Feuille de style principale
-├── js/
-│   └── main.js           # Scripts JavaScript
-├── index.html            # Fichier HTML principal
-└── README.md             # Ce fichier
+│   ├── css/
+│   │   ├── components/    # Composants UI réutilisables
+│   │   ├── layout/        # Mise en page globale
+│   │   ├── pages/         # Styles spécifiques aux pages
+│   │   ├── themes/        # Thèmes et variables
+│   │   ├── utils/         # Utilitaires et mixins
+│   │   └── style.min.css  # Fichier CSS principal
+│   │
+│   ├── js/
+│   │   ├── components/    # Composants JavaScript
+│   │   ├── libs/          # Bibliothèques tierces
+│   │   ├── services/      # Services et logique métier
+│   │   └── main.js        # Point d'entrée JavaScript
+│   │
+│   └── images/
+│       ├── icons/         # Icônes et SVG
+│       ├── optimized/     # Images optimisées
+│       │   ├── webp/      # Version WebP
+│       │   └── png/       # Version PNG de secours
+│       └── raw/           # Images brutes non optimisées
+│
+├── pages/                 # Pages supplémentaires
+│   └── legal/             # Pages légales
+│
+├── .htaccess             # Configuration serveur Apache
+├── 404.html              # Page d'erreur 404
+├── favicon.ico           # Favicon du site
+├── index.html            # Page d'accueil
+├── offline.html          # Page hors ligne
+├── robots.txt            # Configuration des robots d'indexation
+├── sitemap.xml           # Plan du site
+└── README.md             # Documentation du projet
 ```
 
 ## Technologies utilisées

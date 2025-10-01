@@ -1,0 +1,271 @@
+# =============================================================================
+# CORE CONFIGURATION
+# =============================================================================
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Force HTTPS (uncomment in production)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+# Redirect www to non-www (uncomment and customize)
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Hide server information
+ServerSignature Off
+
+# =============================================================================
+# PERFORMANCE OPTIMIZATION
+# =============================================================================
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    # Compress HTML, CSS, JavaScript, Text, XML and fonts
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    
+    # Remove browser bugs (only needed for really old browsers)
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# Set browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Default expiration: 1 hour
+    ExpiresDefault "access plus 1 hour"
+    
+    # HTML: no caching
+    ExpiresByType text/html "access plus 0 seconds"
+    
+    # CSS and JavaScript: 1 year
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    
+    # Media files: 1 year
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Web fonts: 1 year
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType font/opentype "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    
+    # Other files
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    
+    # PWA specific
+    <FilesMatch "\.(json|manifest|webmanifest)$">
+        ExpiresByType application/json "access plus 0 seconds"
+        ExpiresByType application/manifest+json "access plus 0 seconds"
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Set cache control headers
+<IfModule mod_headers.c>
+    # Cache static assets for 1 year
+    <FilesMatch "\.(ico|jpe?g|png|gif|webp|svg|woff|woff2|ttf|eot|css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Don't cache HTML files
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+    
+    # Security headers
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # HSTS (uncomment in production after HTTPS is set up)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Content Security Policy (CSP) - customize as needed
+    # Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self';"
+    
+    # Feature Policy (optional)
+    # Header set Feature-Policy "geolocation 'self'; microphone 'none'; camera 'none'"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy (replaces Feature-Policy)
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# =============================================================================
+# SECURITY
+# =============================================================================
+
+# Block access to sensitive files and directories
+<FilesMatch "^\.|^\.git|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|webpack\.config\.js|gulpfile\.js|Gruntfile\.js|phpunit\.xml|phpcs\.xml|phpmd\.xml|travis\.yml|Dockerfile|docker-compose\.yml|\.env|README\.md|CHANGELOG\.md|LICENSE\.txt|LICENSE|LICENSE-MIT|LICENSE-APACHE|LICENSE-AGPL|LICENSE-GPL|LICENSE-LGPL|LICENSE-BSD|LICENSE-MIT\.txt|LICENSE-APACHE\.txt|LICENSE-AGPL\.txt|LICENSE-GPL\.txt|LICENSE-LGPL\.txt|LICENSE-BSD\.txt|LICENSE\.md|LICENSE\.txt|LICENSE\.MIT|LICENSE\.APACHE|LICENSE\.AGPL|LICENSE\.GPL|LICENSE\.LGPL|LICENSE\.BSD|LICENSE\.MIT\.txt|LICENSE\.APACHE\.txt|LICENSE\.AGPL\.txt|LICENSE\.GPL\.txt|LICENSE\.LGPL\.txt|LICENSE\.BSD\.txt$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to sensitive directories
+<IfModule mod_rewrite.c>
+    RewriteRule ^(\.git|node_modules|vendor|storage|tests|database|config|bootstrap|app|resources|routes|storage/logs|storage/framework) - [F,L,NC]
+</IfModule>
+
+# Prevent hotlinking (uncomment and customize)
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTP_REFERER} !^$
+#     RewriteCond %{HTTP_REFERER} !^https?://(www\.)?yourdomain\.com [NC]
+#     RewriteRule \.(jpe?g|png|gif|webp|svg|ico)$ - [NC,F,L]
+# </IfModule>
+
+# Block access to .htaccess and .htpasswd
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to XML-RPC
+<Files xmlrpc.php>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Disable server signature
+ServerSignature Off
+
+# Disable directory browsing
+Options All -Indexes
+
+# =============================================================================
+# PWA SPECIFIC CONFIGURATION
+# =============================================================================
+
+# Serve service worker with correct MIME type
+<IfModule mod_mime.c>
+    AddType application/javascript             js mjs
+    AddType application/manifest+json         webmanifest
+</IfModule>
+
+# Route all requests to index.html for SPA routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # If an existing asset or directory is requested, serve it
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+    RewriteRule ^ - [L]
+    
+    # If the requested resource doesn't exist, use index.html
+    RewriteRule ^ /index.html [L]
+</IfModule>
+
+# =============================================================================
+# ERROR PAGES
+# =============================================================================
+
+# Custom error pages (uncomment and customize paths as needed)
+# ErrorDocument 400 /error-pages/400.html
+# ErrorDocument 401 /error-pages/401.html
+# ErrorDocument 403 /error-pages/403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# =============================================================================
+# MIME TYPES
+# =============================================================================
+
+<IfModule mod_mime.c>
+    # Data interchange
+    AddType application/atom+xml                        atom
+    AddType application/json                            json map topojson
+    AddType application/ld+json                         jsonld
+    AddType application/rss+xml                         rss
+    AddType application/vnd.geo+json                    geojson
+    AddType application/xml                             rdf xml
+
+    # JavaScript
+    AddType application/javascript                      js mjs
+
+    # Manifest files
+    AddType application/manifest+json                   webmanifest
+    AddType application/x-web-app-manifest+json         webapp
+    AddType text/cache-manifest                         appcache
+
+    # Media files
+    AddType audio/mp4                                   f4a f4b m4a
+    AddType audio/ogg                                   oga ogg opus
+    AddType image/bmp                                   bmp
+    AddType image/svg+xml                               svg svgz
+    AddType image/webp                                  webp
+    AddType video/mp4                                   f4v f4p m4v mp4
+    AddType video/ogg                                   ogv
+    AddType video/webm                                  webm
+    AddType video/x-flv                                 flv
+    AddType image/x-icon                                cur ico
+
+    # Web fonts
+    AddType application/font-woff                       woff
+    AddType application/font-woff2                      woff2
+    AddType application/vnd.ms-fontobject               eot
+    AddType font/opentype                               otf
+    AddType font/ttf                                    ttf
+    AddType font/collection                             ttc
+    AddType font/woff                                   woff
+    AddType font/woff2                                  woff2
+
+    # Other
+    AddType text/cache-manifest                         appcache manifest
+    AddType text/markdown                               markdown md
+    AddType text/calendar                               ics
+    AddType text/vcard                                  vcard vcf
+    AddType text/vnd.rim.location.xloc                  xloc
+    AddType text/vtt                                    vtt
+    AddType text/x-component                            htc
+</IfModule>
+
+# =============================================================================
+# CHARACTER ENCODING
+# =============================================================================
+
+# Serve all resources with the proper MIME types
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .manifest .rss .vtt .webapp .webmanifest .xml
+</IfModule>

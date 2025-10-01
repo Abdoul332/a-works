@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test PWA - OnePagePro</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .status {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #392988;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test PWA - OnePagePro</h1>
+    
+    <div id="status">
+        <h2>État du Service Worker</h2>
+        <div id="sw-status" class="status">Vérification en cours...</div>
+        
+        <h2>Cache</h2>
+        <div id="cache-status" class="status">Vérification en cours...</div>
+        
+        <h2>Installation</h2>
+        <div id="install-status" class="status">Vérification en cours...</div>
+        <button id="install-btn" class="btn" style="display: none;">Installer l'application</button>
+    </div>
+
+    <script>
+        // Vérification du Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    document.getElementById('sw-status').textContent = 'Service Worker enregistré avec succès';
+                    document.getElementById('sw-status').className = 'status success';
+                    
+                    // Vérification du cache
+                    return caches.has('onepagepro-v1');
+                })
+                .then(hasCache => {
+                    const cacheStatus = document.getElementById('cache-status');
+                    if (hasCache) {
+                        cacheStatus.textContent = 'Cache initialisé avec succès';
+                        cacheStatus.className = 'status success';
+                    } else {
+                        cacheStatus.textContent = 'Le cache n\'a pas pu être initialisé';
+                        cacheStatus.className = 'status error';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('sw-status').textContent = `Erreur lors de l'enregistrement du Service Worker: ${error}`;
+                    document.getElementById('sw-status').className = 'status error';
+                });
+        } else {
+            document.getElementById('sw-status').textContent = 'Service Worker non supporté par ce navigateur';
+            document.getElementById('sw-status').className = 'status error';
+        }
+
+        // Gestion de l'installation de l'application
+        let deferredPrompt;
+        const installBtn = document.getElementById('install-btn');
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Empêche le navigateur de montrer la bannière d'installation
+            e.preventDefault();
+            // Stocke l'événement pour pouvoir le déclencher plus tard
+            deferredPrompt = e;
+            
+            // Affiche le bouton d'installation
+            installBtn.style.display = 'block';
+            installBtn.addEventListener('click', () => {
+                // Affiche l'invite d'installation
+                deferredPrompt.prompt();
+                // Attend que l'utilisateur réponde à l'invite
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        document.getElementById('install-status').textContent = 'Installation acceptée !';
+                        document.getElementById('install-status').className = 'status success';
+                    } else {
+                        document.getElementById('install-status').textContent = 'Installation refusée';
+                        document.getElementById('install-status').className = 'status warning';
+                    }
+                    deferredPrompt = null;
+                });
+            });
+            
+            document.getElementById('install-status').textContent = 'Prêt pour l\'installation';
+            document.getElementById('install-status').className = 'status success';
+        });
+
+        // Vérification si l'application est déjà installée
+        window.addEventListener('appinstalled', (evt) => {
+            document.getElementById('install-status').textContent = 'Application installée avec succès !';
+            document.getElementById('install-status').className = 'status success';
+            installBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

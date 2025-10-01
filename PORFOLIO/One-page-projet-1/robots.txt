@@ -3,9 +3,9 @@ User-agent: *
 Allow: /
 
 # Fichiers à ignorer
-Disallow: /css/
-Disallow: /js/
-Disallow: /assets/
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/images/raw/
 
-# Sitemap (à décommenter et mettre à jour avec votre domaine)
-# Sitemap: https://votredomaine.com/sitemap.xml
+# Sitemap
+Sitemap: https://votredomaine.com/sitemap.xml

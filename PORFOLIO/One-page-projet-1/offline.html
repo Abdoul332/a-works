@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4361ee">
+    <title>Hors ligne - OnePagePro</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/assets/images/favicon/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-dark: #3f37c9;
+            --text-color: #2b2d42;
+            --text-light: #6c757d;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e9ecff 100%);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 480px;
+            width: 100%;
+            padding: 40px 30px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .offline-illustration {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            display: block;
+            opacity: 0.9;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 16px;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn:hover, .btn:focus {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+            outline: none;
+        }
+        
+        .btn i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .connection-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            padding: 10px 15px;
+            background: #fff5f5;
+            border-radius: 50px;
+            color: #e63946;
+            font-size: 14px;
+            font-weight: 500;
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .connection-status.connected {
+            background: #f0fdf4;
+            color: #10b981;
+        }
+        
+        .connection-status i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            p {
+                font-size: 15px;
+            }
+            
+            .offline-illustration {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="offline-illustration" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 7C9.24 7 7 9.24 7 12C7 14.76 9.24 17 12 17C14.76 17 17 14.76 17 12C17 9.24 14.76 7 12 7Z" fill="#4361ee" fill-opacity="0.1"/>
+            <path d="M12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z" fill="#4361ee"/>
+            <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" fill="#4361ee"/>
+        </svg>
+        
+        <div class="connection-status" id="connectionStatus">
+            <i class="fas fa-wifi-slash"></i>
+            <span>Hors ligne</span>
+        </div>
+        
+        <h1>Vous êtes actuellement hors ligne</h1>
+        <p>Pas de panique ! Votre connexion Internet semble interrompue. Voici ce que vous pouvez faire :</p>
+        
+        <button class="btn" id="retryBtn">
+            <i class="fas fa-sync-alt"></i>
+            <span>Réessayer</span>
+        </button>
+        
+        <div style="margin-top: 30px; font-size: 14px; color: var(--text-light);">
+            <p>Conseils :</p>
+            <ul style="list-style: none; padding: 0; margin: 10px 0 0;">
+                <li style="margin-bottom: 8px;">• Vérifiez votre connexion Wi-Fi ou données mobiles</li>
+                <li style="margin-bottom: 8px;">• Désactivez le mode avion si activé</li>
+                <li>• Réessayez de vous connecter plus tard</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Vérification de la connexion
+        function updateConnectionStatus() {
+            const connectionStatus = document.getElementById('connectionStatus');
+            const retryBtn = document.getElementById('retryBtn');
+            
+            function checkConnection() {
+                if (navigator.onLine) {
+                    // Si la connexion est rétablie, recharger la page
+                    window.location.reload();
+                } else {
+                    // Afficher l'état hors ligne
+                    connectionStatus.innerHTML = '<i class="fas fa-wifi-slash"></i><span>Hors ligne</span>';
+                    connectionStatus.className = 'connection-status';
+                }
+            }
+            
+            // Vérifier l'état de la connexion
+            checkConnection();
+            
+            // Écouter les changements de connexion
+            window.addEventListener('online', checkConnection);
+            window.addEventListener('offline', checkConnection);
+            
+            // Gérer le clic sur le bouton de réessai
+            retryBtn.addEventListener('click', () => {
+                retryBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i><span>Connexion...</span>';
+                retryBtn.disabled = true;
+                
+                // Simuler une tentative de reconnexion
+                setTimeout(() => {
+                    if (navigator.onLine) {
+                        window.location.reload();
+                    } else {
+                        retryBtn.innerHTML = '<i class="fas fa-sync-alt"></i><span>Réessayer</span>';
+                        retryBtn.disabled = false;
+                        alert('Impossible de se connecter. Vérifiez votre connexion Internet.');
+                    }
+                }, 1500);
+            });
+        }
+        
+        // Démarrer la vérification de connexion
+        document.addEventListener('DOMContentLoaded', updateConnectionStatus);
+    </script>
+</body>
+</html>
