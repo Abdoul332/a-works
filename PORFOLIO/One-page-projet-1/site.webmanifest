@@ -1,0 +1,9 @@
+{
+  "name": "OnePagePro",
+  "short_name": "OnePagePro",
+  "description": "Votre vitrine en ligne qui convertit",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#392988"
+}

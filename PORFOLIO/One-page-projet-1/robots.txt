@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Fichiers à ignorer
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/
+
+# Sitemap (à décommenter et mettre à jour avec votre domaine)
+# Sitemap: https://votredomaine.com/sitemap.xml

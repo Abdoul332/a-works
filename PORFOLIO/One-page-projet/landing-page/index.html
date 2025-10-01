@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Transformez vos visiteurs en clients</title>
+    <meta name="description" content="Découvrez comment une landing page efficace peut transformer vos visiteurs en clients fidèles. Augmentez vos conversions dès aujourd'hui.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo" aria-label="LandingPro - Retour à l'accueil">LandingPro</a>
+            <nav class="nav" role="navigation" aria-label="Navigation principale">
+                <a href="#avantages" class="nav-link" data-scroll>Avantages</a>
+                <a href="#exemple" class="nav-link" data-scroll>Exemples</a>
+                <a href="#contact" class="btn btn-outline nav-cta" data-scroll>Contact rapide</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu mobile" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right" data-aos-delay="100">
+                <span class="eyebrow">🚀 Augmentez vos conversions</span>
+                <h1>Transformez vos visiteurs en <span class="highlight">clients</span> avec une landing page efficace</h1>
+                <p class="subtitle">Découvrez comment une seule page bien conçue peut <strong>multiplier par 3 vos conversions</strong> et booster votre business en ligne.</p>
+                
+                <div class="hero-stats" aria-hidden="true">
+                    <div class="stat">
+                        <span class="stat-number" data-count="300">0</span>%
+                        <span class="stat-label">Augmentation moyenne des conversions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="24">0</span>h
+                        <span class="stat-label">Support réactif</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary pulse-animation" data-scroll>
+                        <i class="fas fa-rocket"></i> Créer ma landing page
+                    </a>
+                    <a href="#avantages" class="btn btn-secondary" data-scroll>
+                        <i class="fas fa-info-circle"></i> Découvrir les avantages
+                    </a>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i> Garantie 100% satisfait
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i> Paiement sécurisé
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="floating-shape"></div>
+                <img 
+                    src="images/landing-page-preview.svg" 
+                    alt="Aperçu d'une landing page professionnelle avec formulaire de conversion" 
+                    class="hero-img"
+                    loading="lazy"
+                >
+                <div class="floating-element floating-1">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>CTA clair et visible</span>
+                </div>
+                <div class="floating-element floating-2">
+                    <i class="fas fa-check"></i>
+                    <span>Formulaire optimisé</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Défiler</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Section Éducative -->
+    <section id="en-savoir-plus" class="section educative">
+        <div class="container">
+            <h2>Qu'est-ce qu'une landing page ?</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>Une landing page (ou page d'atterrissage) est une page web conçue spécifiquement pour convertir les visiteurs en prospects ou clients. Contrairement à un site web classique, elle est focalisée sur une seule action précise : remplir un formulaire, télécharger un contenu, ou effectuer un achat.</p>
+                    <p class="highlight">Exemple concret : Une entreprise de formation en ligne crée une landing page pour son cours de photographie. La page présente les bénéfices du cours, des témoignages d'élèves, et un formulaire d'inscription. Résultat : Un taux de conversion de 25% supérieur à leur page d'accueil classique.</p>
+                </div>
+                <div class="illustration">
+                    <div class="stat-card">
+                        <span class="stat-number">+200%</span>
+                        <span class="stat-text">Augmentation moyenne des conversions</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">10x</span>
+                        <span class="stat-text">Plus efficace qu'une page d'accueil classique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avantages -->
+    <section id="avantages" class="section benefits">
+        <div class="container">
+            <h2>Pourquoi une landing page est-elle si efficace ?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Ciblage précis</h3>
+                    <p>Chaque landing page est conçue pour un public et une offre spécifique, ce qui augmente considérablement la pertinence pour le visiteur.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Meilleur taux de conversion</h3>
+                    <p>En éliminant les distractions, vous guidez le visiteur vers l'action souhaitée, ce qui se traduit par plus d'inscriptions et de ventes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Mesure des performances</h3>
+                    <p>Facilite le suivi précis des résultats et l'optimisation continue pour de meilleures performances.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Optimisée mobile</h3>
+                    <p>Conçue pour offrir une expérience optimale sur tous les appareils, ce qui est essentiel pour toucher un maximum d'utilisateurs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Exemple -->
+    <section id="exemple" class="section example">
+        <div class="container">
+            <h2>À quoi ressemble une landing page efficace ?</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
+                Découvrez différents exemples de landing pages optimisées pour la conversion, 
+                avec des méthodes de contact variées adaptées à vos besoins.
+            </p>
+            <div class="demos-wrapper">
+                <!-- Exemple 1 - Offre Spéciale -->
+                <div class="demo-card">
+                    <div class="demo-frame">
+                        <div class="demo-header">
+                            <div class="demo-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="demo-url">votredomaine.com/offre-speciale</div>
+                        </div>
+                        <div class="demo-content">
+                            <h3>Offre spéciale : Formation Complète</h3>
+                            <p>Inscrivez-vous aujourd'hui et obtenez 30% de réduction</p>
+                            
+                            <!-- Méthode 1 : Formulaire classique -->
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <h4>Par email</h4>
+                                <p>Recevez toutes les informations par email</p>
+                                <form class="demo-form">
+                                    <input type="text" placeholder="Votre nom" class="form-input" required>
+                                    <input type="email" placeholder="Votre email" class="form-input" required>
+                                    <button type="submit" class="btn-submit">Je profite de l'offre</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Méthode 2 : Boutons de contact directs -->
+                            <div class="contact-methods">
+                                <a href="tel:+33123456789" class="btn-contact phone">
+                                    <i class="fas fa-phone"></i> Appeler maintenant
+                                </a>
+                                <a href="https://wa.me/33123456789" target="_blank" class="btn-contact whatsapp">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="mailto:contact@votredomaine.com" class="btn-contact email">
+                                    <i class="fas fa-envelope"></i> Email
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Notes sur l'exemple -->
+                <div class="demo-notes">
+                    <div class="note">
+                        <div class="note-icon">✓</div>
+                        <div class="note-content">
+                            <h4>Options de contact multiples</h4>
+                            <p>Donnez le choix à vos visiteurs de vous contacter comme ils le souhaitent</p>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <div class="note-icon">✓</div>
+                        <div class="note-content">
+                            <h4>Appel à l'action clair</h4>
+                            <p>Boutons visibles et incitatifs</p>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <div class="note-icon">✓</div>
+                        <div class="note-content">
+                            <h4>Formulaire simple</h4>
+                            <p>Seuls les champs essentiels sont demandés</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exemple 2 - Webinaire -->
+                <div class="demo-card">
+                    <div class="demo-frame">
+                        <div class="demo-header">
+                            <div class="demo-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="demo-url">webinaire.votredomaine.com/inscription</div>
+                        </div>
+                        <div class="demo-content">
+                            <h3>Webinaire Gratuit : Boostez Votre Business en Ligne</h3>
+                            <p>Inscrivez-vous maintenant pour réserver votre place au webinaire exclusif du [date]</p>
+                            <p class="demo-note"><i class="fas fa-users"></i> 124 personnes déjà inscrites</p>
+                            
+                            <!-- Méthode 1 : Formulaire d'inscription -->
+                            <div class="contact-method">
+                                <i class="fas fa-calendar-check"></i>
+                                <h4>Réserver en ligne</h4>
+                                <p>Choisissez votre créneau préféré</p>
+                                <form class="demo-form">
+                                    <input type="text" placeholder="Votre prénom" class="form-input" required>
+                                    <input type="email" placeholder="Votre email" class="form-input" required>
+                                    <select class="form-input" required>
+                                        <option value="">Sélectionnez un créneau</option>
+                                        <option value="matin">10h - 11h30</option>
+                                        <option value="aprem">14h - 15h30</option>
+                                        <option value="soir">19h - 20h30</option>
+                                    </select>
+                                    <button type="submit" class="btn-submit">Réserver ma place</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Méthode alternative : Lien de calendrier -->
+                            <div class="contact-method">
+                                <i class="fas fa-calendar-plus"></i>
+                                <h4>Ajouter à votre agenda</h4>
+                                <p>Nous vous enverrons un rappel</p>
+                                <a href="#" class="btn-contact" style="background: #4285F4;">
+                                    <i class="far fa-calendar-alt"></i> Ajouter à Google Agenda
+                                </a>
+                            </div>
+                            
+                            <!-- Contact direct -->
+                            <div class="contact-methods">
+                                <a href="https://wa.me/33123456789?text=Bonjour, je souhaite m'inscrire au webinaire" target="_blank" class="btn-contact whatsapp">
+                                    <i class="fab fa-whatsapp"></i> Poser une question
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exemple 3 - Produit Physique -->
+                <div class="demo-card">
+                    <div class="demo-frame">
+                        <div class="demo-header">
+                            <div class="demo-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="demo-url">boutique.votredomaine.com/offre-speciale</div>
+                        </div>
+                        <div class="demo-content">
+                            <div class="product-preview">
+                                <div class="product-image">
+                                    <div style="background: #f5f5f5; padding: 2rem; border-radius: 8px; text-align: center;">
+                                        <i class="fas fa-watch" style="font-size: 4rem; color: #666; margin-bottom: 1rem;"></i>
+                                        <p>Image du produit</p>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <span class="product-tag">Offre limitée</span>
+                                    <h3>Montre Connectée Pro X3</h3>
+                                    <p class="price">
+                                        <span class="old-price">199€</span>
+                                        <span class="new-price">149€</span>
+                                        <span class="discount">-25%</span>
+                                    </p>
+                                    <ul class="features">
+                                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Suivi d'activité 24/7</li>
+                                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Résistance à l'eau 50m</li>
+                                        <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Autonomie 7 jours</li>
+                                    </ul>
+                                    
+                                    <!-- Méthode 1 : Achat en ligne -->
+                                    <div class="contact-method">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <h4>Acheter en ligne</h4>
+                                        <p>Paiement sécurisé - Livraison gratuite</p>
+                                        <form class="demo-form">
+                                            <select class="form-input" required>
+                                                <option value="">Choisissez la couleur</option>
+                                                <option value="noir">Noir</option>
+                                                <option value="bleu">Bleu nuit</option>
+                                                <option value="argent">Argent</option>
+                                            </select>
+                                            <button type="submit" class="btn-submit">
+                                                <i class="fas fa-credit-card"></i> Payer 149€
+                                            </button>
+                                        </form>
+                                    </div>
+                                    
+                                    <!-- Méthode 2 : Paiement en plusieurs fois -->
+                                    <div class="contact-method" style="background: #f8f9fa; border: 1px dashed #ddd;">
+                                        <i class="fas fa-credit-card"></i>
+                                        <h4>En 3x sans frais</h4>
+                                        <p>49,67€/mois - Sans frais</p>
+                                        <a href="#" class="btn-submit" style="background: #6c757d;">
+                                            <i class="fas fa-calendar-alt"></i> Payer en 3x
+                                        </a>
+                                    </div>
+                                    
+                                    <!-- Contact pour questions -->
+                                    <div class="contact-methods" style="margin-top: 1rem;">
+                                        <a href="tel:+33123456789" class="btn-contact phone" style="flex: 1 0 100%;">
+                                            <i class="fas fa-phone"></i> Commander par téléphone
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-notes">
+                        <div class="note">
+                            <div class="note-icon">✓</div>
+                            <div class="note-content">
+                                <h4>Options de paiement flexibles</h4>
+                                <p>Paiement en une fois ou en plusieurs fois sans frais</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <div class="note-icon">✓</div>
+                            <div class="note-content">
+                                <h4>Fonctionnalités mises en avant</h4>
+                                <p>Liste claire des avantages avec des icônes</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <div class="note-icon">✓</div>
+                            <div class="note-content">
+                                <h4>Support client</h4>
+                                <p>Disponible par téléphone pour toute question</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exemple 4 - Service en Ligne -->
+                <div class="demo-card">
+                    <div class="demo-frame">
+                        <div class="demo-header">
+                            <div class="demo-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="demo-url">app.votreservice.com/essai-gratuit</div>
+                        </div>
+                        <div class="demo-content">
+                            <div class="service-header">
+                                <h3>Créez des sites web professionnels en quelques clics</h3>
+                                <p class="subtitle">Aucune compétence technique requise - Essayez gratuitement pendant 14 jours</p>
+                            </div>
+                            
+                            <div class="demo-grid">
+                                <!-- Méthode 1 : Inscription par email -->
+                                <div class="contact-method">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                    <h4>Essai gratuit</h4>
+                                    <p>Créez votre compte en 1 minute</p>
+                                    <form class="demo-form">
+                                        <input type="text" placeholder="Nom de votre entreprise" class="form-input" required>
+                                        <input type="email" placeholder="Votre email professionnel" class="form-input" required>
+                                        <input type="password" placeholder="Créez un mot de passe" class="form-input" required>
+                                        <button type="submit" class="btn-submit">
+                                            <i class="fas fa-rocket"></i> Commencer mon essai gratuit
+                                        </button>
+                                        <p class="form-note">Aucune carte de crédit requise - Annulation à tout moment</p>
+                                    </form>
+                                </div>
+                                
+                                <!-- Méthode 2 : Connexion avec réseaux sociaux -->
+                                <div class="contact-method" style="margin-top: 1.5rem;">
+                                    <h4>Ou inscrivez-vous avec</h4>
+                                    <div class="social-login">
+                                        <a href="#" class="btn-social google">
+                                            <i class="fab fa-google"></i> Google
+                                        </a>
+                                        <a href="#" class="btn-social facebook">
+                                            <i class="fab fa-facebook-f"></i> Facebook
+                                        </a>
+                                    </div>
+                                    <p class="form-note" style="margin-top: 1rem;">
+                                        <i class="fas fa-lock"></i> Vos données sont sécurisées et ne seront jamais partagées
+                                    </p>
+                                </div>
+                                
+                                <!-- Fonctionnalités -->
+                                <div class="demo-features">
+                                    <h4>Inclus dans votre essai :</h4>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
+                                        <span>+100 modèles professionnels</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
+                                        <span>Hébergement inclus avec SSL</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
+                                        <span>Support 24/7 par chat et email</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
+                                        <span>Nom de domaine personnalisé</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact support -->
+                            <div class="contact-methods" style="margin-top: 1.5rem;">
+                                <a href="#" class="btn-contact" style="background: #6c757d; flex: 1 0 100%;">
+                                    <i class="fas fa-comments"></i> Discuter avec notre équipe
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-notes">
+                        <div class="note">
+                            <div class="note-icon">✓</div>
+                            <div class="note-content">
+                                <h4>Offre d'essai claire</h4>
+                                <p>Durée de l'essai et absence d'engagement bien visibles</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <div class="note-icon">✓</div>
+                            <div class="note-content">
+                                <h4>Avantages clés</h4>
+                                <p>Liste des fonctionnalités principales sous forme de puces</p>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <div class="note-icon">✓</div>
+                            <div class="note-content">
+                                <h4>Réduction des frictions</h4>
+                                <p>Formulaire simple et rassurances sur l'essai sans engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA -->
+    <section id="contact" class="section cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Prêt à transformer vos visiteurs en clients ?</h2>
+                <p>Je crée des landing pages sur mesure qui convertissent. Discutons de votre projet !</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Dites-moi en plus sur votre projet..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer mon message</button>
+                </form>
+                <div id="formSuccess" class="form-success">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Merci pour votre message ! Je vous recontacte dans les plus brefs délais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">LandingPro</div>
+                <p>Création de landing pages qui convertissent pour les entrepreneurs ambitieux.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <a href="#">Accueil</a>
+                <a href="#avantages">Avantages</a>
+                <a href="#exemple">Exemple</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> contact@landingpro.fr</p>
+                <p><i class="fas fa-phone"></i> +33 6 12 34 56 78</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 LandingPro. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
