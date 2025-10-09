@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Content Security Policy simplifiée -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self';">
+    
+    <!-- Primary Meta Tags -->
+    <title>OnePagePro - Votre Vitrine en Ligne qui Convertit</title>
+    <meta name="title" content="OnePagePro - Votre Vitrine en Ligne qui Convertit">
+    <meta name="description" content="Découvrez comment OnePagePro peut transformer vos visiteurs en clients avec des landing pages performantes. Solution clé en main pour entrepreneurs et petites entreprises.">
+    <meta name="keywords" content="one page, site vitrine, landing page, création site web, web design, référencement, SEO, site internet, site one page, site vitrine professionnel">
+    <meta name="author" content="WebFlash">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#392988">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="OnePagePro">
+    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#392988">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votredomaine.com/">
+    <meta property="og:title" content="OnePagePro - Votre Vitrine en Ligne qui Convertit">
+    <meta property="og:description" content="Découvrez comment OnePagePro peut transformer vos visiteurs en clients avec des landing pages performantes. Solution clé en main pour entrepreneurs et petites entreprises.">
+    <meta property="og:image" content="https://votredomaine.com/assets/images/optimized/webp/one-page-1.webp">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votredomaine.com/">
+    <meta property="twitter:title" content="OnePagePro - Votre Vitrine en Ligne qui Convertit">
+    <meta property="twitter:description" content="Découvrez comment OnePagePro peut transformer vos visiteurs en clients avec des landing pages performantes. Solution clé en main pour entrepreneurs et petites entreprises.">
+    <meta property="twitter:image" content="https://votredomaine.com/assets/images/optimized/webp/one-page-1.webp">
+    
+    <!-- Meta Tags -->
+    <meta name="theme-color" content="#4361ee">
+    <meta name="msapplication-TileColor" content="#4361ee">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Core CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    
+    <!-- Third-party CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Web<span>Flash</span></a>
+                <div class="nav-links">
+                    <a href="#definition">C'est quoi ?</a>
+                    <a href="#importance">Avantages</a>
+                    <a href="#cas-utilisation">Pour qui ?</a>
+                    <a href="#processus">Processus</a>
+                    <a href="#copyright" class="btn btn-primary">Projet</a>
+                </div>
+                <div class="menu-btn">
+                    <div class="menu-btn__lines"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Apprenez à lancer votre site web</h1>
+                <p class="lead">Imaginez un site web qui présente votre activité de manière claire, qui met en valeur vos services et qui incite vos visiteurs à vous contacter.<br><br> Dans cette catégorie, il existe un modèle qu'on appelle “La One-Page” : une seul Page qui est simple, élégante et redoutablement efficace.</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn btn-outline btn-lg">Créer une</a>
+                    <a href="#processus" class="btn btn-outline">
+                        Comprendre le processus
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <picture>
+                    <source srcset="assets/images/optimized/webp/one-page-1.webp" type="image/webp">
+                    <source srcset="assets/images/optimized/png/one-page-1.png" type="image/png">
+                    <img 
+                        src="assets/images/optimized/png/one-page-1.png" 
+                        alt="Illustration d'une landing page moderne et responsive"
+                        width="600"
+                        height="400"
+                        loading="lazy"
+                        decoding="async"
+                        class="hero-img"
+                    >
+                </picture>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Défiler</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Definition Section -->
+    <section id="definition" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" style="margin-bottom: 2rem;">
+                <h2>L’impact d’une one-page</h2>
+            </div>
+            <div class="definition-content">
+                <div class="definition-text" data-aos="fade-right">
+                    <h3>Pourquoi tel impact ?</h3>
+                    <p>Imaginez votre site web comme une histoire captivante. Sur une seule page, vous guidez vos visiteurs à travers un parcours logique et engageant :</p>
+                    
+                    <div class="journey-steps">
+                        <div class="journey-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4><i class="fas fa-lightbulb"></i> L'Accroche</h4>
+                                <p>Votre message principal capte immédiatement l'attention</p>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4><i class="fas fa-bullseye"></i> La Proposition</h4>
+                                <p>Vous présentez clairement ce que vous offrez</p>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4><i class="fas fa-hand-holding-heart"></i> La Confiance</h4>
+                                <p>Vous rassurez avec des preuves sociales et des témoignages</p>
+                            </div>
+                        </div>
+                        <div class="journey-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4><i class="fas fa-phone-alt"></i>L'Action </h4>
+                                <p>Vous guidez vers le contact ou l'achat en un clic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="definition-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <div class="visual-header">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <h3>Le Parcours Visiteur</h3>
+                        </div>
+                        <div class="visual-content">
+                            <div class="visual-item bounce">
+                                <i class="fas fa-eye"></i>
+                                <p>1. Le visiteur voit tout d'un coup d'œil</p>
+                            </div>
+                            <div class="visual-arrow">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="visual-item bounce" style="animation-delay: 0.2s">
+                                <i class="fas fa-mouse"></i>
+                                <p>2. Il fait défiler naturellement</p>
+                            </div>
+                            <div class="visual-arrow">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="visual-item bounce" style="animation-delay: 0.4s">
+                                <i class="fas fa-check-circle"></i>
+                                <p>3. Il prend sa décision facilement</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="conversion-tip">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Les sites one page convertissent en moyenne <strong>37%</strong> de mieux que les sites multi-pages*</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importance Section -->
+    <section id="importance" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Avantages d’une one-page</h2>
+            </div>
+            
+            <div class="simple-cards">
+                <div class="simple-card" data-aos="fade-up">
+                    <h3>Efficacité maximale</h3>
+                    <p>Une page unique bien conçue est plus efficace qu'un site complexe. Vos visiteurs trouvent l'information essentielle en un clin d'œil.</p>
+                    <div class="highlight">+200% d'engagement</div>
+                </div>
+                
+                <div class="simple-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Optimisé mobile</h3>
+                    <p>Parfaitement adapté aux smartphones, où la majorité de vos clients vous découvrent. Expérience fluide sur tous les écrans.</p>
+                    <div class="highlight">100% responsive</div>
+                </div>
+                
+                <div class="simple-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Résultats clairs</h3>
+                    <p>Mesurez facilement l'impact de votre page avec des indicateurs simples et pertinents.</p>
+                    <div class="highlight">Suivi complet</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Use Cases Section -->
+<section id="cas-utilisation" class="section bg-light">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>À qui s’adresse ce format ?</h2>
+            <p>Découvrez comment une page unique peut répondre à vos besoins spécifiques</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                    <div class="timeline-icon">
+                        
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Artisans & Commerçants</h3>
+                    <p>Mettez en avant votre savoir-faire, vos créations ou votre commerce local avec une présentation soignée qui donne envie de vous rendre visite.</p>
+                    <ul class="feature-list">
+                        <li>Vitrine de vos produits phares</li>
+                        <li>Horaires et localisation</li>
+                        <li>Témoignages clients</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-content">
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Professionnels & Indépendants</h3>
+                    <p>Développez votre visibilité en ligne et attirez de nouveaux clients avec une présentation professionnelle de vos services.</p>
+                    <ul class="feature-list">
+                        <li>Présentation de votre expertise</li>
+                        <li>Vos domaines d'intervention</li>
+                        <li>Formulaire de contact simplifié</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Événements & Ateliers</h3>
+                    <p>Communiquez efficacement sur vos prochains événements et facilitez les inscriptions en quelques clics.</p>
+                    <ul class="feature-list">
+                        <li>Programme détaillé</li>
+                        <li>Bouton d'inscription visible</li>
+                        <li>Compte à rebours avant l'événement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Processus de Création -->
+    <section id="processus" class="section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Votre one-page en pratique ?</h2>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Échange initial</h3>
+                        <p>Nous échangeons sur vos besoins, votre activité et vos objectifs. C'est l'occasion pour moi de bien comprendre votre projet et de vous proposer la meilleure solution.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Validation du contenu</h3>
+                        <p>Vous me fournissez les éléments essentiels (textes, photos, logo) ou je peux vous aider à les créer. Nous définissons ensemble la structure de votre page.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Maquette et validation</h3>
+                        <p>Je crée une première version de votre page que vous pouvez visualiser et commenter. J'apporte les modifications nécessaires jusqu'à ce que vous soyez entièrement satisfait.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Mise en ligne</h3>
+                        <p>Une fois la page approuvée, je m'occupe de tout pour la mettre en ligne. Votre site est désormais visible par vos clients potentiels !</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-note" data-aos="fade-up">
+                <div class="note-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <p>Le délai moyen pour une page sur mesure est de 7 à 14 jours, selon la complexité et la rapidité de nos échanges. Chaque projet est unique et je m'adapte à vos contraintes de temps.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Nos Services -->
+    <section id="nos-services" class="section dark-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Nos Services</span>
+                <h2>Des solutions web adaptées à vos besoins</h2>
+                <p class="section-subtitle">Découvrez nos offres pour une présence en ligne professionnelle.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Site Vitrine -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-badge">Populaire</div>
+                    <div class="service-icon">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3>Sites Vitrine</h3>
+                    <p>Une présence en ligne professionnelle qui présente votre activité de manière claire et attrayante.</p>
+                    <ul class="service-features">
+                        <li>Design moderne et responsive</li>
+                        <li>Optimisation mobile</li>
+                        <li>Référencement de base</li>
+                        <li>Formulaire de contact</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-service">
+                        En savoir plus <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service E-commerce -->
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-badge">EXCULSIF</div>
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Boutique en ligne</h3>
+                    <p>Vendez vos produits en ligne avec une solution e-commerce complète et sécurisée.</p>
+                    <ul class="service-features">
+                        <li>Catalogue produits illimité</li>
+                        <li>Paiement en ligne sécurisé</li>
+                        <li>Gestion des stocks</li>
+                        <li>Suivi des commandes</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-service">
+                        Démarrer mon projet <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service Application Web -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Applications Web</h3>
+                    <p>Des applications sur mesure pour automatiser vos processus métiers.</p>
+                    <ul class="service-features">
+                        <li>Développement sur mesure</li>
+                        <li>Interface intuitive</li>
+                        <li>Sécurité renforcée</li>
+                        <li>Maintenance incluse</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-service">
+                        Discutons-en <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-cta" data-aos="fade-up" data-aos-delay="250">
+                <p>Vous avez un projet spécifique en tête ? Parlons-en ! Notre équipe est là pour concrétiser vos idées.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane"></i> Contactez-nous
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">Web<span>Flash</span></a>
+                <p>WebFlash – Source pour les non-techniques souhaitant lancer leur site web et comprendre la démarche complète.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/abdoul332" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Abdoul332" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#definition">Le concept</a></li>
+                    <li><a href="#importance">Les avantages</a></li>
+                    <li><a href="#services">Mes services</a></li>
+                    <li><a href="#cas-utilisation">Pour qui ?</a></li>
+                    <li><a href="#processus">Processus</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Coordonnées</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Niger</p>
+                <p><i class="fas fa-envelope"></i> abdoulibrahim332@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +227 91123080</p>
+                <p><i class="far fa-clock"></i> Lun-Ven : 9h-18h</p>
+                <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline footer-cta">
+                    <i class="fas fa-paper-plane"></i> Envoyer un message
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p id="copyright">&copy; 2025  – Projet développé par Ibrahim Ali Abdoulahi</p>
+                <div class="footer-legal">
+                    <a href="https://abdoul332.github.io/a-works/Mentions_legales.html" target="_blank">Mentions légales</a>
+                    <span>•</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- Core Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    
+    <!-- Initialisation de AOS (Animate On Scroll) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                mirror: false
+            });
+        }
+    });
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker enregistré avec succès:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log("Échec de l'enregistrement du Service Worker:", error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
+    <script type="application/ld+json">
+{{ ... }}
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "OnePagePro",
+        "url": "https://votredomaine.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://votredomaine.com/recherche?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "WebFlash",
+        "url": "https://votredomaine.com/",
+        "logo": "https://votredomaine.com/assets/images/icons/Logo.png",
+        "sameAs": [
+            "https://www.linkedin.com/in/abdoul332",
+            "https://github.com/Abdoul332"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+22791123080",
+            "contactType": "customer service",
+            "email": "abdoulibrahim332@gmail.com",
+            "availableLanguage": ["French", "English"]
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "WebFlash",
+        "image": "https://votredomaine.com/assets/images/optimized/webp/one-page-1.webp",
+        "@id": "https://votredomaine.com",
+        "url": "https://votredomaine.com/",
+        "telephone": "+22791123080",
+        "priceRange": "€€",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Niamey",
+            "addressRegion": "Niamey",
+            "addressCountry": "NE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 13.5136,
+            "longitude": 2.1108
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/abdoul332",
+            "https://github.com/Abdoul332"
+        ]
+    }
+    </script>
+</body>
+</html>

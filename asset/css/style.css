@@ -940,22 +940,26 @@
         .service-link:hover {
             gap: 0.75rem;
         }
+/* Portfolio Grid - Grille de portfolio */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
   margin-top: 40px;
-  /* Empêche le débordement sur mobile */
   width: 100%;
   max-width: 100%;
 }
 
+/* Carte de portfolio */
 .portfolio-card {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .portfolio-card:hover {
@@ -963,19 +967,31 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
+/* Conteneur d'image */
 .portfolio-image {
   position: relative;
-  height: 300px;
+  height: 0;
+  padding-bottom: 70%; /* Ratio d'aspect 10:7 */
   overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Image du portfolio */
 .portfolio-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  max-width: 100%;
-  height: auto;
+  object-fit: contain; /* Changé de 'cover' à 'contain' pour voir l'image entière */
+  object-position: center;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  background-color: #f8f9fa; /* Fond de secours */
+  padding: 10px; /* Espace autour de l'image */
 }
 
 .portfolio-card:hover .portfolio-image img {
@@ -1632,10 +1648,26 @@
             }
         }
 
+        /* Media Queries pour le portfolio */
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 25px;
+            }
+        }
+
         @media (max-width: 767px) {
-            /* Portfolio Images */
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
             .portfolio-image {
-                height: 180px;
+                padding-bottom: 75%; /* Légèrement plus grand sur mobile pour une meilleure visibilité */
+            }
+            
+            .portfolio-card {
+                margin-bottom: 1.5rem;
             }
             
             /* Typography Adjustments */
