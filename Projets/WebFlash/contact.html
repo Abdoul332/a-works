@@ -19,128 +19,234 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
+    <!-- Main CSS uniquement (pas de contact.css) -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header (identique à l'accueil) -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">Web<span>Flash</span></a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#portfolio">Portfolio</a></li>
-                    <li><a href="index.html#about">À propos</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
+            <nav class="navbar">
+                <a href="index.html" class="logo">Web<span>Flash</span></a>
+                <div class="nav-links">
+                    <a href="index.html#definition">C'est quoi ?</a>
+                    <a href="index.html#importance">Avantages</a>
+                    <a href="index.html#cas-utilisation">Pour qui ?</a>
+                    <a href="index.html#processus">Processus</a>
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
+                </div>
+                <div class="menu-btn" aria-label="Ouvrir le menu" role="button" tabindex="0">
+                    <div class="menu-btn__lines"></div>
+                </div>
             </nav>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
+    <!-- Page Hero moderne -->
+    <section class="page-hero section">
         <div class="container">
-            <h1 data-aos="fade-up">Contactez-nous</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Une question ? Un projet ? Nous sommes là pour vous aider !</p>
+            <div class="hero-content-center" data-aos="fade-up">
+                <span class="hero-badge">Contact</span>
+                <h1 class="hero-title">Parlons de votre projet</h1>
+                <p class="hero-description">Une question, un devis ou simplement envie d'échanger ? Notre équipe est à votre écoute.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Info -->
-    <div class="container">
-        <div class="contact-container">
-            <!-- Téléphone -->
-            <div class="contact-card" data-aos="fade-up">
-                <div class="contact-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="contact-info">
-                    <h3>Téléphone</h3>
-                    <a href="tel:+22791123080">+227 91 12 30 80</a>
-                    <p>Lun-Ven: 9h - 18h</p>
-                </div>
-            </div>
-            
-            <!-- Email -->
-            <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-info">
-                    <h3>Email</h3>
-                    <a href="mailto:abdoulibrahim332@gmail.com">abdoulibrahim332@gmail.com</a>
-                    <p>Réponse sous 24h</p>
-                </div>
-            </div>
-            
-            <!-- Réseaux sociaux -->
-            <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="contact-icon">
-                    <i class="fas fa-share-alt"></i>
-                </div>
-                <div class="contact-info">
-                    <h3>Réseaux sociaux</h3>
-                    <p>Suivez-nous sur nos réseaux</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/abdoul332" class="social-link" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Abdoul332" class="social-link" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://twitter.com/" class="social-link" target="_blank" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+    <!-- Section Contact principale -->
+    <section class="section contact-main-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Formulaire de contact (gauche) -->
+                <div class="contact-form-container" data-aos="fade-right" data-aos-delay="100">
+                    <div class="form-header">
+                        <h2 class="form-title">Envoyez-nous un message</h2>
+                        <p class="form-subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    
+                    <form id="contactForm" class="contact-form" action="#" method="POST" novalidate>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user"></i>
+                                    <span>Nom complet</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    placeholder="Jean Dupont" 
+                                    required
+                                    autocomplete="name"
+                                >
+                            </div>
+                        </div>
 
-    <!-- Contact Form & Map Section -->
-    <section class="contact-form-map-section">
-        <div class="contact-form-map">
-            <!-- Contact Form -->
-            <div class="contact-form" data-aos="fade-right">
-                <h2>Envoyez-nous un message</h2>
-                <form id="contactForm" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Nom complet *</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Sujet</label>
-                        <input type="text" id="subject" name="subject" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" class="form-control" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Envoyer le message
-                    </button>
-                </form>
-            </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Adresse email</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="jean.dupont@exemple.com" 
+                                    required
+                                    autocomplete="email"
+                                >
+                            </div>
+                        </div>
 
-            <!-- Google Map -->
-            <div class="map-container" data-aos="fade-left">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.835709215655!2d2.1217!3d13.5124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDMwJzQ0LjYiTiAywrA3JzE4LjEiRQ!5e0!3m2!1sfr!2sne!4v1620000000000!5m2!1sfr!2sne" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    title="Localisation WebFlash">
-                </iframe>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="phone" class="form-label">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Téléphone</span>
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="form-input" 
+                                    placeholder="+227 XX XX XX XX"
+                                    autocomplete="tel"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="subject" class="form-label">
+                                    <i class="fas fa-tag"></i>
+                                    <span>Sujet</span>
+                                </label>
+                                <select id="subject" name="subject" class="form-input form-select">
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="devis">Demande de devis</option>
+                                    <option value="information">Demande d'information</option>
+                                    <option value="support">Support technique</option>
+                                    <option value="partenariat">Partenariat</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment-dots"></i>
+                                    <span>Votre message</span>
+                                    <span class="required">*</span>
+                                </label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-input form-textarea" 
+                                    rows="6" 
+                                    placeholder="Décrivez votre projet ou votre demande..." 
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Envoyer le message</span>
+                            </button>
+                            <p class="form-notice">
+                                <i class="fas fa-shield-alt"></i>
+                                Vos données sont protégées et ne seront jamais partagées.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Informations de contact (droite) -->
+                <aside class="contact-info-container" data-aos="fade-left" data-aos-delay="200">
+                    <div class="info-card">
+                        <h3 class="info-title">Nos coordonnées</h3>
+                        <p class="info-description">Vous préférez nous contacter directement ? Voici nos coordonnées.</p>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-label">Email</h4>
+                                    <a href="mailto:abdoulibrahim332@gmail.com" class="info-link">abdoulibrahim332@gmail.com</a>
+                                    <span class="info-meta">Réponse sous 24h</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-label">Téléphone</h4>
+                                    <a href="tel:+22791123080" class="info-link">+227 91 12 30 80</a>
+                                    <span class="info-meta">Lun - Ven, 9h - 18h</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-label">Localisation</h4>
+                                    <p class="info-text">Niamey, Niger</p>
+                                    <span class="info-meta">Afrique de l'Ouest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-social">
+                        <h3 class="info-title">Suivez-nous</h3>
+                        <p class="info-description">Restez connectés avec nous sur les réseaux sociaux.</p>
+                        
+                        <div class="social-grid">
+                            <a href="https://www.linkedin.com/in/abdoul332" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Abdoul332" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://twitter.com/" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://facebook.com/" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-cta">
+                        <div class="cta-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="cta-title">Besoin d'aide ?</h3>
+                        <p class="cta-description">Notre équipe est disponible pour répondre à toutes vos questions.</p>
+                        <a href="mailto:abdoulibrahim332@gmail.com" class="btn btn-outline btn-block">
+                            <i class="fas fa-envelope"></i>
+                            <span>Nous écrire</span>
+                        </a>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
@@ -158,18 +264,14 @@
                         <h4>Navigation</h4>
                         <ul>
                             <li><a href="index.html">Accueil</a></li>
-                            <li><a href="index.html#services">Services</a></li>
-                            <li><a href="index.html#portfolio">Portfolio</a></li>
-                            <li><a href="index.html#about">À propos</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            
                         </ul>
                     </div>
                     <div class="footer-links-group">
                         <h4>Légal</h4>
                         <ul>
                             <li><a href="mentions-legales.html">Mentions légales</a></li>
-                            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
-                            <li><a href="cookies.html">Politique des cookies</a></li>
+                           
                         </ul>
                     </div>
                 </div>
