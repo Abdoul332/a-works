@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon site pour me restaurer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Découvrez les délicieux kebabs halal d'ABBA CHIKEN. Commandez en ligne ou réservez votre table.">
+    <title>ABBA CHIKEN - Restaurant de Kebab Halal</title>
+    
+    <!-- Preload des polices critiques -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Chargement du CSS avec priorité -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    
+    <!-- Préchargement des images critiques -->
+    <link rel="preload" as="image" href="img/Kebab.jpg" imagesrcset="img/Kebab.jpg 1x, img/Kebab@2x.jpg 2x">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
     
 </head>
 <body>
@@ -35,83 +48,180 @@
          <button><a href="https://wa.me/22787171269?text=Bonjour%20je%20souhaite%20commander%20chez%20vous" target="_blank">Passez à la commande</a></button>
         </div>
         <div class="right">
-          <img src="img/Kebab.jpg" alt="">
+          <img 
+            src="./img/Kebab.jpg" 
+            alt="Kebab délicieux d'ABBA CHIKEN" 
+            width="600" 
+            height="400"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-width: 600px;"
+            class="lazy-load">
         </div>
     </section>
     <!--section menu-->
     <section id="menu">
-        <h2 class="mini-title">Nos menus</h2>
-        <h3 class="title">Les plus Populaires </h3>
+        <h2 class="mini-title">Notre Carte</h2>
+        <h3 class="title">Découvrez nos délices</h3>
         <div class="dishes">
+            <!-- Kebab Classique -->
             <div class="dish">
-                <img src="img/Poulet frit.jpg" alt="">
-                <p>Poulet frit</p>
-                <h4>3 500 FCFA</h4>
-                <A href="#" class="btn-commander">Commander</A>
-
+                <div class="dish-img-container">
+                    <img 
+                      src="img/Kebab.jpg">
+                </div>
+                <div class="dish-content">
+                    <h4>Kebab Classique</h4>
+                    <p>Pain frais, viande marinée, légumes frais et sauce maison</p>
+                    <span class="price">2 800 FCFA</span>
+                    <a href="#" class="btn-commander">Commander</a>
+                </div>
             </div>
-            <div class="dish">
-                <img src="img/Hamburger.jpg" alt="">
-                <p>Hamburger</p>
-                <h4>2 500 FCFA</h4>
-                <A href="#" class="btn-commander">Commander</A>
 
+            <!-- Poulet Frit -->
+            <div class="dish">
+                <div class="dish-img-container">
+                    <img src="img/Poulet frit.jpg" alt="Poulet Frit">
+                </div>
+                <div class="dish-content">
+                    <h4>Poulet Frit</h4>
+                    <p>Morceaux de poulet croustillants, frites et sauce au choix</p>
+                    <span class="price">3 500 FCFA</span>
+                    <a href="#" class="btn-commander">Commander</a>
+                </div>
             </div>
-            <div class="dish">
-                <img src="img/patte.jpg" alt="">
-                <p>
-                    Tagliatelles au bacon</p>
-                <h4>5 500 FCFA</h4>
-                <A href="#" class="btn-commander">Commander</A>
 
+            <!-- Burger Gourmet -->
+            <div class="dish">
+                <div class="dish-img-container">
+                    <img src="img/Hamburger.jpg" alt="Burger Gourmet">
+                </div>
+                <div class="dish-content">
+                    <h4>Burger Gourmet</h4>
+                    <p>Pain brioché, steak haché 100% boeuf, cheddar, salade et oignons caramélisés</p>
+                    <span class="price">3 200 FCFA</span>
+                    <a href="#" class="btn-commander">Commander</a>
+                </div>
             </div>
-            <div class="dish">
-                <img src="img/NOUI.jpg" alt="">
-                <p>
-                    Tagliatelles au poulet et curry</p>
-                <h4>6 500 FCFA</h4>
-                <A href="#" class="btn-commander">Commander</A>
 
+            <!-- Pizza -->
+            <div class="dish">
+                <div class="dish-img-container">
+                    <img src="img/Pyzza.jpg" alt="Pizza">
+                </div>
+                <div class="dish-content">
+                    <h4>Pizza</h4>
+                    <p>Base de sauce tomate maison, fromage fondant et garniture au choix</p>
+                    <span class="price">4 500 FCFA</span>
+                    <a href="#" class="btn-commander">Commander</a>
+                </div>
             </div>
-            <div class="dish">
-                <img src="img/Salade.jpg" alt="">
-                <p>végétariens</p>
-                <h4>3 500 FCFA</h4>
-                <A href="#" class="btn-commander">Commander</A>
 
+            <!-- Sandwich Kebab -->
+            <div class="dish">
+                <div class="dish-img-container">
+                    <img src="img/Sandwich Kebab.jpg" alt="Sandwich Kebab">
+                </div>
+                <div class="dish-content">
+                    <h4>Sandwich Kebab</h4>
+                    <p>Pain pita, viande rôtie, légumes frais et sauce blanche</p>
+                    <span class="price">2 500 FCFA</span>
+                    <a href="#" class="btn-commander">Commander</a>
+                </div>
+            </div>
+
+            <!-- Pâtes Tagliatelles -->
+            <div class="dish">
+                <div class="dish-img-container">
+                    <img src="img/patte.jpg" alt="Tagliatelles au bacon">
+                </div>
+                <div class="dish-content">
+                    <h4>Tagliatelles au Bacon</h4>
+                    <p>Pâtes fraîches, lardons fumés, crème fraîche et parmesan</p>
+                    <span class="price">5 500 FCFA</span>
+                    <a href="#" class="btn-commander">Commander</a>
+                </div>
+            </div>
+            
             </div>
            
 
             
         </div>
     </section>
-    <!--section about-->
+    <!-- Section À Propos -->
     <section id="about-us">
-        <h2 class="mini-title">À propos
-        </h2>
-        <h3 class="title"> Pourquoi choisir nos kebabs ?</h3>
-        <div class="about">
-            <div class="left">
-                <img src="img/Kebab.jpg" alt="">
+        <div class="container">
+            <div class="section-header">
+                <span class="mini-title">Notre Savoir-Faire</span>
+                <h2 class="title">L'Excellence Culinaire à Votre Portée</h2>
+                <div class="title-underline"></div>
             </div>
-        
-        <div class="right">
-            <h3>100% Halal certifié – pour manger en toute confiance.</h3>
-            <p>
-                
-                
-               <hr> Goût unique et généreux – bien assaisonné, bien garni, toujours savoureux.
-                
-                <br> <hr>Produits frais du jour – légumes croquants, pain croustillant, sauces maison.
-                
-                <br> <hr>Service rapide et chaleureux – que ce soit sur place ou à emporter.
-                
-                <br> <hr>Excellent rapport qualité/prix – parce qu’on peut bien manger sans se ruiner 
-               <hr> </p>
             
-            <button><a href="">En savoir plus</a></button>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="img/Kebab.jpg" alt="Notre kebab artisanal" loading="lazy">
+                        <div class="experience-badge">
+                            <span>+10 ans</span>
+                            <small>d'expérience</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <h3>Une Cuisine Authentique et Engagée</h3>
+                    <p class="lead">Découvrez l'authenticité des saveurs méditerranéennes préparées avec des ingrédients frais et sélectionnés avec soin.</p>
+                    
+                    <ul class="features-list">
+                        <li>
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>100% Halal Certifié</h4>
+                                <p>Viandes sélectionnées selon les normes halal les plus strictes</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Frais & Naturel</h4>
+                                <p>Produits frais du marché et préparations maison quotidiennes</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Fait avec Passion</h4>
+                                <p>Recettes traditionnelles et savoir-faire artisanal</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="cta-buttons">
+                        <a href="#menu" class="btn btn-primary">Découvrir la carte</a>
+                        <a href="#contact" class="btn btn-outline">Nous contacter</a>
+                    </div>
+                    
+                    <!-- Popup Développeur -->
+                    <div id="dev-popup" class="dev-popup">
+                        <div class="dev-popup-content">
+                            <span class="close-popup">&times;</span>
+                            <p>Projet développé par <strong>Ibrahim</strong></p>
+                            <p>Développeur Web & Consultant SEO</p>
+                            <div class="dev-links">
+                                <a href="https://www.linkedin.com/in/abdoul332/" target="_blank" class="dev-link">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://abdoul332.github.io/a-works/" target="_blank" class="dev-link">
+                                    <i class="fas fa-globe"></i> Portfolio
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
     </section>
     <!--sectionts comments-->
     <section id="comment-section">
@@ -205,8 +315,23 @@
     <p class="footer-text">Réalisation de <span><a href="Abdoul332.github.io/a-works" style="text-decoration: none; color:  #27ae60;">A-works</a> | Développement web et expertise SEO | Vitesse, indexation et fonctionnalités web essentielles </span> | Tous droits réservés. </p>
 </footer>
 
-<!-- Lien vers le fichier JavaScript principal -->
-<script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+<!-- Chargement de Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Service Worker pour la mise en cache -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').then(registration => {
+        console.log('ServiceWorker enregistré avec succès');
+      }).catch(err => {
+        console.log('Échec de l\'enregistrement du ServiceWorker:', err);
+      });
+    });
+  }
+</script>
+
+<!-- Chargement du JavaScript principal -->
+<script src="script.js" defer></script>
 </body>
 </html>
