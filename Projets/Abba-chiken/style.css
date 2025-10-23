@@ -145,12 +145,126 @@ transition: 0.5s;
     letter-spacing: 1px;
 }
 #home .right {
-    widht:50%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+/* Styles pour le pop-up de notification */
+.notification-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-left: 4px solid #0cd693;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-popup .btn-reservation {
+    background-color: #0cd693;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.notification-popup .btn-reservation:hover {
+    background-color: #0ab57d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Animation d'entrée */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation de sortie */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+/* Styles pour le défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Désactiver l'animation de défilement quand on utilise les flèches du clavier */
+html:not(.smooth-scroll) {
+    scroll-behavior: auto;
+}
+
+/* Style pour la section de réservation */
+#reservation {
+    transition: all 0.5s ease;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Style pour le bouton de réservation dans la popup */
+.notification-popup .btn-reservation {
+    background-color: #0cd693;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.notification-popup .btn-reservation:hover {
+    background-color: #0ab57d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 #home .right img{
     width: 50%;
@@ -225,6 +339,29 @@ transition: 0.5s;
     color: #fff;
     border-radius: 6px;
 
+}
+.btn-commander {
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #27ae60;
+    padding: 10px 60px;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Effet de clic sur le bouton */
+.btn-commander:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 /*Scorllbal css*/
 ::-webkit-scrollbar{
@@ -361,6 +498,30 @@ transition: 0.5s;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     outline: 0;
 
+}
+#reservation form .btn-commander {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background-color: #0cd693;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform-origin: center;
+}
+
+/* Effet de clic sur le bouton */
+#reservation form .btn-commander:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 #reservation form input[type="submit"]{
     margin-top: 15px;
