@@ -9,8 +9,186 @@
 /*ader .toggle_menu{
     display: none;
 }*/
-section{
-    margin-top:50px;
+section {
+    margin-top: 50px;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styles pour la section menu */
+#menu {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+/* Conteneur des plats */
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Style des cartes de plats */
+.dish {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.dish:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Styles pour mobile */
+@media (max-width: 768px) {
+    .dishes {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .dish {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .dish-img-container {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .dish-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .dish-content {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .dish h4 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+        color: #333;
+    }
+    
+    .dish p {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    
+    .price {
+        display: block;
+        font-weight: bold;
+        color: #0cd693;
+        font-size: 1.2rem;
+        margin: 10px 0 15px;
+    }
+    
+    .btn-commander {
+        display: inline-block;
+        background: #0cd693;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+    
+    .btn-commander:hover {
+        background: #0bb57d;
+    }
+    
+    /* Styles pour le popup de commande */
+    .commander-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+        z-index: 1000;
+        text-align: center;
+    }
+    
+    .commander-popup h3 {
+        margin-top: 0;
+        color: #333;
+    }
+    
+    .commander-popup p {
+        margin: 15px 0;
+        color: #666;
+    }
+    
+    .commander-popup-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .btn-confirm, .btn-cancel {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 25px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-confirm {
+        background: #0cd693;
+        color: white;
+    }
+    
+    .btn-confirm:hover {
+        background: #0bb57d;
+    }
+    
+    .btn-cancel {
+        background: #f1f1f1;
+        color: #333;
+    }
+    
+    .btn-cancel:hover {
+        background: #e0e0e0;
+    }
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
 }
 /* Optimisation du rendu */
 body {
