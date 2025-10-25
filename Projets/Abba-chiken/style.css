@@ -1504,6 +1504,335 @@ p, h1, h2, h3, h4, h5, h6, li, a, span, div {
         width: 100%;
         padding: auto;
     }
+}
+
+/* ==========================================================================
+   Section Témoignages
+   ========================================================================== */
+.testimonials-section {
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonials-section .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonials-section .divider {
+    width: 80px;
+    height: 3px;
+    background: #ff6b6b;
+    margin: 15px auto 0;
+    position: relative;
+}
+
+.testimonials-section .divider::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #4ecdc4;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 2;
+}
+
+.rating {
+    color: #ffc107;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.rating .far {
+    color: #e0e0e0;
+}
+
+.testimonial-text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-style: italic;
+    position: relative;
+    padding-left: 20px;
+}
+
+.testimonial-text::before {
+    content: '"';
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    font-size: 4rem;
+    color: #f0f0f0;
+    font-family: serif;
+    line-height: 1;
+    z-index: -1;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+}
+
+.client-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.client-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.client-info span {
+    display: block;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 3px;
+}
+
+/* Effet de fond décoratif */
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(78, 205, 196, 0.1);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 60px 20px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .testimonial-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    .client-avatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Suppression de l'ancienne section commentaires */
+    padding: 60px 5%;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#comment-section .mini-title,
+#comment-section .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 30px auto 0;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comment {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comment > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.comment h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.comment p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Styles spécifiques pour mobile */
+@media screen and (max-width: 480px) {
+    #comment-section {
+        padding: 30px 15px;
+    }
+
+    .comments {
+        gap: 15px;
+    }
+
+    .comment {
+        padding: 15px;
+    }
+
+    .comment img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .comment h4 {
+        font-size: 0.9rem;
+    }
+
+    .comment p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}
+
+/* Pour les tablettes */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .comments {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .comment {
+        margin: 0;
+    }
+}
+
+/* Pour les tablettes en mode paysage */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .comments {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0 20px;
+    }
+}
+
+/* Pour les ordinateurs de bureau */
+@media screen and (min-width: 1025px) {
+    .comments {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 0;
+    }
+}
     #home .left{
         margin: 100px 0;
 
