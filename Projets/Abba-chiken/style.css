@@ -581,12 +581,7 @@ html:not(.smooth-scroll) {
     scroll-behavior: auto;
 }
 
-/* Style pour la section de réservation */
-#reservation {
-    transition: all 0.5s ease;
-    border-radius: 8px;
-    padding: 0 10px;
-}
+/* Ancien style pour la section de réservation - Remplacé par le nouveau style */
 
 /* Styles améliorés pour les notifications */
 .notification {
@@ -1218,59 +1213,42 @@ html:not(.smooth-scroll) {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Bouton de réservation */
+/* Bouton de réservation - Style principal */
 .btn-reservation {
-    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    display: block;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
     font-weight: 600;
-    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 0 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
-    z-index: 1;
-}
-
-.btn-reservation::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.5s;
-    z-index: -1;
-}
-
-.btn-reservation:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
-}
-
-.btn-reservation:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 10px rgba(46, 204, 113, 0.3);
-}
-
-.btn-reservation:hover::before {
-    left: 100%;
 }
 
 .btn-reservation i {
-    font-size: 18px;
-    transition: transform 0.3s ease;
+    margin-right: 8px;
+    font-size: 1em;
+    transition: transform 0.2s ease;
 }
 
-.btn-reservation:hover i {
-    transform: scale(1.1);
+.btn-reservation:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #ff3d3d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+}
+
+.btn-reservation:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 /* Animation de pulse au survol */
@@ -2090,5 +2068,510 @@ p, h1, h2, h3, h4, h5, h6, li, a, span, div {
     }
     header .menu.responsive li{
         margin: 15px 0;
+    }
+}
+
+/* ===========================================
+   STYLES DU FORMULAIRE DE RÉSERVATION
+   =========================================== */
+
+/* Conteneur principal */
+#reservation {
+    padding: 25px 0 35px;
+    background-color: #f9f9f9;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#reservation .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Titres */
+#reservation .mini-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0 0 12px 0;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#reservation .reservation-subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Formulaire */
+#reservationForm {
+    background: white;
+    padding: 20px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    border: 1px solid #eee;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Groupes de champs */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    flex: 1 1 100%;
+    margin: 0 0 12px 0;
+    min-width: 0;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 2px;
+}
+
+.form-group.full-width {
+    flex: 0 0 100%;
+    margin-right: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.3;
+    width: 100%;
+}
+
+/* Champs de formulaire */
+#reservationForm input[type="text"],
+#reservationForm input[type="email"],
+#reservationForm input[type="tel"],
+#reservationForm input[type="date"],
+#reservationForm input[type="time"],
+#reservationForm input[type="number"],
+#reservationForm select,
+#reservationForm textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#reservationForm textarea {
+    height: 90px;
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.5;
+    padding: 12px;
+}
+
+/* Style pour les selects */
+#reservationForm select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 36px;
+}
+
+#reservationForm input:focus,
+#reservationForm textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+/* Style pour les champs invalides */
+#reservationForm input:invalid,
+#reservationForm textarea:invalid {
+    border-color: #ff6b6b;
+}
+
+/* Style pour les champs valides */
+#reservationForm input:valid:not(:placeholder-shown),
+#reservationForm textarea:valid:not(:placeholder-shown) {
+    border-color: #4caf50;
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Style pour le bouton de chargement */
+.btn-reservation.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn-reservation.loading:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Style pour les messages de succès/erreur */
+.form-message {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Style pour les écrans de taille moyenne */
+@media (min-width: 481px) and (max-width: 1024px) {
+    #reservation .container {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+    
+    #reservationForm {
+        padding: 20px 15px;
+    }
+    
+    .form-group {
+        flex: 1 1 calc(50% - 10px);
+        margin: 0 0 15px 0;
+    }
+    
+    .form-group:nth-child(odd) {
+        margin-right: 10px;
+    }
+    
+    .form-group.full-width {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+}
+
+/* Style pour les mobiles */
+@media (max-width: 480px) {
+    #reservation {
+        padding: 20px 0 30px;
+    }
+    
+    #reservation .container {
+        padding: 0 8px;
+    }
+
+    #reservation .mini-title {
+        font-size: 1.5rem;
+        padding: 0 8px;
+        margin-bottom: 10px;
+    }
+
+    #reservation .reservation-subtitle {
+        font-size: 0.9rem;
+        padding: 0 8px;
+        margin-bottom: 18px;
+    }
+
+    #reservationForm {
+        padding: 15px 10px;
+        border-radius: 6px;
+        margin: 0 auto;
+        width: calc(100% - 16px);
+    }
+    
+    .form-group {
+        flex: 1 1 100% !important;
+        margin: 0 0 12px 0 !important;
+        padding: 0 4px;
+    }
+    
+    .form-row {
+        margin: 0 0 6px 0;
+        gap: 8px;
+    }
+    
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+    
+    #reservationForm input[type="text"],
+    #reservationForm input[type="email"],
+    #reservationForm input[type="tel"],
+    #reservationForm input[type="date"],
+    #reservationForm input[type="time"],
+    #reservationForm input[type="number"],
+    #reservationForm select,
+    #reservationForm textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-radius: 4px;
+    }
+    
+    .btn-reservation {
+        margin: 10px auto 0 !important;
+        padding: 12px 24px !important;
+        font-size: 1rem !important;
+        max-width: 100%;
+        width: auto;
+        display: block;
+    }
+    
+    #reservationForm textarea {
+        height: 100px;
+        min-height: 100px;
+    }
+}
+
+/* Style pour les très petits écrans */
+@media (max-width: 480px) {
+    #reservation .container {
+        padding: 0 15px;
+    }
+    
+    #reservationForm {
+        padding: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Conteneur principal du formulaire */
+#reservation .mini-title {
+    color: #0cd693;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#reservation h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#reservation h3 {
+    text-align: center;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Styles du formulaire */
+#reservationForm {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0cd693;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(12, 214, 147, 0.15);
+    background-color: #fff;
+}
+
+#reservationForm textarea {
+    height: 70px;
+    resize: vertical;
+    min-height: 50px;
+    padding: 8px 10px;
+    line-height: 1.4;
+}
+
+/* Style spécifique pour le bouton de soumission */
+#reservation .btn-reservation {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 14px 28px !important;
+    border-radius: 6px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 30px 0 10px 0 !important;
+    box-shadow: 0 4px 15px rgba(255, 82, 82, 0.3) !important;
+    display: block !important;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#reservation .btn-reservation:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #ff3d3d 100%) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(255, 82, 82, 0.4) !important;
+}
+
+#reservation .btn-reservation:active {
+    transform: translateY(1px) !important;
+    box-shadow: 0 2px 10px rgba(255, 82, 82, 0.3) !important;
+}
+
+#reservation .btn-reservation i {
+    margin-right: 10px !important;
+    font-size: 1.1em !important;
+    transition: transform 0.3s ease;
+}
+
+#reservation .btn-reservation:hover i {
+    transform: scale(1.1);
+}
+
+/* Style pour les champs obligatoires */
+.form-group.required label:after {
+    content: " *";
+    color: #e74c3c;
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+input:invalid + .error-message {
+    display: block;
+}
+
+/* Style pour la grille sur les grands écrans */
+@media (min-width: 768px) {
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* Style pour les écrans mobiles */
+@media (max-width: 767px) {
+    #reservation {
+        padding: 40px 15px;
+    }
+    
+    #reservation h2 {
+        font-size: 2rem;
+    }
+    
+    #reservationForm {
+        padding: 25px 20px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .form-group input[type="number"],
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #btn-reservation {
+        padding: 14px 20px;
+        font-size: 0.95rem;
     }
 }

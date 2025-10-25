@@ -707,3 +707,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Gestion du formulaire de réservation
+document.addEventListener('DOMContentLoaded', function() {
+    // Mettre à jour la date minimale pour la réservation (aujourd'hui)
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+    }
+
+    // Gestion de la soumission du formulaire
+    const reservationForm = document.getElementById('reservationForm');
+    if (reservationForm) {
+        reservationForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Afficher un indicateur de chargement
+            const submitButton = document.getElementById('btn-reservation');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            
+            try {
+                const formData = new FormData(reservationForm);
+                const response = await fetch(reservationForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Succès
+                    notificationManager.showNotification('Votre réservation a bien été envoyée ! Nous vous contacterons bientôt pour confirmer.', {
+                        type: 'success',
+                        duration: 5000
+                    });
+                    reservationForm.reset();
+                } else {
+                    // Erreur du serveur
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || 'Une erreur est survenue lors de l\'envoi du formulaire.');
+                }
+            } catch (error) {
+                // Erreur réseau ou autre
+                console.error('Erreur:', error);
+                notificationManager.showNotification(error.message || 'Une erreur est survenue. Veuillez réessayer plus tard.', {
+                    type: 'error',
+                    duration: 5000
+                });
+            } finally {
+                // Réactiver le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        });
+    }
+
+    // Validation en temps réel des champs
+    const formInputs = document.querySelectorAll('#reservationForm input, #reservationForm textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('input', function() {
+            if (this.checkValidity()) {
+                this.classList.remove('invalid');
+                this.classList.add('valid');
+            } else {
+                this.classList.remove('valid');
+                this.classList.add('invalid');
+            }
+        });
+    });
+});
