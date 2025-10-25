@@ -6,16 +6,17 @@
     <meta name="description" content="Découvrez les délicieux kebabs halal d'ABBA CHIKEN. Commandez en ligne ou réservez votre table.">
     <title>ABBA CHIKEN - Restaurant de Kebab Halal</title>
     
-    <!-- Preload des polices critiques -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Chargement du CSS avec priorité -->
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="style.css"></noscript>
     
     <!-- Préchargement des images critiques -->
-    <link rel="preload" as="image" href="img/Kebab.jpg" imagesrcset="img/Kebab.jpg 1x, img/Kebab@2x.jpg 2x">
+    <link rel="preload" as="image" href="img/Kebab.jpg" imagesrcset="img/Kebab.webp 1x, img/Kebab@2x.jpg 2x" fetchpriority="high" as="image" type="image/webp">
+    <link rel="preload" as="image" href="img/Kebab.jpg" imagesrcset="img/Kebab.jpg 1x, img/Kebab@2x.jpg 2x" fetchpriority="high">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
@@ -50,15 +51,25 @@
          <button><a href="https://wa.me/22787171269?text=Bonjour%20je%20souhaite%20commander%20chez%20vous" target="_blank">Passez à la commande</a></button>
         </div>
         <div class="right">
-          <img 
-            src="./img/Kebab.jpg" 
-            alt="Kebab délicieux d'ABBA CHIKEN" 
-            width="600" 
-            height="400"
-            loading="lazy"
-            decoding="async"
-            style="width: 100%; height: auto; max-width: 600px;"
-            class="lazy-load">
+            <div class="menu-highlight">
+                <div class="menu-image-container">
+                    <picture>
+                        <source srcset="img/Kebab.webp" type="image/webp">
+                        <source srcset="img/Kebab.jpg" type="image/jpeg">
+                        <img 
+                            src="img/Kebab.jpg" 
+                            alt="Nouveau menu Kebab Halal d'ABBA CHIKEN" 
+                            width="600"
+                            height="400"
+                            loading="eager"
+                            fetchpriority="high"
+                            decoding="async"
+                            class="menu-featured-image">
+                    </picture>
+                    
+                </div>
+                <div class="menu-image-decoration"></div>
+            </div>
         </div>
     </section>
     <!--section menu-->
@@ -69,8 +80,10 @@
             <!-- Kebab Classique -->
             <div class="dish">
                 <div class="dish-img-container">
-                    <img 
-                      src="img/Kebab.jpg">
+                    <picture>
+                        <source srcset="img/Kebab.webp" type="image/webp">
+                        <img src="img/Kebab.webp" alt="Kebab Classique" loading="lazy" width="400" height="300">
+                    </picture>
                 </div>
                 <div class="dish-content">
                     <h4>Kebab Classique</h4>
@@ -83,7 +96,10 @@
             <!-- Poulet Frit -->
             <div class="dish">
                 <div class="dish-img-container">
-                    <img src="img/Poulet frit.jpg" alt="Poulet Frit">
+                    <picture>
+                        <source srcset="img/Poulet-frit.webp" type="image/webp">
+                        <img src="img/Poulet-frit.webp" alt="Poulet Frit" title="Poulet Frit croustillant" loading="lazy" width="400" height="300">
+                    </picture>
                 </div>
                 <div class="dish-content">
                     <h4>Poulet Frit</h4>
@@ -96,7 +112,10 @@
             <!-- Burger Gourmet -->
             <div class="dish">
                 <div class="dish-img-container">
-                    <img src="img/Hamburger.jpg" alt="Burger Gourmet">
+                    <picture>
+                        <source srcset="img/Hamburger.webp" type="image/webp">
+                        <img src="img/Hamburger.webp" alt="Burger Gourmet" loading="lazy" width="400" height="300">
+                    </picture>
                 </div>
                 <div class="dish-content">
                     <h4>Burger Gourmet</h4>
@@ -109,7 +128,10 @@
             <!-- Pizza -->
             <div class="dish">
                 <div class="dish-img-container">
-                    <img src="img/Pyzza.jpg" alt="Pizza">
+                    <picture>
+                        <source srcset="img/Pyzza.webp" type="image/webp">
+                        <img src="img/Pyzza.webp" alt="Pizza" loading="lazy" width="400" height="300">
+            </picture>
                 </div>
                 <div class="dish-content">
                     <h4>Pizza</h4>
@@ -122,7 +144,10 @@
             <!-- Sandwich Kebab -->
             <div class="dish">
                 <div class="dish-img-container">
-                    <img src="img/Sandwich Kebab.jpg" alt="Sandwich Kebab">
+                    <picture>
+                        <source srcset="img/Sandwich-Kebab.webp" type="image/webp">
+                        <img src="img/Sandwich-Kebab.webp" alt="Sandwich Kebab" title="Délicieux Sandwich Kebab" loading="lazy" width="400" height="300">
+                    </picture>
                 </div>
                 <div class="dish-content">
                     <h4>Sandwich Kebab</h4>
@@ -135,7 +160,10 @@
             <!-- Pâtes Tagliatelles -->
             <div class="dish">
                 <div class="dish-img-container">
-                    <img src="img/patte.jpg" alt="Tagliatelles au bacon">
+                    <picture>
+                        <source srcset="img/patte.webp" type="image/webp">
+                        <img src="img/patte.webp" alt="Salade" loading="lazy" width="400" height="300">
+            </picture>
                 </div>
                 <div class="dish-content">
                     <h4>Tagliatelles au Bacon</h4>
@@ -163,7 +191,10 @@
             <div class="about-grid">
                 <div class="about-image">
                     <div class="image-frame">
-                        <img src="img/Kebab.jpg" alt="Notre kebab artisanal" loading="lazy">
+                        <picture>
+                <source srcset="img/kebab.webp" type="image/webp">
+                <img src="img/kebab.jpg" alt="Kebab" loading="lazy" width="400" height="300">
+            </picture>
                         <div class="experience-badge">
                             <span>+10 ans</span>
                             <small>d'expérience</small>
@@ -249,7 +280,10 @@
                         <p class="testimonial-text">"Je suis très exigeant sur les repas halal, et chez ABBA CHIKEN je suis rassuré. Frais, savoureux et toujours impeccable. Une adresse que je recommande vivement !"</p>
                     </div>
                     <div class="client-info">
-                        <img src="img/Ali.jpg" alt="Ali B" class="client-avatar">
+                        <picture>
+                <source srcset="img/ali.webp" type="image/webp">
+                <img src="img/ali.jpg" alt="Ali B. - Client fidèle" class="client-avatar" loading="lazy" width="100" height="100">
+            </picture>
                         <div>
                             <h4>Ali B.</h4>
                             <span>Client fidèle</span>
@@ -270,7 +304,10 @@
                         <p class="testimonial-text">"Rapide, délicieux et excellent rapport qualité-prix. Mon adresse préférée pour une pause déjeuner réussie. Le kebab épicé est tout simplement exceptionnel !"</p>
                     </div>
                     <div class="client-info">
-                        <img src="img/Ismael.jpg" alt="Ismaël" class="client-avatar">
+                        <picture>
+                <source srcset="img/ismael.webp" type="image/webp">
+                <img src="img/ismael.jpg" alt="Ismaël" loading="lazy" width="100" height="100" class="client-avatar">
+            </picture>
                         <div>
                             <h4>Ismaël D.</h4>
                             <span>Client régulier</span>
@@ -291,7 +328,10 @@
                         <p class="testimonial-text">"Le meilleur kebab de Niamey ! Des saveurs authentiques, des ingrédients frais et un service irréprochable. Une adresse que je recommande à tous les amateurs de bonne cuisine."</p>
                     </div>
                     <div class="client-info">
-                        <img src="img/Mariam.jpg" alt="Mariam" class="client-avatar">
+                        <picture>
+                            <source srcset="img/mariam.webp" type="image/webp">
+                            <img src="img/mariam.jpg" alt="Mariam" loading="lazy" width="100" height="100" class="client-avatar">
+                        </picture>
                         <div>
                             <h4>Mariam K.</h4>
                             <span>Nouvelle cliente</span>
@@ -353,13 +393,38 @@
         <hr>
     </div>
 
-    <p class="footer-text">Réalisation de <span><a href="Abdoul332.github.io/a-works" style="text-decoration: none; color:  #27ae60;">A-works</a> | Développement web et expertise SEO | Vitesse, indexation et fonctionnalités web essentielles </span> | Tous droits réservés. </p>
+    <p class="footer-text">Réalisation de <span><a href="https://Abdoul332.github.io/a-works" style="text-decoration: none; color: #27ae60;" rel="noopener noreferrer">A-works</a> | Développement web et expertise SEO | Vitesse, indexation et fonctionnalités web essentielles</span> | Tous droits réservés.</p>
 </footer>
 
-<!-- Chargement de Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Chargement optimisé des ressources externes -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-<!-- Chargement du JavaScript principal unifié -->
+<!-- Chargement du JavaScript principal -->
 <script src="script.js" defer></script>
+
+<!-- Chargement différé des images non critiques -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Chargement différé des images non critiques
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        
+        if ('loading' in HTMLImageElement.prototype) {
+            // Le navigateur supporte le lazy loading natif
+            const lazyImageObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach((img) => {
+                lazyImageObserver.observe(img);
+            });
+        }
+    });
+</script>
 </body>
 </html>

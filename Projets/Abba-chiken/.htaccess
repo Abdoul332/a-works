@@ -1,0 +1,149 @@
+# Activation de la compression GZIP
+<IfModule mod_deflate.c>
+    # Active la compression pour les fichiers textes
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    
+    # Désactive la compression pour les navigateurs qui ont des problèmes avec les fichiers compressés
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    
+    # Désactive la compression pour les images (déjà compressées)
+    SetEnvIfNoCase Request_URI \\.(?:gif|jpe?g|png|webp)$ no-gzip dont-vary
+    
+    # Active la compression pour les polices
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+</IfModule>
+
+# Mise en cache des fichiers statiques
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Vidéo
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
+    
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    
+    # Polices
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+    ExpiresByType font/opentype "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    
+    # Autres
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
+
+# Headers de cache
+<IfModule mod_headers.c>
+    # Protège contre le clickjacking
+    Header always append X-Frame-Options SAMEORIGIN
+    
+    # Active le mode XSS
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Désactive le mime-type sniffing
+    Header set X-Content-Type-Options nosniff
+    
+    # HSTS (à décommenter en production avec HTTPS)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # CORS pour les polices
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+    
+    # Cache-Control pour les fichiers statiques
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|webp|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# Compression des fichiers statiques
+<IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                  "application/javascript" \
+                                  "application/json" \
+                                  "application/ld+json" \
+                                  "application/manifest+json" \
+                                  "application/rdf+xml" \
+                                  "application/rss+xml" \
+                                  "application/schema+json" \
+                                  "application/vnd.geo+json" \
+                                  "application/vnd.ms-fontobject" \
+                                  "application/x-font-ttf" \
+                                  "application/x-javascript" \
+                                  "application/x-web-app-manifest+json" \
+                                  "application/xhtml+xml" \
+                                  "application/xml" \
+                                  "font/eot" \
+                                  "font/opentype" \
+                                  "image/bmp" \
+                                  "image/svg+xml" \
+                                  "image/vnd.microsoft.icon" \
+                                  "image/x-icon" \
+                                  "text/cache-manifest" \
+                                  "text/css" \
+                                  "text/html" \
+                                  "text/javascript" \
+                                  "text/plain" \
+                                  "text/vcard" \
+                                  "text/vnd.rim.location.xloc" \
+                                  "text/vtt" \
+                                  "text/x-component" \
+                                  "text/x-cross-domain-policy" \
+                                  "text/xml"
+</IfModule>
+
+# Redirection vers HTTPS (à décommenter en production)
+# <IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteCond %{HTTPS} off
+#    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# Protection contre le hotlinking (à personnaliser avec votre domaine)
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?votresite.com [NC]
+    RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
+</IfModule>
+
+# Désactive l'accès aux dossiers
+Options -Indexes
+
+# Protection contre les injections de fichiers
+<IfModule mod_php5.c>
+    php_flag allow_url_fopen off
+    php_flag allow_url_include off
+    php_flag register_globals off
+</IfModule>
+
+# Désactive le serveur signature
+ServerSignature Off

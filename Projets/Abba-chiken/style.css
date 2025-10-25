@@ -43,6 +43,88 @@ section:first-of-type {
     margin-top: 50px;
 }
 
+/* Styles pour les images de plats */
+.dish-img-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour éviter les sauts de mise en page */
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f5f5f5; /* Couleur de fond de secours */
+}
+
+.dish-img-container picture,
+.dish-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.dish-img-container img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Assure que l'image reste stable pendant le chargement */
+.dish-img-container img[loading="lazy"] {
+    opacity: 1;
+}
+
+/* Style épuré pour la présentation du produit */
+.menu-highlight {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.menu-image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.menu-featured-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.menu-featured-image:hover {
+    opacity: 0.95;
+}
+
+/* Suppression de l'élément décoratif sous l'image */
+.menu-image-decoration {
+    display: none;
+}
+
+.menu-badge {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transform: rotate(8deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 10;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
 /* Styles pour la section menu */
 #menu {
     text-align: center;
@@ -90,6 +172,29 @@ section:first-of-type {
     html, body {
         overflow-x: hidden;
         position: relative;
+    }
+    
+    #home .right {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 30px auto 0 !important;
+        justify-content: center !important;
+        padding: 0 15px !important;
+        animation: none !important;
+    }
+    
+    #home .right img {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        transform: none !important;
+        border-radius: 15px !important;
+        animation: float 6s ease-in-out infinite;
+        will-change: transform;
+    }
+    
+    /* Afficher le bouton menu uniquement sur mobile */
+    .toggle_menu {
+        display: flex; /* Afficher le bouton menu sur mobile */
     }
     
     body {
@@ -396,33 +501,22 @@ transition: 0.5s;
     letter-spacing: 1px;
 }
 #home .right {
-    width: 35%;
-    height: 100%;
+    width: 45%;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Styles pour le pop-up de notification */
-.notification-popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: white;
-    color: #333;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 320px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    gap: 0;
+    max-width: 400px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    border-left: 4px solid #0cd693;
-    animation: slideIn 0.3s ease-out;
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+    margin-left: -60px;
+    position: relative;
+    z-index: 1;
 }
 
 .notification-content {
@@ -449,33 +543,32 @@ transition: 0.5s;
 }
 
 .notification-popup .btn-reservation:hover {
-    background-color: #0ab57d;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+background-color: #0ab57d;
+transform: translateY(-2px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Animation d'entrée */
 @keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+from {
+transform: translateX(100%);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
 }
 
 /* Animation de sortie */
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(20px);
-    }
+from {
+opacity: 1;
+}
+to {
+opacity: 0;
+transform: translateX(20px);
+}
 }
 
 /* Styles pour le défilement fluide */
@@ -493,6 +586,68 @@ html:not(.smooth-scroll) {
     transition: all 0.5s ease;
     border-radius: 8px;
     padding: 0 10px;
+}
+
+/* Styles améliorés pour les notifications */
+.notification {
+    background: linear-gradient(135deg, #27ae60 0%, #219653 100%) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(39, 174, 96, 0.3) !important;
+    padding: 18px 24px !important;
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    max-width: 350px !important;
+    backdrop-filter: blur(10px);
+    border-left: 4px solid #0cd693 !important;
+    transform: translateY(0) scale(1);
+    opacity: 1 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.notification:hover {
+    transform: translateY(-2px) scale(1.01) !important;
+    box-shadow: 0 12px 28px rgba(39, 174, 96, 0.4) !important;
+}
+
+.notification-message {
+    color: white !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+}
+
+.notification .btn-reservation {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+.notification .btn-reservation i {
+    font-size: 1.1em !important;
+}
+
+.notification .btn-reservation:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.notification .btn-reservation:active {
+    transform: translateY(0) !important;
 }
 
 /* Style pour le bouton de réservation dans la popup */
@@ -518,19 +673,18 @@ html:not(.smooth-scroll) {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-#home .right img{
-    width: 60%;
-    max-width: 400px;
-    min-width: 250px;
+#home .right img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: animate 2s linear, float 6s ease-in-out infinite;
     transition: all 0.5s ease;
     object-fit: cover;
     aspect-ratio: 1/1;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     border: 5px solid rgba(255,255,255,0.2);
-    outline: 2px solid #0cd693;
-    outline-offset: 5px;
+    transform: scale(1.1);
+    margin-left: -40px;
 }
 /*animation image*/
 @keyframes float {
