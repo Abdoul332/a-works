@@ -1,56 +1,320 @@
-// Gestion des boutons "Commander"
-document.addEventListener('DOMContentLoaded', function() {
-    // Fonction pour afficher les notifications avec bouton de réservation
-    function showNotification(message, showReservationButton = true) {
+// Gestion des notifications modernes
+class NotificationManager {
+    constructor() {
+        this.notifications = [];
+        this.notificationContainer = null;
+        this.initContainer();
+    }
+
+    initContainer() {
+        this.notificationContainer = document.createElement('div');
+        this.notificationContainer.className = 'notification-container';
+        document.body.appendChild(this.notificationContainer);
+        this.addStyles();
+    }
+
+    showNotification(message, options = {}) {
+        const {
+            type = 'info',
+            duration = 5000,
+            showReservationButton = true,
+            autoClose = true
+        } = options;
+
+        // Création de la notification
         const notification = document.createElement('div');
-        notification.className = 'notification';
+        notification.className = `notification notification-${type}`;
+        notification.setAttribute('role', 'alert');
+        notification.setAttribute('aria-live', 'assertive');
+        
+        // Icône selon le type
+        const iconMap = {
+            success: 'check-circle',
+            error: 'exclamation-circle',
+            warning: 'exclamation-triangle',
+            info: 'info-circle'
+        };
+        const icon = iconMap[type] || 'info-circle';
         
         // Contenu de la notification
-        const content = document.createElement('div');
-        content.className = 'notification-content';
-        content.textContent = message;
-        notification.appendChild(content);
-        
-        // Ajouter le bouton de réservation si demandé
-        if (showReservationButton) {
-            const reserveBtn = document.createElement('button');
-            reserveBtn.className = 'btn-reservation';
-            reserveBtn.innerHTML = '<i class="fas fa-calendar-check"></i> Réserver une table';
-            
-            // Gestion du clic sur le bouton de réservation
-            reserveBtn.addEventListener('click', function() {
-                scrollToReservation();
-                // Fermer la notification après le clic
-                closeNotification(notification);
+        notification.innerHTML = `
+            <div class="notification-icon">
+                <i class="fas fa-${icon}"></i>
+            </div>
+            <div class="notification-content">
+                <div class="notification-message">${message}</div>
+                ${showReservationButton ? `
+                <button class="btn-reservation" aria-label="Réserver une table">
+                    <i class="fas fa-calendar-check"></i> Réserver une table
+                </button>` : ''}
+            </div>
+            <button class="notification-close" aria-label="Fermer la notification">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+
+        // Gestion du bouton de réservation
+        const reserveBtn = notification.querySelector('.btn-reservation');
+        if (reserveBtn) {
+            reserveBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.closeNotification(notification);
+                setTimeout(() => this.scrollToReservation(), 300);
             });
-            
-            notification.appendChild(reserveBtn);
         }
-        
-        document.body.appendChild(notification);
-        
-        // Supprimer la notification après 5 secondes
+
+        // Gestion de la fermeture
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.closeNotification(notification);
+        });
+
+        // Ajout au conteneur
+        this.notificationContainer.appendChild(notification);
+        this.notifications.push(notification);
+
+        // Animation d'entrée
         setTimeout(() => {
-            closeNotification(notification);
-        }, 5000);
-        
+            notification.classList.add('show');
+        }, 10);
+
+        // Fermeture automatique
+        if (autoClose) {
+            notification.timeoutId = setTimeout(() => {
+                this.closeNotification(notification);
+            }, duration);
+        }
+
         return notification;
+    }
+
+    closeNotification(notification) {
+        if (!notification || !notification.parentNode) return;
+        
+        clearTimeout(notification.timeoutId);
+        notification.classList.remove('show');
+        
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+                this.notifications = this.notifications.filter(n => n !== notification);
+            }
+        }, 300);
+    }
+
+    scrollToReservation() {
+        const reservationSection = document.getElementById('reservation');
+        if (reservationSection) {
+            window.scrollTo({
+                top: reservationSection.offsetTop - 20,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    addStyles() {
+        const style = document.createElement('style');
+        style.textContent = `
+            .notification-container {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                max-width: 100%;
+                pointer-events: none;
+            }
+
+            .notification {
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                background: #fff;
+                border-radius: 6px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+                padding: 10px 14px;
+                max-width: 280px;
+                opacity: 0;
+                transform: translateX(20px);
+                transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+                pointer-events: auto;
+                overflow: hidden;
+                font-size: 13px;
+                line-height: 1.3;
+            }
+
+            .notification.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .notification-icon {
+                font-size: 16px;
+                margin-right: 10px;
+                margin-top: 1px;
+                flex-shrink: 0;
+                opacity: 0.9;
+            }
+
+            .notification-content {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .notification-message {
+                margin-bottom: 6px;
+                line-height: 1.3;
+                color: #333;
+                font-size: 12.5px;
+            }
+
+            .btn-reservation {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                background: linear-gradient(135deg, #27ae60, #2ecc71);
+                color: white;
+                border: none;
+                border-radius: 3px;
+                padding: 4px 8px;
+                font-size: 11px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                margin-top: 6px;
+                line-height: 1.2;
+            }
+
+            .btn-reservation:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+            }
+
+            .btn-reservation:active {
+                transform: translateY(0);
+            }
+
+            .notification-close {
+                background: none;
+                border: none;
+                color: #999;
+                font-size: 12px;
+                cursor: pointer;
+                padding: 2px;
+                margin: -2px -2px -2px 6px;
+                border-radius: 3px;
+                transition: all 0.2s ease;
+                opacity: 0.7;
+            }
+
+            .notification-close:hover {
+                color: #666;
+                background: rgba(0, 0, 0, 0.05);
+            }
+
+            /* Types de notifications */
+            .notification-info .notification-icon { color: #3498db; }
+            .notification-success .notification-icon { color: #27ae60; }
+            .notification-warning .notification-icon { color: #f39c12; }
+            .notification-error .notification-icon { color: #e74c3c; }
+
+            /* Barre de progression */
+            .notification::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: rgba(0, 0, 0, 0.1);
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.1s linear;
+            }
+
+            .notification[data-duration]::after {
+                animation: progress linear forwards;
+                animation-duration: inherit;
+            }
+
+            @keyframes progress {
+                to { transform: scaleX(0); }
+            }
+
+            /* Responsive */
+            @media (max-width: 600px) {
+                .notification-container {
+                    left: 10px;
+                    right: 10px;
+                    top: 10px;
+                    max-width: none;
+                }
+                
+                .notification {
+                    max-width: 100%;
+                    padding: 8px 12px;
+                    font-size: 12.5px;
+                }
+                
+                .notification-message {
+                    font-size: 12px;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+// Initialisation du gestionnaire de notifications
+const notificationManager = new NotificationManager();
+
+// Gestion des boutons "Commander"
+document.addEventListener('DOMContentLoaded', function() {
+    // Gestion des boutons "Commander"
+    document.addEventListener('click', function(e) {
+        const btn = e.target.closest('.btn-commander');
+        if (!btn) return;
+
+        e.preventDefault();
+        const dishName = btn.getAttribute('data-dish') || 'ce plat';
+        
+        notificationManager.showNotification(
+            `Vous avez commandé ${dishName}. Merci pour votre commande !`,
+            {
+                type: 'success',
+                showReservationButton: true,
+                duration: 5000
+            }
+        );
+    });
+
+    // Gestion du formulaire de contact
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            notificationManager.showNotification(
+                'Votre message a été envoyé avec succès !',
+                {
+                    type: 'success',
+                    showReservationButton: false,
+                    duration: 3000
+                }
+            );
+            this.reset();
+        });
     }
     
     // Fonction pour fermer une notification
     function closeNotification(notification) {
-        if (!notification.parentNode) return;
-        
-        notification.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-        notification.style.borderLeft = '4px solid #2196F3';
-        notification.querySelector('.notification-content').style.color = '#2196F3';
-        notification.style.color = '#2196F3';
-        notification.style.animation = 'fadeOut 0.5s ease-out';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 500);
+        if (notification && notification.close) {
+            notification.close();
+        } else if (notification && notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
     }
     
     // Fonction pour faire défiler jusqu'à la section réservation
@@ -179,14 +443,43 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            left: 20px;
             background: #2196F3;
             color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
+            padding: 20px 25px 20px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            z-index: 9999;
             animation: slideIn 0.3s ease-out forwards;
-            max-width: 300px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .notification-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        
+        .notification-close:hover {
+            opacity: 1;
         }
         
         .notification-content {
@@ -314,13 +607,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from { transform: translateY(100%) translateX(0); opacity: 0; }
+            to { transform: translateY(0) translateX(0); opacity: 1; }
         }
         
         @keyframes fadeOut {
-            from { transform: translateY(0); opacity: 1; }
-            to { transform: translateY(20px); opacity: 0; }
+            from { transform: translateY(0) translateX(0); opacity: 1; }
+            to { transform: translateY(20px) translateX(0); opacity: 0; }
         }
         
         .btn-commander {
