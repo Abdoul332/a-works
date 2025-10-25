@@ -622,3 +622,88 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 });
+
+// Gestion du menu mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleMenu = document.querySelector('.toggle_menu');
+    const menu = document.querySelector('header .menu');
+    const menuLinks = document.querySelectorAll('header .menu a');
+    const body = document.body;
+    
+    // Vérifier si on est sur mobile
+    function isMobile() {
+        return window.innerWidth <= 980; // Correspond à la même valeur que dans le CSS
+    }
+
+    // Fonction pour basculer le menu
+    function toggleMobileMenu() {
+        menu.classList.toggle('active');
+        toggleMenu.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    }
+
+    // Gérer le clic sur le bouton du menu
+    if (toggleMenu) {
+        toggleMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+    }
+
+    // Gérer les clics sur les liens du menu
+    menuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            
+            // Vérifier si c'est un lien d'ancrage
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Fermer le menu sur mobile
+                    if (isMobile()) {
+                        toggleMobileMenu();
+                    }
+                    
+                    // Défilement fluide vers la section cible
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100, // Ajuster pour l'en-tête fixe
+                        behavior: 'smooth'
+                    });
+                    
+                    // Mettre à jour l'URL sans recharger la page
+                    history.pushState(null, '', href);
+                }
+            }
+            // Si ce n'est pas un lien d'ancrage, le comportement par défaut est conservé
+        });
+    });
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener('click', function(e) {
+        if (isMobile() && menu.classList.contains('active') && 
+            !menu.contains(e.target) && 
+            !toggleMenu.contains(e.target)) {
+            toggleMobileMenu();
+        }
+    });
+
+    // Gérer le redimensionnement de la fenêtre
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        document.body.classList.add('resize-animation-stopper');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            document.body.classList.remove('resize-animation-stopper');
+        }, 400);
+
+        // Désactiver le menu mobile si on passe en mode desktop
+        if (window.innerWidth > 980) {
+            menu.classList.remove('active');
+            toggleMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+    });
+});
