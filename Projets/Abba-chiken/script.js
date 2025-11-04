@@ -709,7 +709,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Gestion du formulaire de réservation
+// Fonction pour le défilement personnalisé vers les sections
+function smoothScrollTo(target) {
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const targetElement = document.querySelector(target);
+    
+    if (targetElement) {
+        // Ajout d'un décalage de 200px vers le bas pour ne pas être tout en haut
+        const offset = 200; // 200px de décalage vers le bas
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = targetPosition - headerHeight + offset; // Défilement 200px plus bas
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Gestion des clics sur les liens du menu
 document.addEventListener('DOMContentLoaded', function() {
+    // Gestion des clics sur les liens du menu
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Vérifier si c'est un lien d'ancrage
+            if (href !== '#' && href.startsWith('#')) {
+                e.preventDefault();
+                smoothScrollTo(href);
+                
+                // Fermer le menu mobile si ouvert
+                const toggleMenu = document.querySelector('.toggle_menu');
+                const menu = document.querySelector('.menu');
+                if (toggleMenu && menu && menu.classList.contains('active')) {
+                    toggleMenu.classList.remove('active');
+                    menu.classList.remove('active');
+                }
+            }
+        });
+    });
+    
     // Mettre à jour la date minimale pour la réservation (aujourd'hui)
     const dateInput = document.getElementById('date');
     if (dateInput) {
