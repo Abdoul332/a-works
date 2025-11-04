@@ -78,6 +78,18 @@ img {
     display: block;
 }
 
+/* Images haute résolution pour les écrans Retina */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    .logo img,
+    .hero-image img,
+    .dish-card img {
+        /* Utiliser des images 2x plus grandes ici si disponibles */
+        /* Exemple : content: url('image@2x.jpg'); */
+    }
+}
+
 /* ============================================
    #MISE EN PAGE ET CONTENEURS
    ============================================ */
@@ -518,8 +530,51 @@ footer .service p {
 /* ============================================
    #MÉDIAS QUERIES
    ============================================ */
-/* Tablettes */
-@media screen and (max-width: 980px) {
+
+/* Très grands écrans (27" et plus) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    html {
+        font-size: 18px;
+    }
+    
+    /* Ajustement des espacements */
+    section {
+        padding: 100px 0;
+    }
+    
+    /* Meilleure lisibilité sur grands écrans */
+    p, li {
+        line-height: 1.8;
+    }
+}
+
+/* Grands écrans (24-27") */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+/* Écrans larges (21-24") */
+@media (min-width: 1440px) and (max-width: 1599px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Écrans moyens (15-21") */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* Tablettes et petits ordinateurs portables */
+@media screen and (max-width: 1023px) {
     html {
         font-size: 15px;
     }
@@ -529,7 +584,7 @@ footer .service p {
     }
 }
 
-/* Mobiles */
+/* Mobiles et tablettes en mode portrait */
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
@@ -550,7 +605,7 @@ footer .service p {
     }
 }
 
-/* Petits mobiles */
+/* Mobiles moyens */
 @media screen and (max-width: 480px) {
     :root {
         --spacing-sm: 0.75rem;
@@ -2477,8 +2532,8 @@ p, h1, h2, h3, h4, h5, h6, li, a, span, div {
     z-index: 1;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Tablettes en mode paysage */
+@media (min-width: 769px) and (max-width: 1024px) {
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -3069,8 +3124,23 @@ p, h1, h2, h3, h4, h5, h6, li, a, span, div {
     }
 }
 
-/* Style pour les très petits écrans */
-@media (max-width: 480px) {
+/* Très petits mobiles (ex: iPhone 5/SE) */
+@media (max-width: 360px) {
+    :root {
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+}
     #reservation .container {
         padding: 0 15px;
     }
